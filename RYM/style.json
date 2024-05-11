@@ -1,0 +1,96 @@
+{
+  "styles": [
+    {
+      "name": "anthemic",
+      "description": "Music suited for anthems, with an easy-to-remember theme, call-and-response lyrics, repetition, and a powerful sound."
+    },
+    {
+      "name": "atmospheric",
+      "description": "Music that emphasizes timbre and texture, with atmosphere being central to the composition."
+    },
+    {
+      "name": "atonal",
+      "description": "Music lacking a focus on a key, where notes are played independently of each other."
+    },
+    {
+      "name": "avant-garde",
+      "description": "Radical, unorthodox, and experimental music challenging norms."
+    },
+    {
+      "name": "chaotic",
+      "description": "Music characterized by a sense of disorder and confusion."
+    },
+    {
+      "name": "complex",
+      "description": "Music interconnected with many elements, utilizing changes in tempo, rhythm, melody, and structure."
+    },
+    {
+      "name": "dense",
+      "description": "Music characterized by a busy, thick, and multi-layered sound."
+    },
+    {
+      "name": "dissonant",
+      "description": "Music characterized by harsh and inharmonious sound."
+    },
+    {
+      "name": "eclectic",
+      "description": "Music combining different techniques, styles, and genres."
+    },
+    {
+      "name": "heavy",
+      "description": "Music that feels powerful through distorted riffs and aggressive performance."
+    },
+    {
+      "name": "lush",
+      "description": "Music with rich textures and layered instrumentation creating a tender and colorful sound."
+    },
+    {
+      "name": "melodic",
+      "description": "Music emphasizing melody more than rhythm, harmony, or texture."
+    },
+    {
+      "name": "microtonal",
+      "description": "Music using intervals smaller than a semitone or alternative tuning systems."
+    },
+    {
+      "name": "minimalistic",
+      "description": "Music stripped to its essentials with conventional structures and narrow instrumentation."
+    },
+    {
+      "name": "noisy",
+      "description": "Music emphasizing distorted timbres and textures."
+    },
+    {
+      "name": "polyphonic",
+      "description": "Music with multiple independent voices of similar importance."
+    },
+    {
+      "name": "progressive",
+      "description": "Music innovating conventions through structural unity and diverse stylistic influences."
+    },
+    {
+      "name": "raw",
+      "description": "Music with unrefined and brash delivery."
+    },
+    {
+      "name": "repetitive",
+      "description": "Music focusing on repetition in riffs, melodies, or patterns."
+    },
+    {
+      "name": "rhythmic",
+      "description": "Music emphasizing rhythm over other compositional aspects."
+    },
+    {
+      "name": "soft",
+      "description": "Music characterized by a gentle and quiet sound."
+    },
+    {
+      "name": "sparse",
+      "description": "Music utilizing little sonic activity or variance."
+    },
+    {
+      "name": "technical",
+      "description": "Music showcasing expert instrumental skill and complex compositions."
+    }
+  ]
+}
