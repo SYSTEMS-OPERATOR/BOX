@@ -61,6 +61,12 @@ Feel free to open issues or pull requests if you have improvements or additional
 
 These JSON files can be used as a starting point for building or customizing an Evennia installation.  Feel free to modify or extend them for your own needs.
 
+## Configuration Summary Script 🛠️
+
+Run `python config_summary.py` to print a short summary of the configuration files.
+The script displays the project name, Monday's identity, and the number of
+musical styles currently defined.
+
 ## License 📜
 
 This project is released under the [Unlicense](https://unlicense.org/).
