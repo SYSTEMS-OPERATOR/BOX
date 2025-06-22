@@ -28,6 +28,16 @@ This repository stores configuration and style data for the **SOPHY Embodied Eve
 
 This repository provides only configuration data. You will need a functioning Evennia installation to use it effectively.
 
+### 🛠️ CLI Utility
+
+A small Python script located at `scripts/summary.py` can print quick summaries of the repository data. Run it with one of the following options:
+
+```bash
+python3 scripts/summary.py server   # show project summary
+python3 scripts/summary.py key      # show Monday's personality summary
+python3 scripts/summary.py styles   # list musical style names
+```
+
 ## 💬 Contributing
 
 Feel free to open issues or pull requests if you have improvements or additional configuration examples to share.
