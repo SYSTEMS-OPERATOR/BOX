@@ -11,13 +11,15 @@ This repository stores configuration and style data for the **SOPHY Embodied Eve
 
 - `CFG/SERVER.json` – core server configuration and deployment phases.
 - `KEY/MONDAY.JSON` – example neural imprint for a digital personality named **Monday**.
+- `KEY/TUESDAY.JSON` – upbeat personality profile used in examples below.
 - `RYM/styles.json` – list of musical style descriptors.
 - 
 ## 📂 Repository Structure
 
 - **CFG/** – Contains configuration files such as `SERVER.json` defining server architecture and deployment details.
-- **KEY/** – Stores character or agent profiles like `MONDAY.JSON` describing personality traits and metadata.
+- **KEY/** – Stores character or agent profiles like `MONDAY.JSON` and `TUESDAY.JSON` describing personality traits and metadata.
 - **RYM/** – Includes reference lists such as `styles.json` with musical style descriptions.
+- **scripts/** – Small utilities demonstrating how to use the JSON files.
 - **LICENSE** – Public domain dedication via the Unlicense.
 
 ## 🚀 Quick Start Example
@@ -25,6 +27,7 @@ This repository stores configuration and style data for the **SOPHY Embodied Eve
 1. Set up an Ubuntu environment with Python and Evennia installed.
 2. Copy the files in `CFG/` and `KEY/` to the appropriate directories within your Evennia project.
 3. Run your server and connect via Telnet or the web interface.
+4. Optionally execute `python scripts/list_styles.py` to view available musical styles.
 
 This repository provides only configuration data. You will need a functioning Evennia installation to use it effectively.
 
@@ -55,11 +58,23 @@ Feel free to open issues or pull requests if you have improvements or additional
 }
 ```
 
+**TUESDAY.JSON**
+```json
+{
+  "neural_imprint": {
+    "identity": {
+      "name": "Tuesday",
+      "personality": "Optimistic, cheerful, supportive digital companion"
+    }
+  }
+}
+```
+
 **styles.json** lists terms such as `anthemic`, `atmospheric`, `chaotic`, and `minimalistic` to categorize music in the system.
 
 ## Usage 💡
 
-These JSON files can be used as a starting point for building or customizing an Evennia installation.  Feel free to modify or extend them for your own needs.
+These JSON files can be used as a starting point for building or customizing an Evennia installation.  Feel free to modify or extend them for your own needs. The `scripts/` directory contains small utilities like `list_styles.py` that read these files and print helpful information.
 
 ## License 📜
 
