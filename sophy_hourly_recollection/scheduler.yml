@@ -1,0 +1,17 @@
+# Scheduler placeholder - user must adapt to their CI system
+# Example for a GitHub Actions cron job (note: runner permissions required)
+
+name: sophy-hourly-recollection
+
+on:
+  schedule:
+    - cron: '5 * * * *' # run at minute 5 of every hour
+
+jobs:
+  run-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run recollection harness
+        run: |
+          python3 sophy_hourly_recollection/harness.py
