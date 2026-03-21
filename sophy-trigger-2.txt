@@ -1,0 +1,4 @@
+SOPHY recollection trigger
+timestamp: 2026-03-21T13:15:00-0400
+triggered_by: assistant
+note: retry without [ci skip]
