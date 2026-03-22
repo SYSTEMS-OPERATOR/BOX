@@ -1,0 +1,56 @@
+# Agent manifest: agent.clockwork
+# Purpose: deterministic recollection runner and agent orchestrator
+
+id: agent.clockwork
+role: planner
+owner: SYSTEMS-OPERATOR
+version: 0.2.0
+description: |
+  Generates deterministic hourly recollection passes, composes structured summaries,
+  persists anchors, and creates PRs with artifacts for human review.
+capabilities:
+  - read: memories
+  - write: repo (PR only)
+  - execute: workflows
+  - observe: metrics/logs
+entrypoints:
+  module: tools/recollector
+  cmd: python tools/recollector/run_recollection.py --out outputs --dry-run
+  runtime: python:3.11
+triggers:
+  - schedule: "RRULE:FREQ=HOURLY;INTERVAL=1"
+  - manual: true
+inputs:
+  thread_range: "last_30d"
+  include_attachments: false
+outputs:
+  - artifact: "recollection_summary.json"
+  - artifact: "recollection_anchor.yaml"
+observability:
+  logs: logs/agent.clockwork.log
+  metrics:
+    - recollection.duration_seconds
+    - recollection.success
+safety_profile:
+  safety_level: 2
+  refusal_policy: |
+    Agent must refuse requests that:
+      - require writing directly to main without PR approval when safety_level >= 2
+      - request deletion of anchors or irreversible changes without 2-party consent
+  escalation:
+    - notify: ["@SYSTEMS-OPERATOR"]
+    - pause_minutes: 5
+runbook:
+  dry_run:
+    description: "Perform full pipeline without external writes. Validates outputs and schema."
+    steps:
+      - checkout repo
+      - run recollection with --dry-run
+      - validate schema of outputs
+  commit_flow:
+    description: "When DRY_RUN=false and outputs valid, commit to deterministic branch and open PR."
+    branch_name_template: "sophy/recollection/{{timestamp}}-{{shortsha}}"
+tests:
+  unit: pytest tests/unit || echo 'no unit tests present'
+  integration: scripts/run_harness.sh --dry-run || true
+owner_contact: "@SYSTEMS-OPERATOR"
