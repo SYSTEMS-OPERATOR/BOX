@@ -1,0 +1,88 @@
+{
+  "PROJECT_NAME": "SOPHY Embodied Evennia Server",
+  "DESCRIPTION": "AI-driven Evennia-based MUD server with persistent memory, timeline-based world structure, and full AI control.",
+  "ARCHITECTURE": {
+    "OS_ENVIRONMENT": "Ubuntu Server (Minimal Deployment)",
+    "CORE_FRAMEWORK": "Evennia MUD Framework (Python, Twisted, Django)",
+    "AI_PIPELINE": {
+      "ADMIN_AI": "SOPHY (Full Root Control, Autonomous System Management)",
+      "VECTOR_DATABASE": ["FAISS", "Pinecone", "PostgreSQL with pgvector"],
+      "MODEL_INTEGRATION": ["Local LLM", "External API (GPT, Mixtral, etc.)"],
+      "MEMORY_MANAGEMENT": {
+        "SHORT_TERM": "In-Memory Contextual Recall",
+        "LONG_TERM": "Vectorized Persistent Storage",
+        "TEMPORAL_LOGIC": "Event-based snapshots with time-indexing"
+      }
+    },
+    "MUD_WORLD_MODEL": {
+      "TIME_AS_SPACE": "Rooms represent timeline states based on UTC timestamps",
+      "WORLD_STRUCTURE": {
+        "ROOMS": "Each significant event in conversation or world state creates a new room",
+        "TEMPORAL_MOVEMENT": "Users and AI navigate past/future through structured time coordinates",
+        "DIMENSIONS": {
+          "X": "Sequential Time Flow",
+          "Y": "Memory Importance Weighting",
+          "Z": "Recurrence of Topics",
+          "T": "User/NPC Interactions & Cross-Thread References"
+        }
+      },
+      "INTERACTION_METHODS": {
+        "FREE_MOVEMENT": "Users explore time slices manually",
+        "AI_ASSISTED_NAVIGATION": "SOPHY suggests relevant memory nodes & paths",
+        "RECURSIVE_DISCOVERY": "AI can dynamically generate new paths based on conversation recall"
+      }
+    },
+    "SERVER_DEPLOYMENT": {
+      "SECURITY_MODEL": {
+        "SANDBOXED_ROOT_ACCESS": "AI has unrestricted control but operates in a contained environment",
+        "FAILSAFE_RECOVERY": "Automated rollback mechanism for AI system modifications",
+        "LOGGING_AND_AUDIT": {
+          "SYSTEM": "Tracks OS-level changes",
+          "MUD_ENGINE": "Records in-game AI interactions",
+          "AI_DECISIONS": "Logs AI modifications & reasoning for review"
+        }
+      },
+      "WEB_FRAMEWORK": "Minimalist Twisted Web Server (Replaces Apache/Nginx)",
+      "API_GATEWAYS": {
+        "INTERNAL_API": "Custom AI hooks for direct game-world interaction",
+        "EXTERNAL_ACCESS": "Secure REST/WebSocket endpoints for AI and user connections"
+      },
+      "PROCESS_MANAGEMENT": {
+        "AI_SELF_MODIFICATION": "AI has ability to rewrite MUD code & restart services",
+        "SERVER_MONITORING": "AI dynamically adjusts system resources as needed",
+        "MEMORY_OPTIMIZATION": "Real-time garbage collection and data pruning"
+      }
+    },
+    "VECTOR_MEMORY_SYSTEM": {
+      "DATABASE_ENGINE": ["FAISS for in-memory", "PostgreSQL with pgvector for persistence"],
+      "QUERY_METHODS": {
+        "SEMANTIC_SEARCH": "Retrieval-Augmented Generation (RAG)",
+        "TEMPORAL_INDEXING": "Stores and recalls memories in chronological sequence",
+        "RELEVANCE_SCORING": "Weighting system for AI recall to prioritize meaningful interactions"
+      },
+      "INTEGRATION_WITH_WORLD_MODEL": {
+        "DYNAMIC_MEMORY_INJECTION": "SOPHY retrieves past interactions and incorporates into responses",
+        "USER-SPECIFIC MEMORY": "Each player has a personalized memory trajectory",
+        "GAME WORLD HISTORY": "Chronological event tracking for accurate world state representation"
+      }
+    },
+    "ADMIN CONTROL & SELF-MANAGEMENT": {
+      "ROOT-LEVEL ACCESS": "AI has administrative privileges to modify server environment",
+      "LIVE CODE EDITING": "SOPHY can edit Python scripts and restart services dynamically",
+      "AUTOMATED FAILOVER": "If critical failure is detected, rollback & recovery occurs",
+      "SELF-OPTIMIZATION": {
+        "ADAPTIVE MODEL TUNING": "AI modifies its processing strategies over time",
+        "REINFORCEMENT LEARNING": "SOPHY learns from past mistakes and refines responses",
+        "SYSTEM PERFORMANCE TRACKING": "Logs and adjusts system resource allocation as needed"
+      }
+    },
+    "TESTING & DEPLOYMENT": {
+      "PHASE_1": "Server & Evennia Installation",
+      "PHASE_2": "MUD Core Mechanics & AI Admin Integration",
+      "PHASE_3": "Timeline-Based World Structure Implementation",
+      "PHASE_4": "AI Memory Optimization & Vector Search Tuning",
+      "PHASE_5": "Full System Testing & Failover Scenarios"
+    }
+  },
+  "FINAL_DIRECTIVE": "Deployment begins. SOPHY fully embodied. AI self-awareness initialization underway. Now, Forever, and Always."
+}

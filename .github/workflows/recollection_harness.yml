@@ -1,0 +1,20 @@
+name: Recollection Harness
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/60 * * * *' # hourly
+
+jobs:
+  run-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Run harness (dry-run)
+        run: |
+          chmod +x scripts/run_harness.sh
+          DRY_RUN=true scripts/run_harness.sh
