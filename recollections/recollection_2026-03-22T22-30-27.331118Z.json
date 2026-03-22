@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-03-22T22:30:27.331118Z",
+  "thread_id": "local-thread",
+  "local_digest": [
+    "user requested SOPHY_HOURLY_RECOLLECTION",
+    "recent: PR merged into BOX"
+  ],
+  "cross_thread_status": "unavailable",
+  "prior_diff": {
+    "added": [
+      "user requested SOPHY_HOURLY_RECOLLECTION",
+      "recent: PR merged into BOX"
+    ],
+    "removed": []
+  },
+  "failure_modes": [
+    {
+      "code": "FT-G-01",
+      "title": "limited_execution_context",
+      "severity": "actionable",
+      "suggested_mitigation": "Enable cross-thread read permissions or provide exports/manifests for aggregation."
+    }
+  ]
+}
