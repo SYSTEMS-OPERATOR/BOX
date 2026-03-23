@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 import argparse
 import json
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 import os
 
 
 def utc_iso_now() -> str:
-    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+    return datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
 
 def write_simple_yaml(path: str, payload: dict) -> None:
@@ -36,7 +36,7 @@ with open(os.path.join(args.outdir, 'recollection_summary.json'), 'w') as f:
     json.dump(summary, f, indent=2)
 
 anchor = {
-    'id': 'anchor-' + datetime.now(UTC).strftime('%Y%m%d%H%M%S'),
+    'id': 'anchor-' + datetime.now(timezone.utc).strftime('%Y%m%d%H%M%S'),
     'timestamp_utc': utc_iso_now(),
     'root_hash': 'deadbeef',
     'summary': 'Recollection anchor (dry run: %s)' % args.dry,

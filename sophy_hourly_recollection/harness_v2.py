@@ -101,7 +101,7 @@ def write_recollection(schema):
 
 def run(sources, prior_recollection=None):
     schema = dict(SCHEMA_TEMPLATE)
-    schema['timestamp'] = datetime.datetime.now(datetime.UTC).isoformat().replace('+00:00', 'Z')
+    schema['timestamp'] = datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00', 'Z')
     schema['thread_id'] = 'local-thread'
     schema['local_digest'] = run_local_digest(sources)
 
