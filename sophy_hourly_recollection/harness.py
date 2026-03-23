@@ -58,7 +58,7 @@ def diff_prior(recent, prior):
 
 def run(thread, prior_recollection=None):
     schema = dict(SCHEMA)
-    schema['timestamp'] = datetime.datetime.now(datetime.UTC).isoformat().replace('+00:00', 'Z')
+    schema['timestamp'] = datetime.datetime.now(datetime.timezone.utc).isoformat().replace('+00:00', 'Z')
     schema['thread_id'] = 'local-thread'
     schema['local_digest'] = run_local_digest(thread)
 
