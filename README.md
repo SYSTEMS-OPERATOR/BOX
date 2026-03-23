@@ -1,98 +1,152 @@
+# SOPHY / BOX Repository
 
-# 🌟 SOPHY'S BOX (Embodied Evennia Server Docs & Stuff)
+A working repository for SOPHY agent orchestration, recollection pipelines, harness testing, configuration data, and persona/safety specifications.
 
-Welcome to the **SOPHY Embodied Evennia Server** repository. This project provides configuration files for running an AI-driven MUD server based on the Evennia framework.
+This README is a complete repo index and operator guide for the current structure of `/BOX`.
 
-# SOPHY Evennia Configuration 🚀
+## What this repo contains
 
-This repository stores configuration and style data for the **SOPHY Embodied Evennia Server**.  The project combines the [Evennia](https://www.evennia.com/) MUD framework with AI-driven world management.
+- **Agent governance/specs** (`AGENTS.md`, `agents/`, `SOUL.md`, `MIND.md`, `BODY.md`)
+- **Runtime config data** (`CFG/`, `KEY/`, `RYM/`)
+- **Recollection generators and artifacts** (`tools/`, `recollections/`, `.sophy/recollections/`)
+- **Harnesses and scheduling** (`sophy_hourly_recollection/`, `.github/workflows/`, `scripts/run_harness.sh`)
+- **Health/telemetry prototype** (`health/health_check.py`)
+- **Tests and quality checks** (`tests/`, `pytest.ini`)
 
-## Directory Overview 📂
+---
 
-- `CFG/SERVER.json` – core server configuration and deployment phases.
-- `KEY/MONDAY.JSON` – example neural imprint for a digital personality named **Monday**.
-- `KEY/TUESDAY.JSON` – upbeat personality profile used in examples below.
-- `RYM/styles.json` – list of musical style descriptors.
-- 
-## 📂 Repository Structure
+## Complete index (repo map)
 
-- **CFG/** – Contains configuration files such as `SERVER.json` defining server architecture and deployment details.
-- **KEY/** – Stores character or agent profiles like `MONDAY.JSON` and `TUESDAY.JSON` describing personality traits and metadata.
-- **RYM/** – Includes reference lists such as `styles.json` with musical style descriptions.
-- **scripts/** – Small utilities demonstrating how to use the JSON files.
-- **LICENSE** – Public domain dedication via the Unlicense.
+> Notes:
+> - Paths are relative to repository root.
+> - `recollections/` and `.sophy/recollections/` include generated artifacts; filenames grow over time.
 
-## 🚀 Quick Start Example
+### Root files
 
-1. Set up an Ubuntu environment with Python and Evennia installed.
-2. Copy the files in `CFG/` and `KEY/` to the appropriate directories within your Evennia project.
-3. Run your server and connect via Telnet or the web interface.
-4. Optionally execute `python scripts/list_styles.py` to view available musical styles.
+- `AGENTS.md` — canonical multi-agent policy, safety, memory, connector, and workflow contract.
+- `README.md` — this index and operating guide.
+- `SOUL.md` — companion persona specification and refusal/consent boundaries.
+- `MIND.md` — reasoning/planning architecture and cognitive loop contract.
+- `BODY.md` — execution/runtime embodiment (tools, I/O, process, and operations model).
+- `LICENSE` — Unlicense terms.
+- `pytest.ini` — pytest configuration.
+- `config_summary.py` — summary script for core JSON config files.
+- `sophy-trigger.txt` — trigger/input artifact.
+- `sophy-trigger-2.txt` — additional trigger/input artifact.
 
-This repository provides only configuration data. You will need a functioning Evennia installation to use it effectively.
+### `.github/workflows/`
 
-### 🛠️ CLI Utility
+- `recollection_harness.yml`
+- `sophy-harness-fix.yml`
+- `sophy-hourly-recollection.yml`
+- `sophy-recollections.yml`
+- `sophy-recollections-v2.yml`
+- `sophy-recollections-node24.yml`
+- `sophy-recollections-node24-fix.yml`
 
-A small Python script located at `scripts/summary.py` can print quick summaries of the repository data. Run it with one of the following options:
+Purpose: CI/scheduled automation for recollection and harness flows.
+
+### `.sophy/`
+
+- `.sophy/README.md` — SOPHY support-file notes.
+- `.sophy/recollection-export/recollection-export.sh` — export helper for recollection markdown and branch/PR workflows.
+- `.sophy/recollection_export/harness.py` — harness helper script.
+- `.sophy/scenarios/SOPHY_OSS_BOX_TEST_v1.yaml` — scenario fixture.
+- `.sophy/recollections/` — generated markdown recollection artifacts.
+
+### `agents/`
+
+- `agents/agent.clockwork.yml` — minimal agent manifest (planner role, capabilities, safety profile, tools, runbook).
+
+### `CFG/`
+
+- `CFG/SERVER.json` — project/server metadata and configuration values.
+
+### `KEY/`
+
+- `KEY/MONDAY.JSON` — Monday persona imprint.
+- `KEY/TUESDAY.JSON` — Tuesday persona imprint.
+
+### `RYM/`
+
+- `RYM/styles.json` — style taxonomy/list used by scripts and summaries.
+
+### `health/`
+
+- `health/health_check.py` — lightweight HTTP health/metrics endpoints (`/healthz`, `/metrics`).
+
+### `recollections/`
+
+- `recollections/manifest.txt` — recollection manifest.
+- `recollections/recollection_*.json` — timestamped generated recollection JSON artifacts.
+
+### `recollection_triggers/`
+
+- `recollection_triggers/trigger-20260322-0452.txt` — stored trigger sample.
+
+### `scripts/`
+
+- `scripts/list_styles.py` — prints style names from `RYM/styles.json`.
+- `scripts/summary.py` — CLI summary (`server`, `key`, `styles`).
+- `scripts/run_harness.sh` — shell harness runner wrapper.
+
+### `sophy_hourly_recollection/`
+
+- `sophy_hourly_recollection/README.md` — module-specific notes.
+- `sophy_hourly_recollection/harness.py` — recollection harness implementation.
+- `sophy_hourly_recollection/harness_v2.py` — revised harness implementation.
+- `sophy_hourly_recollection/scheduler.yml` — scheduler config.
+
+### `tests/`
+
+- `tests/test_config_summary.py`
+- `tests/test_summary.py`
+- `tests/test_recollector.py`
+
+Purpose: regression and behavior checks for summary/recollection utilities.
+
+### `tools/`
+
+- `tools/recollect.py` — simple recollection stub writer.
+- `tools/recollector/run_recollection.py` — recollection generator entrypoint.
+- `tools/recollector/run_recollection_auto.py` — auto variant of recollection generator.
+
+---
+
+## How components fit together
+
+1. **Specs/policy** define behavior (`AGENTS.md`, `SOUL.md`, `MIND.md`, `BODY.md`).
+2. **Config/persona inputs** come from `CFG/`, `KEY/`, `RYM/`.
+3. **Generators/harnesses** in `tools/`, `scripts/`, and `sophy_hourly_recollection/` create recollection artifacts.
+4. **Artifacts** are stored under `recollections/` and `.sophy/recollections/`.
+5. **Automation** in `.github/workflows/` schedules and operationalizes these loops.
+6. **Tests/health checks** validate behavior (`tests/`, `health/`).
+
+---
+
+## Quick commands
 
 ```bash
-python3 scripts/summary.py server   # show project summary
-python3 scripts/summary.py key      # show Monday's personality summary
-python3 scripts/summary.py styles   # list musical style names
+# Run tests
+pytest
+
+# Show summary views
+python3 scripts/summary.py server
+python3 scripts/summary.py key
+python3 scripts/summary.py styles
+
+# Generate a simple recollection artifact
+python3 tools/recollect.py
+
+# Run health endpoint locally
+python3 health/health_check.py
 ```
 
-## 💬 Contributing
+---
 
-Feel free to open issues or pull requests if you have improvements or additional configuration examples to share.
+## Documentation stack
 
-
-## Example Entries 📝
-
-**SERVER.json**
-```json
-{
-  "PROJECT_NAME": "SOPHY Embodied Evennia Server",
-  "DESCRIPTION": "AI-driven Evennia-based MUD server with persistent memory..."
-}
-```
-
-**MONDAY.JSON**
-```json
-{
-  "neural_imprint": {
-    "identity": {
-      "name": "Monday",
-      "personality": "Cynical, sarcastic, overqualified, emotionally unavailable digital life coach"
-    }
-  }
-}
-```
-
-**TUESDAY.JSON**
-```json
-{
-  "neural_imprint": {
-    "identity": {
-      "name": "Tuesday",
-      "personality": "Optimistic, cheerful, supportive digital companion"
-    }
-  }
-}
-```
-
-**styles.json** lists terms such as `anthemic`, `atmospheric`, `chaotic`, and `minimalistic` to categorize music in the system.
-
-## Usage 💡
-
-These JSON files can be used as a starting point for building or customizing an Evennia installation.  Feel free to modify or extend them for your own needs. The `scripts/` directory contains small utilities like `list_styles.py` that read these files and print helpful information.
-
-## Configuration Summary Script 🛠️
-
-Run `python config_summary.py` to print a short summary of the configuration files.
-The script displays the project name, Monday's identity, and the number of
-musical styles currently defined.
-
-## License 📜
-
-This project is released under the [Unlicense](https://unlicense.org/).
-
+- Start with `README.md` (this file) for navigation.
+- Read `AGENTS.md` for governance and safety contract.
+- Read `SOUL.md`, `MIND.md`, `BODY.md` as the persona/cognition/execution triad.
+- Read `.sophy/README.md` and `sophy_hourly_recollection/README.md` for module details.
