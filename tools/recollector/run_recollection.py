@@ -1,8 +1,19 @@
 #!/usr/bin/env python3
 import argparse
 import json
-from datetime import datetime
+from datetime import UTC, datetime
 import os
+
+
+def utc_iso_now() -> str:
+    return datetime.now(UTC).isoformat().replace("+00:00", "Z")
+
+
+def write_simple_yaml(path: str, payload: dict) -> None:
+    with open(path, "w", encoding="utf-8") as f:
+        for key, value in payload.items():
+            rendered = str(value).replace("'", "''")
+            f.write(f"{key}: '{rendered}'\n")
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--in', dest='infile', required=True)
@@ -14,7 +25,7 @@ with open(args.infile, 'r') as f:
     threads = json.load(f)
 
 summary = {
-    'generated_at': datetime.utcnow().isoformat() + 'Z',
+    'generated_at': utc_iso_now(),
     'threads_processed': len(threads),
     'threads': threads,
     'summary': 'Auto-generated recollection (dry run: %s)' % args.dry
@@ -25,14 +36,12 @@ with open(os.path.join(args.outdir, 'recollection_summary.json'), 'w') as f:
     json.dump(summary, f, indent=2)
 
 anchor = {
-    'id': 'anchor-' + datetime.utcnow().strftime('%Y%m%d%H%M%S'),
-    'timestamp_utc': datetime.utcnow().isoformat() + 'Z',
+    'id': 'anchor-' + datetime.now(UTC).strftime('%Y%m%d%H%M%S'),
+    'timestamp_utc': utc_iso_now(),
     'root_hash': 'deadbeef',
     'summary': 'Recollection anchor (dry run: %s)' % args.dry,
     'signed_by': 'agent.clockwork'
 }
-with open(os.path.join(args.outdir, 'recollection_anchor.yaml'), 'w') as f:
-    import yaml
-    yaml.dump(anchor, f)
+write_simple_yaml(os.path.join(args.outdir, 'recollection_anchor.yaml'), anchor)
 
 print('Recollection written to', args.outdir)
