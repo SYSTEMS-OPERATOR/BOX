@@ -6,12 +6,13 @@ current conversation thread (last 10 turns), attempts cross-thread retrieval
 (30-day window) if connector permissions allow, diffs against prior recollections,
 and emits a strict JSON schema.
 
-Failure code FT-G-01 will be emitted if the environment prevents full cross-thread
-reads or persistent write access.
+Failure code FT-G-01 will be emitted only when neither connector access nor
+local recollection history is available.
 """
 
-import json
 import datetime
+import glob
+import json
 
 SCHEMA = {
     "timestamp": None,
@@ -28,10 +29,26 @@ def run_local_digest(thread):
     return thread[-10:]
 
 
-def attempt_cross_thread_retrieval():
-    # In this environment, cross-thread reads are not guaranteed.
-    # Return None and mark FT-G-01 if not available.
-    return None, {"code": "FT-G-01", "title": "limited_execution_context", "severity": "actionable"}
+def attempt_cross_thread_retrieval(max_entries=24):
+    files = sorted(glob.glob('recollections/recollection_*.json'), reverse=True)
+    for path in files[:max_entries]:
+        try:
+            with open(path, 'r', encoding='utf-8') as handle:
+                data = json.load(handle)
+            return {
+                'source': 'local-recollections',
+                'latest_timestamp': data.get('timestamp'),
+                'latest_local_digest': data.get('local_digest', [])
+            }, None
+        except (OSError, json.JSONDecodeError):
+            continue
+
+    return None, {
+        "code": "FT-G-01",
+        "title": "limited_execution_context",
+        "severity": "actionable",
+        "suggested_mitigation": "Enable cross-thread read permissions or provide exports/manifests for aggregation."
+    }
 
 
 def diff_prior(recent, prior):
@@ -41,7 +58,7 @@ def diff_prior(recent, prior):
 
 def run(thread, prior_recollection=None):
     schema = dict(SCHEMA)
-    schema['timestamp'] = datetime.datetime.utcnow().isoformat() + 'Z'
+    schema['timestamp'] = datetime.datetime.now(datetime.UTC).isoformat().replace('+00:00', 'Z')
     schema['thread_id'] = 'local-thread'
     schema['local_digest'] = run_local_digest(thread)
 
@@ -53,6 +70,9 @@ def run(thread, prior_recollection=None):
         schema['cross_thread_status'] = 'available'
         schema['cross_thread_data'] = cross
 
-    schema['prior_diff'] = diff_prior(schema['local_digest'], prior_recollection)
+    effective_prior = prior_recollection
+    if effective_prior is None and cross is not None:
+        effective_prior = cross.get('latest_local_digest', [])
+    schema['prior_diff'] = diff_prior(schema['local_digest'], effective_prior)
 
     return schema
