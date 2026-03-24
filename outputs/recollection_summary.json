@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-03-24T14:16:29.145045Z",
+  "threads_processed": 2,
+  "threads": [
+    {
+      "thread_id": "t1",
+      "last_updated": "2026-03-19T12:00:00Z",
+      "summary": "Test thread 1"
+    },
+    {
+      "thread_id": "t2",
+      "last_updated": "2026-03-20T09:00:00Z",
+      "summary": "Test thread 2"
+    }
+  ],
+  "summary": "Auto-generated recollection (dry run: True)"
+}
