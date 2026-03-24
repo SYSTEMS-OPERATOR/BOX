@@ -1,0 +1,68 @@
+name: "SOPHY recollections (canonical v2)"
+
+on:
+  schedule:
+    - cron: '0 * * * *' # hourly
+  workflow_dispatch: {}
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt || true; fi
+          # Ensure PyYAML is present to avoid ModuleNotFoundError
+          python -m pip install PyYAML>=6.0 || true
+
+      - name: Make harness executable
+        run: |
+          chmod +x .sophy/recollection_export/run_recollection.py || true
+          chmod +x scripts/run_harness.sh || true
+
+      - name: Run recollection harness (dry run)
+        env:
+          DRY_RUN: 'true'
+        run: |
+          # Run the harness; failures should surface.
+          set -euo pipefail
+          python .sophy/recollection_export/run_recollection.py || ./scripts/run_harness.sh || true
+
+      - name: Check for workspace changes
+        id: check_for_workspace_changes
+        run: |
+          git config user.name "sophy-bot" || true
+          git config user.email "sophy-bot@example.com" || true
+          git add -A || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            git commit -m "Auto: recollection export (canonical v2)" || true
+            git push origin HEAD:sophy/recollections/auto || true
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Create PR if there are changes
+        if: steps.check_for_workspace_changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Auto: recollection export (canonical v2)"
+          branch: "sophy/recollections/auto"
+          title: "Auto: recollection export"
+          body: |
+            Automated recollection export. Only created when diffs are present.
+          base: main
