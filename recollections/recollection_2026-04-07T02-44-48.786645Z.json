@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-07T02:44:48.786645Z",
+  "thread_id": "local-thread",
+  "local_digest": [
+    "user requested SOPHY_HOURLY_RECOLLECTION",
+    "recent: PR merged into BOX"
+  ],
+  "cross_thread_status": "available",
+  "prior_diff": {
+    "added": [],
+    "removed": []
+  },
+  "failure_modes": [],
+  "cross_thread_data": {
+    "source": "local-recollections",
+    "sampled_recollections": 24,
+    "latest_timestamp": "2026-04-06T23:40:22.578256Z",
+    "latest_local_digest": [
+      "user requested SOPHY_HOURLY_RECOLLECTION",
+      "recent: PR merged into BOX"
+    ],
+    "unique_recent_events": [
+      "user requested SOPHY_HOURLY_RECOLLECTION",
+      "recent: PR merged into BOX"
+    ]
+  }
+}
