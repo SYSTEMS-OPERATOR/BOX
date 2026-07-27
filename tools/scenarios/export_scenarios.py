@@ -16,7 +16,7 @@ from typing import Any
 import yaml
 
 
-REQUIRED_KEYS = {"title", "version", "purpose", "mode", "actors", "constraints"}
+REQUIRED_KEYS = {"title", "purpose", "mode", "actors", "constraints"}
 
 
 def sha256(path: Path) -> str:
@@ -66,7 +66,7 @@ def render_markdown(data: dict[str, Any], source: Path) -> str:
     lines = [
         f"# {title}",
         "",
-        f"- **Version:** {data.get('version', 'unspecified')}",
+        f"- **Version:** {data.get('version', 'legacy/unspecified')}",
         f"- **Mode:** {data.get('mode', 'unspecified')}",
         f"- **Source:** `{source.as_posix()}`",
         "",
