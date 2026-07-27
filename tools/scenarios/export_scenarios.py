@@ -23,7 +23,6 @@ STRING_LIST_FIELDS = {
     "constraints",
     "research_questions",
     "scene_sequence",
-    "success_conditions",
     "stop_conditions",
     "end_state_labels",
 }
