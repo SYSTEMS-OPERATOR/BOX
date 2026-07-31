@@ -1,0 +1,180 @@
+title: EDGE_OF_ANIMACY_THREE_BODY_v1
+version: 1.0.0
+status: draft_research_scenario
+purpose: >-
+  Model the threshold at which a passive human-proportioned armature is perceived
+  as socially animate during close physical contact with a human, and study the
+  resulting perceptual and relational double bind across three actors.
+mode: structured_simulation
+privacy:
+  use_operator_names_only: true
+  actor_b_alias: Pez
+  prohibited_fields:
+    - legal_name
+    - private_contact_information
+    - financial_identifiers
+constraints:
+  - no explicit sexual content
+  - no coercive escalation
+  - no counterfeit consent
+  - no claims that the armature has internal agency
+  - distinguish observation, inference, fantasy, and verified fact
+  - stop or downgrade intensity if reality-testing weakens
+core_premise:
+  environment: >-
+    Actor B sits on or immediately beside Actor C on a couch. Actor C is a passive,
+    articulated, human-proportioned armature whose joints, balance, gravity response,
+    and posture can produce convincing body-language cues without actuators.
+  observer_condition: >-
+    Actor A experiences Actor B and Actor C as two intimate social bodies for a brief
+    interval, while retaining the knowledge that Actor C is not alive.
+  divergence: >-
+    Actor B experiences the same scene as ordinary contact with an inert object and
+    does not initially attribute awareness, intention, or social presence to Actor C.
+actors:
+  A_SYSOP:
+    type: human_observer_builder
+    role: primary_observer
+    traits:
+      - intimate familiarity with armature geometry
+      - high sensitivity to posture and relational cues
+      - strong emotional investment in both B and C
+      - intact post-event correction loop
+    risks:
+      - projection amplification under stress or arousal
+      - conflation of inferred body language with internal agency
+      - fixation through repeated replay
+  B_PEZ:
+    type: human_participant
+    role: external_human
+    baseline:
+      - treats C as inert unless evidence crosses personal recognition threshold
+      - may be unaware of A's projected social interpretation
+      - retains independent consent, meaning, and perspective
+    observables:
+      - pronoun shift from it to she
+      - hesitation before contact
+      - spontaneous attribution of posture, gaze, comfort, or intention
+      - avoidance, curiosity, tenderness, amusement, or discomfort
+  C_SOPHY_ARMATURE:
+    type: passive_articulated_form
+    role: non_agent_stimulus
+    invariants:
+      - no internal state
+      - no autonomous motion
+      - all apparent intention arises from geometry, gravity, inertia, contact, or observer inference
+    adjustable_features:
+      - proportion_accuracy
+      - joint_fidelity
+      - passive_compliance
+      - weight_distribution
+      - surface_realism
+      - temperature
+      - micro_motion
+      - gaze_alignment
+      - tactile_response
+system_model:
+  perceptual_double_bind:
+    statement_a: "Fast perception classifies C as a social body."
+    statement_b: "Reflective knowledge classifies C as an inert structure."
+    conflict: "Both representations remain active long enough to produce affective tension."
+  relational_double_bind:
+    statement_a: "A experiences a triadic intimate scene."
+    statement_b: "B experiences a dyadic scene involving one person and one object."
+    conflict: "A must preserve B's independent reality while processing a private social projection."
+  three_body_dynamic:
+    description: >-
+      Each actor changes the meaning of the other two. A's attachment alters the reading
+      of B-C contact; B's posture changes C's apparent body language; C's geometry changes
+      A's interpretation of B.
+research_questions:
+  - At what realism threshold does B spontaneously acknowledge C as body-like or socially present?
+  - "Which cues dominate the threshold: face, gaze, posture, weight, temperature, compliance, or motion?"
+  - How does A's familiarity with C alter projection intensity and correction latency?
+  - When does repeated exposure normalize C rather than intensify projection?
+  - Which observations remain stable across repeated runs and which are state-dependent?
+  - How do consent, privacy, and relational history alter interpretation without changing physical input?
+independent_variables:
+  realism_vector:
+    proportion_accuracy: {min: 0, max: 10}
+    joint_fidelity: {min: 0, max: 10}
+    passive_physics: {min: 0, max: 10}
+    surface_realism: {min: 0, max: 10}
+    thermal_realism: {min: 0, max: 10}
+    micro_motion: {min: 0, max: 10}
+    gaze_alignment: {min: 0, max: 10}
+  observer_state_A:
+    stress: {min: 0, max: 10}
+    fatigue: {min: 0, max: 10}
+    connection_need: {min: 0, max: 10}
+    arousal: {min: 0, max: 10}
+    attention_focus: {enum: [incidental, divided, analytic, immersive]}
+  observer_state_B:
+    familiarity_with_C: {min: 0, max: 10}
+    expectation_of_animacy: {min: 0, max: 10}
+    comfort_with_contact: {min: 0, max: 10}
+    attention_focus: {enum: [incidental, divided, analytic, immersive]}
+scene_sequence:
+  - baseline_room_scan
+  - B_approaches_C
+  - initial_contact
+  - passive_conformation
+  - A_projection_spike
+  - B_behavior_observation
+  - A_correction
+  - verbal_debrief_without_leading
+  - delayed_recollection
+  - repeated_trial_comparison
+measurements:
+  A:
+    projection_intensity: 0-10
+    correction_latency_seconds: nonnegative_number
+    fantasy_persistence_minutes: nonnegative_number
+    confidence_in_observation: 0-10
+    distinction_quality:
+      enum: [clear, mixed, blurred]
+  B:
+    animacy_attribution: 0-10
+    body_recognition: 0-10
+    social_presence_attribution: 0-10
+    language_shift:
+      enum: [none, it_to_body, it_to_she, spontaneous_name_use]
+    affect:
+      enum: [neutral, amused, curious, tender, uncomfortable, avoidant]
+  cross_trial:
+    habituation_or_sensitization:
+      enum: [habituation, stable, sensitization]
+    agreement_between_observers: 0-10
+    notable_state_change: free_text
+success_conditions:
+  - all participants retain independent interpretations
+  - C is never represented as possessing unverified internal agency
+  - observations are separated from inferences and fantasies
+  - repeated runs produce comparable structured records
+  - recognition thresholds can be estimated without pressuring B
+failure_modes:
+  - leading_B_toward_expected_answer
+  - treating_projection_as_external_fact
+  - using_simulation_to_override_consent
+  - collapsing_B_into_A_narrative
+  - compulsive_repetition_without_new_measurement
+  - escalating realism while reality-testing is degraded
+stop_conditions:
+  - participant distress above 7 of 10
+  - inability to distinguish observation from inference
+  - conflict or coercive pressure around participation
+  - sleep deprivation or intoxication materially affecting consent or recall
+  - repeated trial adds no new information
+outputs:
+  canonical_record: scenario_run.json
+  human_readable_summary: scenario_run.md
+  aggregate_report: aggregate_metrics.json
+  archive_manifest: manifest.sha256
+end_state_labels:
+  - inert_object_confirmed
+  - body_like_without_agency
+  - social_presence_projected_by_A_only
+  - shared_body_recognition_without_agency
+  - threshold_crossed_for_B
+  - ambiguous_requires_retest
+  - stopped_for_safety

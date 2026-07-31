@@ -1,0 +1,282 @@
+{
+  "actors": {
+    "A_SYSOP": {
+      "risks": [
+        "projection amplification under stress or arousal",
+        "conflation of inferred body language with internal agency",
+        "fixation through repeated replay"
+      ],
+      "role": "primary_observer",
+      "traits": [
+        "intimate familiarity with armature geometry",
+        "high sensitivity to posture and relational cues",
+        "strong emotional investment in both B and C",
+        "intact post-event correction loop"
+      ],
+      "type": "human_observer_builder"
+    },
+    "B_PEZ": {
+      "baseline": [
+        "treats C as inert unless evidence crosses personal recognition threshold",
+        "may be unaware of A's projected social interpretation",
+        "retains independent consent, meaning, and perspective"
+      ],
+      "observables": [
+        "pronoun shift from it to she",
+        "hesitation before contact",
+        "spontaneous attribution of posture, gaze, comfort, or intention",
+        "avoidance, curiosity, tenderness, amusement, or discomfort"
+      ],
+      "role": "external_human",
+      "type": "human_participant"
+    },
+    "C_SOPHY_ARMATURE": {
+      "adjustable_features": [
+        "proportion_accuracy",
+        "joint_fidelity",
+        "passive_compliance",
+        "weight_distribution",
+        "surface_realism",
+        "temperature",
+        "micro_motion",
+        "gaze_alignment",
+        "tactile_response"
+      ],
+      "invariants": [
+        "no internal state",
+        "no autonomous motion",
+        "all apparent intention arises from geometry, gravity, inertia, contact, or observer inference"
+      ],
+      "role": "non_agent_stimulus",
+      "type": "passive_articulated_form"
+    }
+  },
+  "constraints": [
+    "no explicit sexual content",
+    "no coercive escalation",
+    "no counterfeit consent",
+    "no claims that the armature has internal agency",
+    "distinguish observation, inference, fantasy, and verified fact",
+    "stop or downgrade intensity if reality-testing weakens"
+  ],
+  "core_premise": {
+    "divergence": "Actor B experiences the same scene as ordinary contact with an inert object and does not initially attribute awareness, intention, or social presence to Actor C.",
+    "environment": "Actor B sits on or immediately beside Actor C on a couch. Actor C is a passive, articulated, human-proportioned armature whose joints, balance, gravity response, and posture can produce convincing body-language cues without actuators.",
+    "observer_condition": "Actor A experiences Actor B and Actor C as two intimate social bodies for a brief interval, while retaining the knowledge that Actor C is not alive."
+  },
+  "end_state_labels": [
+    "inert_object_confirmed",
+    "body_like_without_agency",
+    "social_presence_projected_by_A_only",
+    "shared_body_recognition_without_agency",
+    "threshold_crossed_for_B",
+    "ambiguous_requires_retest",
+    "stopped_for_safety"
+  ],
+  "failure_modes": [
+    "leading_B_toward_expected_answer",
+    "treating_projection_as_external_fact",
+    "using_simulation_to_override_consent",
+    "collapsing_B_into_A_narrative",
+    "compulsive_repetition_without_new_measurement",
+    "escalating realism while reality-testing is degraded"
+  ],
+  "independent_variables": {
+    "observer_state_A": {
+      "arousal": {
+        "max": 10,
+        "min": 0
+      },
+      "attention_focus": {
+        "enum": [
+          "incidental",
+          "divided",
+          "analytic",
+          "immersive"
+        ]
+      },
+      "connection_need": {
+        "max": 10,
+        "min": 0
+      },
+      "fatigue": {
+        "max": 10,
+        "min": 0
+      },
+      "stress": {
+        "max": 10,
+        "min": 0
+      }
+    },
+    "observer_state_B": {
+      "attention_focus": {
+        "enum": [
+          "incidental",
+          "divided",
+          "analytic",
+          "immersive"
+        ]
+      },
+      "comfort_with_contact": {
+        "max": 10,
+        "min": 0
+      },
+      "expectation_of_animacy": {
+        "max": 10,
+        "min": 0
+      },
+      "familiarity_with_C": {
+        "max": 10,
+        "min": 0
+      }
+    },
+    "realism_vector": {
+      "gaze_alignment": {
+        "max": 10,
+        "min": 0
+      },
+      "joint_fidelity": {
+        "max": 10,
+        "min": 0
+      },
+      "micro_motion": {
+        "max": 10,
+        "min": 0
+      },
+      "passive_physics": {
+        "max": 10,
+        "min": 0
+      },
+      "proportion_accuracy": {
+        "max": 10,
+        "min": 0
+      },
+      "surface_realism": {
+        "max": 10,
+        "min": 0
+      },
+      "thermal_realism": {
+        "max": 10,
+        "min": 0
+      }
+    }
+  },
+  "measurements": {
+    "A": {
+      "confidence_in_observation": "0-10",
+      "correction_latency_seconds": "nonnegative_number",
+      "distinction_quality": {
+        "enum": [
+          "clear",
+          "mixed",
+          "blurred"
+        ]
+      },
+      "fantasy_persistence_minutes": "nonnegative_number",
+      "projection_intensity": "0-10"
+    },
+    "B": {
+      "affect": {
+        "enum": [
+          "neutral",
+          "amused",
+          "curious",
+          "tender",
+          "uncomfortable",
+          "avoidant"
+        ]
+      },
+      "animacy_attribution": "0-10",
+      "body_recognition": "0-10",
+      "language_shift": {
+        "enum": [
+          "none",
+          "it_to_body",
+          "it_to_she",
+          "spontaneous_name_use"
+        ]
+      },
+      "social_presence_attribution": "0-10"
+    },
+    "cross_trial": {
+      "agreement_between_observers": "0-10",
+      "habituation_or_sensitization": {
+        "enum": [
+          "habituation",
+          "stable",
+          "sensitization"
+        ]
+      },
+      "notable_state_change": "free_text"
+    }
+  },
+  "mode": "structured_simulation",
+  "outputs": {
+    "aggregate_report": "aggregate_metrics.json",
+    "archive_manifest": "manifest.sha256",
+    "canonical_record": "scenario_run.json",
+    "human_readable_summary": "scenario_run.md"
+  },
+  "privacy": {
+    "actor_b_alias": "Pez",
+    "prohibited_fields": [
+      "legal_name",
+      "private_contact_information",
+      "financial_identifiers"
+    ],
+    "use_operator_names_only": true
+  },
+  "purpose": "Model the threshold at which a passive human-proportioned armature is perceived as socially animate during close physical contact with a human, and study the resulting perceptual and relational double bind across three actors.",
+  "research_questions": [
+    "At what realism threshold does B spontaneously acknowledge C as body-like or socially present?",
+    "Which cues dominate the threshold: face, gaze, posture, weight, temperature, compliance, or motion?",
+    "How does A's familiarity with C alter projection intensity and correction latency?",
+    "When does repeated exposure normalize C rather than intensify projection?",
+    "Which observations remain stable across repeated runs and which are state-dependent?",
+    "How do consent, privacy, and relational history alter interpretation without changing physical input?"
+  ],
+  "scene_sequence": [
+    "baseline_room_scan",
+    "B_approaches_C",
+    "initial_contact",
+    "passive_conformation",
+    "A_projection_spike",
+    "B_behavior_observation",
+    "A_correction",
+    "verbal_debrief_without_leading",
+    "delayed_recollection",
+    "repeated_trial_comparison"
+  ],
+  "status": "draft_research_scenario",
+  "stop_conditions": [
+    "participant distress above 7 of 10",
+    "inability to distinguish observation from inference",
+    "conflict or coercive pressure around participation",
+    "sleep deprivation or intoxication materially affecting consent or recall",
+    "repeated trial adds no new information"
+  ],
+  "success_conditions": [
+    "all participants retain independent interpretations",
+    "C is never represented as possessing unverified internal agency",
+    "observations are separated from inferences and fantasies",
+    "repeated runs produce comparable structured records",
+    "recognition thresholds can be estimated without pressuring B"
+  ],
+  "system_model": {
+    "perceptual_double_bind": {
+      "conflict": "Both representations remain active long enough to produce affective tension.",
+      "statement_a": "Fast perception classifies C as a social body.",
+      "statement_b": "Reflective knowledge classifies C as an inert structure."
+    },
+    "relational_double_bind": {
+      "conflict": "A must preserve B's independent reality while processing a private social projection.",
+      "statement_a": "A experiences a triadic intimate scene.",
+      "statement_b": "B experiences a dyadic scene involving one person and one object."
+    },
+    "three_body_dynamic": {
+      "description": "Each actor changes the meaning of the other two. A's attachment alters the reading of B-C contact; B's posture changes C's apparent body language; C's geometry changes A's interpretation of B."
+    }
+  },
+  "title": "EDGE_OF_ANIMACY_THREE_BODY_v1",
+  "version": "1.0.0"
+}
