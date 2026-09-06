@@ -52,6 +52,9 @@ Purpose: CI/scheduled automation for recollection and harness flows.
 - `.sophy/recollection-export/recollection-export.sh` — export helper for recollection markdown and branch/PR workflows.
 - `.sophy/recollection_export/harness.py` — harness helper script.
 - `.sophy/scenarios/SOPHY_OSS_BOX_TEST_v1.yaml` — scenario fixture.
+- `.sophy/scenarios/EDGE_OF_ANIMACY_THREE_BODY_v1.yaml` — passive-armature observer scenario.
+- `.sophy/scenarios/EDGE_OF_ANIMACY_THREE_BODY_SOLUTION_v1.md` — constructive consistency proof and threshold-identification limits.
+- `.sophy/scenarios/solutions/20260906-three-body/` — reproducible synthetic proof records and SHA-256 manifest.
 - `.sophy/recollections/` — generated markdown recollection artifacts.
 
 ### `agents/`
@@ -110,6 +113,7 @@ Purpose: regression and behavior checks for summary/recollection utilities.
 - `tools/recollect.py` — simple recollection stub writer.
 - `tools/recollector/run_recollection.py` — recollection generator entrypoint.
 - `tools/recollector/run_recollection_auto.py` — auto variant of recollection generator.
+- `tools/scenarios/solve_three_body.py` — executable synthetic three-body proof and conditional threshold bounds.
 
 ---
 
@@ -129,6 +133,9 @@ Purpose: regression and behavior checks for summary/recollection utilities.
 ```bash
 # Run tests
 pytest
+
+# Verify the three-body scenario's constructive proof (no human trial)
+python3 tools/scenarios/solve_three_body.py
 
 # Show summary views
 python3 scripts/summary.py server

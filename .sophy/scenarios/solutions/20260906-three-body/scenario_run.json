@@ -1,0 +1,119 @@
+{
+  "channels": {
+    "affect": {
+      "A": "not_measured",
+      "B": "not_measured"
+    },
+    "fantasy": {
+      "A": [],
+      "B": []
+    },
+    "inference": {
+      "A": {
+        "reflective_agency_belief": false,
+        "social_presence": true,
+        "threshold": "3"
+      },
+      "B": {
+        "reflective_agency_belief": false,
+        "social_presence": false,
+        "threshold": "7"
+      },
+      "provenance": "assumed_threshold_model_not_actual_participant_reports"
+    },
+    "observation": {
+      "cue_score": "6",
+      "mechanical_samples": [
+        {
+          "acceleration": 0.0,
+          "actuator_input": 0,
+          "agency": false,
+          "energy_about_loaded_equilibrium": 0.10000000000000002,
+          "energy_derivative": -0.08000000000000002,
+          "equation_residual": 0.0,
+          "q": 0.6,
+          "t": 0,
+          "v": 0.2
+        },
+        {
+          "acceleration": -0.06065306597126334,
+          "actuator_input": 0,
+          "agency": false,
+          "energy_about_loaded_equilibrium": 0.06253950499914519,
+          "energy_derivative": -0.06621829941085962,
+          "equation_residual": 0.0,
+          "q": 0.6967346701436833,
+          "t": 0.5,
+          "v": 0.18195919791379003
+        },
+        {
+          "acceleration": -0.07357588823428847,
+          "actuator_input": 0,
+          "agency": false,
+          "energy_about_loaded_equilibrium": 0.035187173641519305,
+          "energy_derivative": -0.04330729063571607,
+          "equation_residual": 0.0,
+          "q": 0.7792723352971346,
+          "t": 1,
+          "v": 0.14715177646857694
+        },
+        {
+          "acceleration": -0.054134113294645084,
+          "actuator_input": 0,
+          "agency": false,
+          "energy_about_loaded_equilibrium": 0.00915781944436709,
+          "energy_derivative": -0.013187259999888611,
+          "equation_residual": 0.0,
+          "q": 0.8917317734107099,
+          "t": 2,
+          "v": 0.08120116994196762
+        },
+        {
+          "acceleration": -0.014652511110987343,
+          "actuator_input": 0,
+          "agency": false,
+          "energy_about_loaded_equilibrium": 0.0004092644060410645,
+          "energy_derivative": -0.0006709252558050236,
+          "equation_residual": 0.0,
+          "q": 0.978021233333519,
+          "t": 4,
+          "v": 0.01831563888873418
+        },
+        {
+          "acceleration": -0.0005367402046440189,
+          "actuator_input": 0,
+          "agency": false,
+          "energy_about_loaded_equilibrium": 4.073773324837241e-07,
+          "energy_derivative": -7.292279321807992e-07,
+          "equation_residual": 0.0,
+          "q": 0.999329074744195,
+          "t": 8,
+          "v": 0.0006038327302245214
+        }
+      ],
+      "provenance": "generated_model_state_not_sensor_or_witness_data"
+    }
+  },
+  "claims": {
+    "actual_B_threshold": "not_estimated_no_trial_data",
+    "autonomous_agency_of_C": false,
+    "proved": [
+      "consistency of observer divergence with a passive armature",
+      "nonidentifiability of B's threshold from one negative report in the toy model"
+    ]
+  },
+  "end_state": "social_presence_projected_by_A_only",
+  "evidence_kind": "synthetic_constructive_witness",
+  "human_trials_performed": 0,
+  "participation": {
+    "provenance": "synthetic_fixture_only",
+    "real_participant_consent": "not_sought_no_human_trial",
+    "stop_reasons": []
+  },
+  "scenario": "EDGE_OF_ANIMACY_THREE_BODY_v1",
+  "solver_version": "1.0.0",
+  "source_sha256": {
+    ".sophy/scenarios/EDGE_OF_ANIMACY_THREE_BODY_v1.md": "6def5960c64db17c5bb5217ead86c11ac169113cead5fde3de99c55ad8f866a8",
+    ".sophy/scenarios/EDGE_OF_ANIMACY_THREE_BODY_v1.yaml": "9ec24e526c84d61f68d54a4a009c4eb6651519aed3cdd70d94b0c7843a17efee"
+  }
+}
