@@ -1,0 +1,68 @@
+{
+  "Boolean_model_state_count": 4,
+  "Boolean_model_states": [
+    {
+      "A_social": false,
+      "B_social": false,
+      "C_agency": false
+    },
+    {
+      "A_social": false,
+      "B_social": true,
+      "C_agency": false
+    },
+    {
+      "A_social": true,
+      "B_social": false,
+      "C_agency": false
+    },
+    {
+      "A_social": true,
+      "B_social": true,
+      "C_agency": false
+    }
+  ],
+  "actual_B_threshold": "not_estimated_no_trial_data",
+  "analytic_energy_law": "dE/dt = -2*v^2 <= 0 after constant contact load is established",
+  "countermodels": [
+    {
+      "prediction_at_8": true,
+      "response_at_6": false,
+      "threshold_B": "7"
+    },
+    {
+      "prediction_at_8": false,
+      "response_at_6": false,
+      "threshold_B": "9"
+    }
+  ],
+  "countermodels_agree_on_available_report": true,
+  "countermodels_disagree_on_unobserved_cue": true,
+  "evidence_kind": "synthetic_mathematical_demonstration",
+  "exact_mechanical_certificate": {
+    "arithmetic": "exact_rational_polynomial_coefficients",
+    "initial_q": "3/5",
+    "initial_v": "1/5",
+    "residual_coefficients": [
+      "0",
+      "0"
+    ]
+  },
+  "human_trials_performed": 0,
+  "maximum_sampled_mechanical_residual": 0.0,
+  "scope": "Finite model checks and analytic conditional proofs; no psychological calibration or proof of sentience",
+  "synthetic_threshold_bracket": {
+    "assumptions": [
+      "one predefined cue axis; other cues and observer state fixed",
+      "independent explicit B reports; no leading or pressure",
+      "deterministic monotone recognition; truthful noise-free reports"
+    ],
+    "feasible": true,
+    "lower": "4",
+    "lower_open": true,
+    "report_count": 4,
+    "status": "bracketed",
+    "upper": "6",
+    "upper_closed": true
+  }
+}
