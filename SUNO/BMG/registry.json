@@ -1,51 +1,37 @@
 {
-  "version": "0.2.0",
+  "version": "0.3.0",
   "verified_parent": {
     "source": "BMG Production Music",
     "genre": "Electronic"
   },
+  "catalog_evidence": "SUNO/BMG/evidence/catalog-genre-terms.json",
   "active": [
     "BMG-BREAKCORE",
     "BMG-DNB",
     "BMG-BREAKS",
     "BMG-JUNGLE",
     "BMG-UKG",
+    "BMG-SPEED-GARAGE",
+    "BMG-BASSLINE",
     "BMG-DUBSTEP",
+    "BMG-NEUROFUNK",
+    "BMG-RIDDIM",
+    "BMG-GRIME",
     "BMG-TECHNO",
     "BMG-HOUSE",
+    "BMG-ACID",
+    "BMG-BIG-BEAT",
     "BMG-EBM",
     "BMG-TRANCE",
     "BMG-INDUSTRIAL",
     "BMG-EXPERIMENTAL",
-    "BMG-BASSLINE",
-    "BMG-SPEED-GARAGE"
+    "BMG-DRONE"
   ],
   "families": {
-    "breaks": [
-      "BMG-BREAKS",
-      "BMG-BREAKCORE",
-      "BMG-JUNGLE",
-      "BMG-DNB"
-    ],
-    "uk_bass": [
-      "BMG-UKG",
-      "BMG-SPEED-GARAGE",
-      "BMG-BASSLINE",
-      "BMG-DUBSTEP",
-      "BMG-DNB"
-    ],
-    "club_4x4": [
-      "BMG-HOUSE",
-      "BMG-TECHNO",
-      "BMG-TRANCE",
-      "BMG-EBM"
-    ],
-    "industrial_experimental": [
-      "BMG-INDUSTRIAL",
-      "BMG-EBM",
-      "BMG-EXPERIMENTAL",
-      "BMG-BREAKCORE"
-    ]
+    "breaks": ["BMG-BREAKS", "BMG-BIG-BEAT", "BMG-BREAKCORE", "BMG-JUNGLE", "BMG-DNB", "BMG-ACID"],
+    "uk_bass": ["BMG-UKG", "BMG-SPEED-GARAGE", "BMG-BASSLINE", "BMG-GRIME", "BMG-DUBSTEP", "BMG-RIDDIM", "BMG-DNB", "BMG-NEUROFUNK"],
+    "club_4x4": ["BMG-HOUSE", "BMG-TECHNO", "BMG-ACID", "BMG-TRANCE", "BMG-EBM"],
+    "industrial_experimental": ["BMG-INDUSTRIAL", "BMG-EBM", "BMG-EXPERIMENTAL", "BMG-DRONE", "BMG-BREAKCORE", "BMG-NEUROFUNK"]
   },
   "verification_queue": [
     "live BMG Electronic child-filter vocabulary",
@@ -53,11 +39,12 @@
     "BMG instrumentation/filter vocabulary",
     "BMG production/sync-use vocabulary"
   ],
-  "namespaces": [
-    "bmg",
-    "rym",
-    "sysop",
-    "suno"
+  "tooling": [
+    "tools/build_rym_crossref.py",
+    "tools/compile_genre_map.py",
+    "tools/blend_maps.py",
+    "tools/validate_maps.py"
   ],
-  "rule": "Do not flatten provenance; verify live BMG child terms before marking them verified."
+  "namespaces": ["bmg", "rym", "sysop", "suno"],
+  "rule": "Do not flatten provenance; catalog evidence is not official taxonomy; verify live BMG child terms before marking them verified."
 }
