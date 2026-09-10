@@ -1,0 +1,67 @@
+{
+  "id": "BMG-RAVE",
+  "version": "0.1.0",
+  "genre": {
+    "canonical": "Rave",
+    "aliases": ["rave", "future rave", "rave music", "rave techno", "rave house"],
+    "parent": "Electronic",
+    "adjacent": ["Techno", "Trance", "House", "Breakbeat Hardcore", "Big Beat"]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "pending_official_tag_verification",
+      "genre_terms": [],
+      "mood_terms": [],
+      "instrument_terms": [],
+      "production_terms": [],
+      "sync_usage_terms": []
+    },
+    "bmg_catalog_related": {
+      "status": "release_title_evidence",
+      "terms": ["Future Rave", "Future Rave Attack", "Future Rave Festival", "Future Rave Fire", "Future Rave Hysteria", "Future Rave Punchy", "Future Rave Weapon"],
+      "evidence_ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json"
+    },
+    "rym": {
+      "genres": ["Rave", "Hardcore Breaks", "Techno", "Trance"],
+      "descriptors": ["energetic", "rhythmic", "repetitive", "anthemic", "dense", "euphoric"]
+    },
+    "sysop": {
+      "seed_terms": ["underground rave", "UK rave", "hoover stabs", "breakbeat hardcore", "acid", "hard minimal", "warehouse"]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {"min": 128, "max": 160, "preferred": [128, 135, 140, 145, 150]},
+    "meter": ["4/4"],
+    "rhythm": ["driving club pulse", "rave-break accents", "rolling percussion", "breakbeat or four-on-the-floor compatible"],
+    "drums": ["hard kick", "bright snare/clap", "rave fills", "rapid hat energy"],
+    "bass": ["driving sub", "rave bass stab", "acid or reese movement optional"],
+    "harmony": ["minor or modal rave hooks", "anthemic synth intervals", "trance-compatible lift optional"],
+    "texture": ["hoover stabs", "bright supersaws", "acid resonance", "warehouse air", "distorted rave FX"],
+    "arrangement": ["DJ intro", "tension build", "hard drop", "breakdown", "re-entry with larger hook"],
+    "mix": ["club-forward low end", "hard transient focus", "wide synth energy", "clear drop contrast"],
+    "vocals": ["MC shouts optional", "short vocal hooks", "instrumental valid"]
+  },
+  "prompt_map": {
+    "positive": [
+      {"term": "rave", "weight": 1.0, "source": "seed"},
+      {"term": "future rave", "weight": 0.85, "source": "seed"},
+      {"term": "warehouse", "weight": 0.8, "source": "sysop"},
+      {"term": "hoover stabs", "weight": 0.8, "source": "sysop"},
+      {"term": "energetic", "weight": 0.75, "source": "rym"},
+      {"term": "anthemic", "weight": 0.7, "source": "rym"}
+    ],
+    "negative": ["soft background wash", "low-energy lounge groove"],
+    "compile_order": ["genre", "tempo", "rhythm", "drums", "bass", "harmony", "texture", "arrangement", "mix", "vocals", "negative"]
+  },
+  "cross_reference": {
+    "backup": {"status": "pending_empirical_scan", "matched_tracks": 0, "top_terms": [], "rym_terms": [], "rym_descriptor_hits": [], "negative_terms": []}
+  },
+  "provenance": {
+    "sources": [
+      {"kind": "bmg_catalog_related", "ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json", "status": "BMG Production Music-distributed release/track-title evidence; not official taxonomy"},
+      {"kind": "rym", "ref": "BOX/RYM/styles.json"},
+      {"kind": "sysop", "ref": "SYSTEMS-OPERATOR/BACKUP", "status": "seed vocabulary pending fingerprint scan"}
+    ],
+    "notes": ["Candidate family created from BMG-distributed Future Rave catalog language. Formal BMG tag status remains unverified."]
+  }
+}
