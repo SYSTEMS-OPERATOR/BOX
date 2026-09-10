@@ -2,12 +2,15 @@
 
 Genre-specific parameter maps for Suno prompting, kept as a provenance-aware library rather than one giant keyword bucket.
 
-Each `BMG-*.JSON` keeps four layers separate:
+Each `BMG-*.JSON` keeps four source layers separate:
 
 - **BMG** — normalized vocabulary verified from public BMG Production Music / Sync+ surfaces.
 - **RYM** — genre and descriptor language used as a separate reference vocabulary.
 - **SYSOP** — observed vocabulary from `SYSTEMS-OPERATOR/BACKUP` and direct project targets.
-- **SUNO** — the eventual compiled prompt layer assembled from the map.
+- **SUNO** — the compiled prompt layer assembled from the map.
+
+A fifth generated layer, **SYSOP_EMPIRICAL**, lives under `fingerprints/`. It measures what actually
+recurs in BACKUP for each map instead of treating every historically used token as equally important.
 
 BMG's public site currently verifies **Electronic** as the parent genre. Child BMG terms stay
 `pending_verification` until a live catalog/filter pass confirms them. `evidence/catalog-genre-terms.json`
@@ -16,10 +19,10 @@ is useful, but is deliberately **not** treated as proof of the official BMG filt
 
 ## Map library
 
-`registry.json` currently indexes twenty maps across breaks, UK bass, 4x4 club, and
-industrial/experimental families: Breaks, Big Beat, Breakcore, Jungle, Drum & Bass, UK Garage,
-Speed Garage, Bassline, Grime, Dubstep, Riddim Dubstep, Neurofunk, House, Techno, Acid,
-Trance, EBM, Industrial Electronic, Experimental Electronic, and Drone Electronic.
+`registry.json` indexes twenty maps across breaks, UK bass, 4x4 club, and industrial/experimental
+families: Breaks, Big Beat, Breakcore, Jungle, Drum & Bass, UK Garage, Speed Garage, Bassline, Grime,
+Dubstep, Riddim Dubstep, Neurofunk, House, Techno, Acid, Trance, EBM, Industrial Electronic,
+Experimental Electronic, and Drone Electronic.
 
 ## Cross-reference BACKUP
 
@@ -30,10 +33,37 @@ python SUNO/BMG/tools/build_rym_crossref.py --backup ../BACKUP --write
 python SUNO/BMG/tools/build_rym_crossref.py --backup ../BACKUP --map BMG-NEUROFUNK
 ```
 
-The scanner uses boundary-aware genre matching so `house` does not accidentally match
-`warehouse`. It aggregates matching-song count, common metadata/style phrases, explicit
-`[RYM: ...]` annotations, BOX/RYM descriptor hits, and negative prompt terms. It does not copy
-lyrics, audio, artwork, cookies, auth data, or full raw BMG metadata.
+The scanner uses boundary-aware genre matching so `house` does not accidentally match `warehouse`.
+It aggregates matching-song count, common metadata/style phrases, explicit `[RYM: ...]` annotations,
+BOX/RYM descriptor hits, and negative prompt terms.
+
+## Build empirical fingerprints
+
+```bash
+python SUNO/BMG/tools/build_empirical_fingerprints.py --backup ../BACKUP
+```
+
+This writes one `SYSOP_<GENRE>_CORE.JSON` per active map plus `fingerprints/index.json`.
+Each fingerprint contains corpus support, global support, lift, ranked core/signature terms,
+co-occurrence pairs, BPM/Hz/key/Camelot anchors, explicit RYM annotations, negative terms, and
+model distribution. Ordinary lyric/prompt prose is ignored.
+
+Useful focused pass:
+
+```bash
+python SUNO/BMG/tools/build_empirical_fingerprints.py \
+  --backup ../BACKUP \
+  --map BMG-NEUROFUNK \
+  --map BMG-SPEED-GARAGE
+```
+
+Compare fingerprints:
+
+```bash
+python SUNO/BMG/tools/compare_fingerprints.py \
+  SUNO/BMG/fingerprints/SYSOP_NEUROFUNK_CORE.JSON \
+  SUNO/BMG/fingerprints/SYSOP_SPEED_GARAGE_CORE.JSON
+```
 
 ## Compile one map
 
@@ -56,8 +86,8 @@ python SUNO/BMG/tools/blend_maps.py \
   --weights 1,0.55 --format json
 ```
 
-The blender sums term scores while preserving every contributing map/source in JSON mode and
-reports the tempo-range intersection when one exists.
+The blender sums term scores while preserving every contributing map/source in JSON mode and reports
+the tempo-range intersection when one exists.
 
 ## Validate
 
