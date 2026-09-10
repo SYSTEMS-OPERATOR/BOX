@@ -1,0 +1,158 @@
+{
+  "version": "0.1.0",
+  "purpose": "Related genre/modifier vocabulary observed in releases distributed by BMG Production Music. This is evidence for candidate prompting/tag vocabulary, not proof of BMG's official website filter taxonomy.",
+  "official_taxonomy": false,
+  "evidence_classes": {
+    "release_title": "Strong catalog-language evidence: term appears in a BMG Production Music-distributed release title.",
+    "track_title": "Contextual catalog-language evidence: term appears in a track title within a BMG Production Music-distributed release.",
+    "official_site_parent": "Verified directly on the BMG Production Music site."
+  },
+  "official_site_parent": {
+    "term": "Electronic",
+    "class": "official_site_parent",
+    "source": "https://bmgproductionmusic.com/en-us/home/genre/electronic/f1cd685e278574e2"
+  },
+  "maps": {
+    "BMG-DNB": {
+      "release_title_terms": [
+        {"term": "Drum & Bass", "evidence": "Fresh Drum & Bass Cuts", "source": "https://music.apple.com/us/album/fresh-drum-bass-cuts/1868553279"},
+        {"term": "Anthemic Drum & Bass", "evidence": "Anthemic Drum & Bass", "source": "https://music.amazon.com/albums/B092Z46F56"},
+        {"term": "Essential Drum & Bass", "evidence": "Essential Drum & Bass 2", "source": "https://open.spotify.com/album/6QCsQS8tmtCWorNPsbG6hp"},
+        {"term": "Liquid Drum & Bass", "evidence": "Ultramarine: Liquid Drum & Bass", "source": "https://music.apple.com/us/album/ultramarine-liquid-drum-bass/1852136348"}
+      ],
+      "candidate_modifiers": ["fresh", "anthemic", "essential", "liquid"]
+    },
+    "BMG-UKG": {
+      "release_title_terms": [
+        {"term": "UK Garage", "evidence": "UK Garage", "source": "https://audiomack.com/at-the-studios-moods-bmg-production-music/album/uk-garage"},
+        {"term": "2-Step", "evidence": "2-Step Revival – UK Garage", "source": "https://music.amazon.co.uk/albums/B0GYQMC9HG"},
+        {"term": "Garage Reload", "evidence": "Garage Reload", "source": "https://audiomack.com/mal-shaw/song/stutter"}
+      ],
+      "candidate_modifiers": ["2-step", "revival", "reload"]
+    },
+    "BMG-DUBSTEP": {
+      "release_title_terms": [
+        {"term": "Dubstep", "evidence": "Dubstep Essentials", "source": "https://open.spotify.com/track/3HqvwPh6lKH9WUUfLq7UJL"},
+        {"term": "Melodic Dubstep", "evidence": "Melodic Dubstep", "source": "https://music.apple.com/us/album/melodic-dubstep-single/1697447637"},
+        {"term": "Post Dubstep", "evidence": "Post Dubstep", "source": "https://music.amazon.com/albums/B08PY96V1Y"},
+        {"term": "Devastating Dubstep", "evidence": "Devastating Dubstep", "source": "https://audiomack.com/dashgo/song/glitch-assault"},
+        {"term": "Metal Dubstep", "evidence": "Metal Dubstep", "source": "https://audiomack.com/axs-music/album/metal-dubstep"},
+        {"term": "Dubstep Orchestra", "evidence": "Dubstep Orchestra", "source": "https://audiomack.com/chil4ril-movement/song/synth-phoney"},
+        {"term": "Hard Hitting Dubstep & Electro", "evidence": "Bass Bangers: Hard Hitting Dubstep & Electro", "source": "https://audiomack.com/dashgo/song/darkstar"}
+      ],
+      "candidate_modifiers": ["melodic", "post", "devastating", "metal", "orchestral", "hard hitting", "electro"]
+    },
+    "BMG-JUNGLE": {
+      "release_title_terms": [
+        {"term": "Jungle", "evidence": "Jungle & X-Grooves", "source": "https://music.apple.com/us/album/jungle-x-grooves/1558154289"},
+        {"term": "Atmos Jungle", "evidence": "ATMOS JUNGLE", "source": "https://music.amazon.com/albums/B0BMZJ9H2X"},
+        {"term": "Jungle Mania", "evidence": "Jungle Mania", "source": "https://music.apple.com/us/album/jungle-mania/1763277706"},
+        {"term": "Electric Jungle", "evidence": "Electric Jungle", "source": "https://open.spotify.com/track/5GMH7u4hRgXGRsM0zClZxG"}
+      ],
+      "candidate_modifiers": ["atmos", "x-grooves", "mania", "electric"]
+    },
+    "BMG-GRIME": {
+      "release_title_terms": [
+        {"term": "Big Time Grime", "evidence": "Big Time Grime", "source": "https://music.apple.com/us/album/big-time-grime/1634116429"},
+        {"term": "London Grime", "evidence": "Yizzy – London Grime", "source": "https://music.amazon.com/albums/B0GVHPZHSP"}
+      ],
+      "candidate_modifiers": ["big time", "London"]
+    },
+    "BMG-RIDDIM": {
+      "release_title_terms": [
+        {"term": "Riddim", "evidence": "Riddim", "source": "https://music.apple.com/us/album/riddim-ep/1738734833"}
+      ],
+      "track_title_terms": [
+        {"term": "Bad Riddim", "evidence": "Bad Riddim / Rhythmic And Intensity Vol II", "source": "https://open.spotify.com/track/4tMhlanZizC8fXSXS0OWRH"}
+      ],
+      "candidate_modifiers": ["rhythmic", "intensity"]
+    },
+    "BMG-BASSLINE": {
+      "track_title_terms": [
+        {"term": "Bassline Bounce", "evidence": "Bring It", "source": "https://music.amazon.es/albums/B0CMGN7FBD"},
+        {"term": "Bassline Groover", "evidence": "Happy House Music", "source": "https://open.spotify.com/intl-de/album/5tbHdjLic6cvXrwXfEP3g1"},
+        {"term": "Bassline Hustle", "evidence": "Rap Club Big Beat", "source": "https://music.amazon.com/tracks/B0GPSM83TM"},
+        {"term": "To The Bassline", "evidence": "Lifestyle Boutique", "source": "https://music.amazon.com/albums/B0GYQBZ4XZ"}
+      ],
+      "candidate_modifiers": ["bounce", "groover", "hustle"]
+    },
+    "BMG-HOUSE": {
+      "release_title_terms": [
+        {"term": "Electronic House", "evidence": "Electronic House", "source": "https://music.apple.com/us/album/electronic-house/1562004242"},
+        {"term": "Melodic House", "evidence": "Melodic House", "source": "https://music.apple.com/us/album/melodic-house/1707726506"},
+        {"term": "French House", "evidence": "French House", "source": "https://music.apple.com/us/album/french-house-single/1707726268"},
+        {"term": "Deep House", "evidence": "Deep House", "source": "https://music.apple.com/us/album/deep-house/1509391931"},
+        {"term": "Positive House", "evidence": "Positive House Trip", "source": "https://music.apple.com/us/album/positive-house-trip/1559237822"},
+        {"term": "Vocal Dance", "evidence": "House Hits - Vocal Dance", "source": "https://www.qobuz.com/us-en/album/house-hits-vocal-dance-luca-quaresma/f1wsgxzbr4tbc"},
+        {"term": "UK EDM House", "evidence": "Red Again UK EDM House", "source": "https://www.qobuz.com/us-en/album/red-again-uk-edm-house-alboom/te44l6ykxj3xy"}
+      ],
+      "candidate_modifiers": ["electronic", "melodic", "French", "deep", "positive", "vocal dance", "UK EDM"]
+    },
+    "BMG-TECHNO": {
+      "release_title_terms": [
+        {"term": "Abstract Techno", "evidence": "ABSTRACT TECHNO", "source": "https://music.apple.com/us/album/abstract-techno/1809467533"},
+        {"term": "Berlin Techno", "evidence": "Berlin Nights - Techno", "source": "https://music.apple.com/us/album/berlin-nights-techno/1621136707"},
+        {"term": "Techno House", "evidence": "Techno House Afterparty", "source": "https://www.shazam.com/en-us/song/1491574557/into-the-night"},
+        {"term": "Techno World", "evidence": "Techno World", "source": "https://music.amazon.com/albums/B087H6KTBW"}
+      ],
+      "candidate_modifiers": ["abstract", "Berlin", "house", "afterparty", "technical", "digital"]
+    },
+    "BMG-TRANCE": {
+      "release_title_terms": [
+        {"term": "Ultimate Trance", "evidence": "Ultimate Trance", "source": "https://www.qobuz.com/se-en/album/ultimate-trance-ignatius-reilly-oliver-william-pearson/t1cfbdgpzgrxa"},
+        {"term": "Dance N Trance", "evidence": "Dance - N - Trance", "source": "https://audiomack.com/bedsandbeats/song/love-groove"}
+      ],
+      "track_title_terms": [
+        {"term": "House Of Trance", "evidence": "Magic Rhythms", "source": "https://music.amazon.com/tracks/B087HH3H5W"},
+        {"term": "Techno Trance", "evidence": "Magic Rhythms", "source": "https://music.amazon.com/tracks/B087HH3H5W"},
+        {"term": "Jungle Trance Dance", "evidence": "Electronic Imprints", "source": "https://music.amazon.com/tracks/B0G4XW8C4T"}
+      ],
+      "candidate_modifiers": ["ultimate", "dance", "house", "techno", "jungle"]
+    },
+    "BMG-ACID": {
+      "release_title_terms": [
+        {"term": "Acid Trax", "evidence": "ACID TRAX", "source": "https://audiomack.com/peter-diggens/song/acid-alchemy"}
+      ],
+      "track_title_terms": [
+        {"term": "Acid Pressure", "evidence": "Electronic Holiday, Vol. 2", "source": "https://audiomack.com/chil4ril-movement/album/electronic-holiday-vol-2"},
+        {"term": "Acid Test", "evidence": "Continental Electro", "source": "https://audiomack.com/axs-music/album/continental-electro"}
+      ],
+      "candidate_modifiers": ["trax", "pressure", "test", "electro"]
+    },
+    "BMG-BIG-BEAT": {
+      "release_title_terms": [
+        {"term": "Big Beat", "evidence": "Big Beat", "source": "https://music.apple.com/us/album/big-beat-ep/1689517169"},
+        {"term": "Rap Club Big Beat", "evidence": "Rap Club Big Beat", "source": "https://music.apple.com/us/album/rap-club-big-beat/1879729075"},
+        {"term": "Big Beat & Trip-Hop", "evidence": "Big Beat & Trip-Hop", "source": "https://music.apple.com/us/album/big-beat-trip-hop/1672734874"},
+        {"term": "Back To The Big Beat", "evidence": "Back To The Big Beat", "source": "https://music.amazon.in/albums/B092YSD89X"},
+        {"term": "Monster Big Beat", "evidence": "Monster Big Beat", "source": "https://music.apple.com/ru/album/monster-big-beat/1562333760"}
+      ],
+      "candidate_modifiers": ["rap club", "trip-hop", "monster", "bass rock", "slam on the breaks"]
+    },
+    "BMG-INDUSTRIAL": {
+      "release_title_terms": [
+        {"term": "Industrial Activity", "evidence": "Industrial Activity, Vol. 1", "source": "https://music.apple.com/us/album/industrial-activity-vol-1/1451690145"},
+        {"term": "Industrial Themes", "evidence": "Industrial Themes", "source": "https://music.apple.com/us/album/industrial-themes/1509533080"}
+      ],
+      "candidate_modifiers": ["activity", "machine", "processing", "servodrive", "powertrain", "technofunk"]
+    },
+    "BMG-DRONE": {
+      "release_title_terms": [
+        {"term": "Drone", "evidence": "Drone V.3", "source": "https://music.apple.com/us/album/drone-v-3-ep/1733199219"},
+        {"term": "Dark Drone", "evidence": "Dark Drone Investigation", "source": "https://music.apple.com/us/album/dark-drone-investigation/1805240993"},
+        {"term": "Dark Drones", "evidence": "Dark Drones", "source": "https://music.amazon.com/tracks/B0921XQ244"},
+        {"term": "Ultimate Drones", "evidence": "Ultimate Drones", "source": "https://audiomack.com/bedsandbeats/song/nebulus-drone"},
+        {"term": "Drones and Tension", "evidence": "Drones and Tension", "source": "https://audiomack.com/bedsandbeats/song/mid-drone"},
+        {"term": "Tension Drones", "evidence": "Tension Drones Vol. 1", "source": "https://music.amazon.in/albums/B0DJ513BFR"}
+      ],
+      "candidate_modifiers": ["dark", "investigation", "tension", "atmospheric", "experimental", "metal", "symphonic", "dirty", "meditative", "mystic"]
+    }
+  },
+  "coverage_gaps": [
+    "No strong BMG Production Music release-title evidence found yet for Breakcore.",
+    "No strong BMG Production Music release-title evidence found yet for Neurofunk.",
+    "No strong BMG Production Music release-title evidence found yet for EBM.",
+    "Experimental Electronic is too broad to promote from release-title evidence without a narrower rule."
+  ],
+  "rule": "Keep release/track-title vocabulary in the catalog-evidence layer until an official BMG site filter or metadata surface independently confirms it as a formal tag/category."
+}
