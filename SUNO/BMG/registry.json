@@ -1,10 +1,11 @@
 {
-  "version": "0.5.0",
+  "version": "0.6.0",
   "verified_parent": {
     "source": "BMG Production Music",
     "genre": "Electronic"
   },
   "catalog_evidence": "SUNO/BMG/evidence/catalog-genre-terms.json",
+  "related_catalog_vocabulary": "SUNO/BMG/evidence/related-catalog-vocabulary.json",
   "fingerprints": {
     "directory": "SUNO/BMG/fingerprints",
     "schema": "SUNO/BMG/fingerprints/fingerprint.schema.json",
@@ -52,7 +53,8 @@
     "live BMG Electronic child-filter vocabulary",
     "BMG mood/filter vocabulary",
     "BMG instrumentation/filter vocabulary",
-    "BMG production/sync-use vocabulary"
+    "BMG production/sync-use vocabulary",
+    "promote catalog-related candidates only when official BMG metadata/filter evidence exists"
   ],
   "tooling": [
     "tools/build_rym_crossref.py",
@@ -62,6 +64,6 @@
     "tools/blend_maps.py",
     "tools/validate_maps.py"
   ],
-  "namespaces": ["bmg", "rym", "sysop", "sysop_empirical", "suno"],
-  "rule": "Do not flatten provenance; empirical SYSOP fingerprints are corpus observations, catalog evidence is not official taxonomy, and live BMG child terms must be verified before marking them verified."
+  "namespaces": ["bmg", "bmg_catalog_related", "rym", "sysop", "sysop_empirical", "suno"],
+  "rule": "Do not flatten provenance; empirical SYSOP fingerprints are corpus observations, BMG-distributed release/track vocabulary is catalog evidence rather than official taxonomy, and live BMG child terms must be verified before marking them verified."
 }
