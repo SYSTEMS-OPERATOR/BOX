@@ -1,17 +1,19 @@
 {
-  "version": "0.1.0",
-  "purpose": "Related genre/modifier vocabulary observed in releases distributed by BMG Production Music. This is evidence for candidate prompting/tag vocabulary, not proof of BMG's official website filter taxonomy.",
+  "version": "0.2.0",
+  "purpose": "Related genre/modifier vocabulary observed on current BMG search surfaces, historical BMG SYNC+ promotional metadata, and releases distributed by BMG Production Music. Catalog/promotional evidence is useful for candidate prompting vocabulary but is not proof of BMG's formal filter taxonomy.",
   "official_taxonomy": false,
+  "official_search_axes_ref": "SUNO/BMG/evidence/official-tag-axes.json",
   "evidence_classes": {
+    "official_site_axis": "Verified search/tag dimension explicitly named by the current BMG Production Music surface.",
     "release_title": "Strong catalog-language evidence: term appears in a BMG Production Music-distributed release title.",
     "track_title": "Contextual catalog-language evidence: term appears in a track title within a BMG Production Music-distributed release.",
-    "official_site_parent": "Verified directly on the BMG Production Music site."
+    "historical_sync_plus_promo": "Descriptive language used by an older BMG SYNC+ promotional surface; useful but not current formal taxonomy."
   },
   "official_site_parent": {
     "term": "Electronic",
-    "class": "official_site_parent",
     "source": "https://bmgproductionmusic.com/en-us/home/genre/electronic/f1cd685e278574e2"
   },
+  "official_search_axes": ["genre", "mood", "instrument", "key", "tempo"],
   "maps": {
     "BMG-DNB": {
       "release_title_terms": [
@@ -26,9 +28,9 @@
       "release_title_terms": [
         {"term": "UK Garage", "evidence": "UK Garage", "source": "https://audiomack.com/at-the-studios-moods-bmg-production-music/album/uk-garage"},
         {"term": "2-Step", "evidence": "2-Step Revival – UK Garage", "source": "https://music.amazon.co.uk/albums/B0GYQMC9HG"},
-        {"term": "Garage Reload", "evidence": "Garage Reload", "source": "https://audiomack.com/mal-shaw/song/stutter"}
+        {"term": "UKG Reloaded", "evidence": "UKG Reloaded", "year": 2026, "label": "Deep East Music / BMG Production Music", "source": "https://music.amazon.com/albums/B0GZLY71FX"}
       ],
-      "candidate_modifiers": ["2-step", "revival", "reload"]
+      "candidate_modifiers": ["2-step", "revival", "reloaded"]
     },
     "BMG-DUBSTEP": {
       "release_title_terms": [
@@ -54,9 +56,10 @@
     "BMG-GRIME": {
       "release_title_terms": [
         {"term": "Big Time Grime", "evidence": "Big Time Grime", "source": "https://music.apple.com/us/album/big-time-grime/1634116429"},
-        {"term": "London Grime", "evidence": "Yizzy – London Grime", "source": "https://music.amazon.com/albums/B0GVHPZHSP"}
+        {"term": "London Grime", "evidence": "Yizzy – London Grime", "source": "https://music.amazon.com/albums/B0GVHPZHSP"},
+        {"term": "Sports Grime", "evidence": "Sports grime", "year": 2025, "label": "Deep East Music / BMG Production Music", "source": "https://music.amazon.in/albums/B0FXC1NVL2"}
       ],
-      "candidate_modifiers": ["big time", "London"]
+      "candidate_modifiers": ["big time", "London", "sports"]
     },
     "BMG-RIDDIM": {
       "release_title_terms": [
@@ -115,9 +118,10 @@
       ],
       "track_title_terms": [
         {"term": "Acid Pressure", "evidence": "Electronic Holiday, Vol. 2", "source": "https://audiomack.com/chil4ril-movement/album/electronic-holiday-vol-2"},
-        {"term": "Acid Test", "evidence": "Continental Electro", "source": "https://audiomack.com/axs-music/album/continental-electro"}
+        {"term": "Acid Test", "evidence": "Continental Electro", "source": "https://audiomack.com/axs-music/album/continental-electro"},
+        {"term": "Acid Groove", "evidence": "Techno Rhythm", "source": "https://music.amazon.com/"}
       ],
-      "candidate_modifiers": ["trax", "pressure", "test", "electro"]
+      "candidate_modifiers": ["trax", "pressure", "test", "groove", "electro"]
     },
     "BMG-BIG-BEAT": {
       "release_title_terms": [
@@ -134,7 +138,7 @@
         {"term": "Industrial Activity", "evidence": "Industrial Activity, Vol. 1", "source": "https://music.apple.com/us/album/industrial-activity-vol-1/1451690145"},
         {"term": "Industrial Themes", "evidence": "Industrial Themes", "source": "https://music.apple.com/us/album/industrial-themes/1509533080"}
       ],
-      "candidate_modifiers": ["activity", "machine", "processing", "servodrive", "powertrain", "technofunk"]
+      "candidate_modifiers": ["activity", "machine", "processing", "servodrive", "powertrain", "technofunk", "propulsion", "driving", "hydrotech"]
     },
     "BMG-DRONE": {
       "release_title_terms": [
@@ -145,14 +149,45 @@
         {"term": "Drones and Tension", "evidence": "Drones and Tension", "source": "https://audiomack.com/bedsandbeats/song/mid-drone"},
         {"term": "Tension Drones", "evidence": "Tension Drones Vol. 1", "source": "https://music.amazon.in/albums/B0DJ513BFR"}
       ],
-      "candidate_modifiers": ["dark", "investigation", "tension", "atmospheric", "experimental", "metal", "symphonic", "dirty", "meditative", "mystic"]
+      "candidate_modifiers": ["dark", "investigation", "tension", "atmospheric", "experimental", "nightmare", "war", "alien", "monster", "anxiogenic", "metal", "symphonic", "dirty", "forest", "ghost", "meditative", "computer", "mystic", "vintage", "gentle", "sequential"]
+    }
+  },
+  "candidate_families": {
+    "BMG-GLITCH": {
+      "status": "catalog_family_candidate",
+      "release_title_terms": [
+        {"term": "Glitched Electronica", "year": 2022, "label": "Bleach Productions / BMG Production Music", "source": "https://music.apple.com/us/album/glitched-electronica/1614519712"},
+        {"term": "Hyper Glitch", "year": 2022, "label": "Bigger Story Music / BMG Production Music", "source": "https://music.amazon.com/albums/B09WLVKF29"},
+        {"term": "Glitch Hop", "year": 2015, "label": "Dynamic Music / BMG Production Music", "source": "https://music.apple.com/us/album/glitch-hop/1564203762"},
+        {"term": "Lofi Glitch Hop", "year": 2023, "label": "Mixtape Mashup / BMG Production Music", "source": "https://music.apple.com/au/album/lofi-glitch-hop-single/1672611071"}
+      ],
+      "candidate_modifiers": ["glitched", "hyper", "glitch hop", "lofi"]
+    },
+    "BMG-RAVE": {
+      "status": "catalog_family_candidate",
+      "release_title_terms": [
+        {"term": "Future Rave", "year": 2023, "label": "AXS Music / BMG Production Music", "source": "https://music.apple.com/us/album/future-rave/1692512532"}
+      ],
+      "track_title_terms": ["Future Of Rave", "Future Rave Attack", "Future Rave Calling", "Future Rave Festival", "Future Rave Fire", "Future Rave Hysteria", "Future Rave Punchy", "Future Rave Sound", "Future Rave Weapon", "Sunset Future Rave"],
+      "candidate_modifiers": ["future", "attack", "festival", "fire", "hysteria", "punchy", "weapon", "sunset"]
+    }
+  },
+  "historical_sync_plus_promotional_vocabulary": {
+    "source": "https://vimeo.com/242634725",
+    "year": 2017,
+    "status": "historical_promo_not_current_taxonomy",
+    "albums": {
+      "RELENTLESS ELECTRO": ["full on electro", "French house", "glitch house", "dubstep", "disco", "pounding EDM", "intense synths"],
+      "GUITARS N BEATS": ["feelgood", "aggressive", "breakbeat rock", "electronica swagger", "beats"],
+      "NEON HYPERDRIVE": ["electronic hybrid", "filmic elements", "retro synths", "huge beats", "80s synth pop"]
     }
   },
   "coverage_gaps": [
     "No strong BMG Production Music release-title evidence found yet for Breakcore.",
     "No strong BMG Production Music release-title evidence found yet for Neurofunk.",
     "No strong BMG Production Music release-title evidence found yet for EBM.",
-    "Experimental Electronic is too broad to promote from release-title evidence without a narrower rule."
+    "Experimental Electronic is too broad to promote from release-title evidence without a narrower rule.",
+    "Current BMG public crawl exposes tag dimensions but not a complete enumerated value list."
   ],
-  "rule": "Keep release/track-title vocabulary in the catalog-evidence layer until an official BMG site filter or metadata surface independently confirms it as a formal tag/category."
+  "rule": "Only current BMG search/filter/metadata surfaces can promote values to formal BMG tags. Release titles, track titles and historical SYNC+ promo text stay in the related-catalog evidence layer."
 }
