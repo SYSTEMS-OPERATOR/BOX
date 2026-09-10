@@ -1,5 +1,5 @@
 {
-  "version": "0.8.0",
+  "version": "0.9.0",
   "verified_parent": {"source": "BMG Production Music", "genre": "Electronic"},
   "official_tag_axes": "SUNO/BMG/evidence/official-tag-axes.json",
   "catalog_evidence": "SUNO/BMG/evidence/catalog-genre-terms.json",
@@ -13,12 +13,12 @@
     "naming": "SYSOP_<MAP_ID>_CORE.JSON",
     "status": "generated_in_private_BACKUP",
     "latest_scan_evidence": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
-    "latest_scan": {"tracks": 441, "unique_style_profiles": 325, "builder_version": "0.2.0", "source_repo": "SYSTEMS-OPERATOR/BACKUP", "generated_output_commit": "f23a6461b7df0badc96e02de50c1597a95a47f36"}
+    "latest_scan": {"tracks": 441, "unique_style_profiles": 325, "maps_scanned": 22, "builder_version": "0.2.0", "source_repo": "SYSTEMS-OPERATOR/BACKUP", "generated_output_commit": "3ffbafd9e677cf10666eceb0547530bbdc6f3f90"}
   },
   "active": ["BMG-BREAKCORE", "BMG-DNB", "BMG-BREAKS", "BMG-JUNGLE", "BMG-UKG", "BMG-SPEED-GARAGE", "BMG-BASSLINE", "BMG-DUBSTEP", "BMG-NEUROFUNK", "BMG-RIDDIM", "BMG-GRIME", "BMG-TECHNO", "BMG-HOUSE", "BMG-ACID", "BMG-BIG-BEAT", "BMG-EBM", "BMG-TRANCE", "BMG-INDUSTRIAL", "BMG-EXPERIMENTAL", "BMG-DRONE"],
   "candidate_families": {
-    "BMG-GLITCH": {"status": "map_created_catalog_evidence_pending_official_tag_verification", "map": "maps/BMG-GLITCH.JSON", "evidence": ["Glitched Electronica", "Hyper Glitch", "Glitch Hop", "Lofi Glitch Hop"]},
-    "BMG-RAVE": {"status": "map_created_catalog_evidence_pending_official_tag_verification", "map": "maps/BMG-RAVE.JSON", "evidence": ["Future Rave"]}
+    "BMG-GLITCH": {"status": "map_created_empirically_supported_pending_official_tag_verification", "map": "maps/BMG-GLITCH.JSON", "empirical_profiles": 18, "empirical_confidence": "moderate", "evidence": ["Glitched Electronica", "Hyper Glitch", "Glitch Hop", "Lofi Glitch Hop"]},
+    "BMG-RAVE": {"status": "map_created_empirically_supported_pending_official_tag_verification", "map": "maps/BMG-RAVE.JSON", "empirical_profiles": 9, "empirical_confidence": "moderate", "evidence": ["Future Rave"]}
   },
   "families": {
     "breaks": ["BMG-BREAKS", "BMG-BIG-BEAT", "BMG-BREAKCORE", "BMG-JUNGLE", "BMG-DNB", "BMG-ACID", "BMG-GLITCH"],
