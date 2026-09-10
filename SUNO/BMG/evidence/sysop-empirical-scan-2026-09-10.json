@@ -1,16 +1,17 @@
 {
-  "version": "0.2.0",
-  "generated_at": "2026-09-10T05:48:57.936057+00:00",
+  "version": "0.3.0",
+  "generated_at": "2026-09-10T06:10:21.517646+00:00",
   "source": {
     "repository": "SYSTEMS-OPERATOR/BACKUP",
-    "source_commit": "64122993bf579197a3863d25c564008dd56cfcb8",
-    "generated_output_commit": "f23a6461b7df0badc96e02de50c1597a95a47f36",
+    "source_commit": "e27be14cfbe01efdd615473b206f3483ecd91bf0",
+    "generated_output_commit": "3ffbafd9e677cf10666eceb0547530bbdc6f3f90",
     "map_repository": "SYSTEMS-OPERATOR/BOX",
-    "map_commit": "b5ce9ea17beb2a4eaebe231439a2e98a9316e448"
+    "map_commit": "25629ddc40881245853e8de35c0de53a2eec5407"
   },
   "sample": {
     "tracks_scanned": 441,
     "unique_style_profiles": 325,
+    "maps_scanned": 22,
     "method": "genre membership from compact display_tags with metadata.tags fallback; identical/reordered style profiles deduplicated for primary support/lift statistics"
   },
   "confidence_groups": {
@@ -28,8 +29,10 @@
     "moderate": [
       {"map_id": "BMG-ACID", "tracks": 20, "profiles": 19},
       {"map_id": "BMG-BASSLINE", "tracks": 9, "profiles": 8},
+      {"map_id": "BMG-GLITCH", "tracks": 18, "profiles": 18},
       {"map_id": "BMG-INDUSTRIAL", "tracks": 15, "profiles": 15},
       {"map_id": "BMG-JUNGLE", "tracks": 10, "profiles": 9},
+      {"map_id": "BMG-RAVE", "tracks": 9, "profiles": 9},
       {"map_id": "BMG-TRANCE", "tracks": 18, "profiles": 9},
       {"map_id": "BMG-UKG", "tracks": 19, "profiles": 19}
     ],
@@ -76,6 +79,30 @@
         {"term": "acid breakcore", "profiles": 7, "support": 0.2},
         {"term": "glitchcore", "profiles": 7, "support": 0.2}
       ]
+    },
+    "BMG-GLITCH": {
+      "profiles": 18,
+      "confidence": "moderate",
+      "core": [
+        {"term": "glitch", "profiles": 18, "support": 1.0, "lift": 7.386},
+        {"term": "glitch hop", "profiles": 5, "support": 0.2778, "lift": 18.056},
+        {"term": "breakcore", "profiles": 7, "support": 0.3889, "lift": 3.83},
+        {"term": "hardcore", "profiles": 4, "support": 0.2222, "lift": 1.605}
+      ],
+      "note": "Catalog-derived Glitch family is independently supported by 18 unique SYSOP style profiles; this supports keeping the candidate map but does not prove official BMG tag status."
+    },
+    "BMG-RAVE": {
+      "profiles": 9,
+      "confidence": "moderate",
+      "core": [
+        {"term": "rave", "profiles": 9, "support": 1.0, "lift": 17.105},
+        {"term": "hardcore", "profiles": 8, "support": 0.8889, "lift": 6.42},
+        {"term": "breakbeat", "profiles": 4, "support": 0.4444, "lift": 4.981},
+        {"term": "acid", "profiles": 3, "support": 0.3333, "lift": 3.869},
+        {"term": "warehouse", "profiles": 2, "support": 0.2222, "lift": 3.283},
+        {"term": "200hz snare", "profiles": 2, "support": 0.2222, "lift": 2.889}
+      ],
+      "note": "Future-Rave catalog evidence maps onto a distinct SYSOP rave cluster, but the nine-profile sample remains provisional."
     },
     "BMG-SPEED-GARAGE": {
       "profiles": 6,
