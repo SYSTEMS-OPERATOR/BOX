@@ -1,0 +1,100 @@
+{
+  "version": "0.1.0",
+  "purpose": "Observed metadata/description vocabulary for BMG Production Music tracks surfaced through an external production-music distributor. This is useful for reconstructing likely tagging language but is not asserted to be the current BMG canonical tag list.",
+  "source_platform": "proTunes",
+  "provider_filter": "BMG Production Music",
+  "status": "external_distribution_metadata",
+  "search_axes_observed_on_distributor": ["genre", "instrument", "vocals", "mood", "provider", "bpm_range", "musical_key"],
+  "relationship_to_current_bmg": "genre/instrument/mood/key/tempo align with the current BMG MusicSpace search axes; vocals is additionally exposed by this distributor.",
+  "samples": [
+    {
+      "track": "Shimmer",
+      "catalog": "Avalon Infinity",
+      "provider": "BMG Production Music",
+      "bpm": 106,
+      "observed": {
+        "genre": ["Electro Pop"],
+        "tempo_language": ["Medium Fast"],
+        "key": ["A minor"],
+        "mood": ["cool", "joyful", "optimistic", "enthusiastic"],
+        "instrument": ["synthesizer", "synth drums", "keyboards"]
+      },
+      "source": "https://protunes.com/search/?FacetTerm=genre%40pop&Origin=homepage&SeedScoreTerm=762024146"
+    },
+    {
+      "track": "Strutting Break",
+      "catalog": "Sounds of Red Bull",
+      "provider": "BMG Production Music",
+      "bpm": 117,
+      "observed": {
+        "genre": ["Afrobeat", "Funk", "Breakbeat"],
+        "mood": ["energetic", "busy", "frantic", "playful", "whimsical", "fun", "upbeat", "motivational", "happy", "outgoing", "optimistic", "positive"],
+        "instrument": ["brass", "horns", "saxophone", "keyboard", "wah guitar", "electric guitar", "bass guitar", "drums"],
+        "vocals": ["instrumental"]
+      },
+      "source": "https://protunes.com/search/?Origin=homepage&SeedScoreTerm=413007947&TextTerm=Funk"
+    },
+    {
+      "track": "Kitsch & Table",
+      "catalog": "Alt-Life Music",
+      "provider": "BMG Production Music",
+      "bpm": 125,
+      "observed": {
+        "genre": ["Breakbeat"],
+        "mood": ["raucous", "groovy"],
+        "instrument": ["organ", "guitars", "electric piano"]
+      },
+      "source": "https://protunes.com/search/?Origin=homepage&SeedScoreTerm=413007947&TextTerm=Funk"
+    },
+    {
+      "track": "Cloudbursting The Sky",
+      "catalog": "Big Idea Music",
+      "provider": "BMG Production Music",
+      "bpm": 120,
+      "observed": {
+        "genre": ["Synth Pop"],
+        "mood": ["artsy", "quirky", "raw"],
+        "instrument": ["synth", "drums", "guitar"],
+        "rhythm_language": ["bouncing", "rhythmic"]
+      },
+      "source": "https://protunes.com/search/?Origin=homepage&SeedScoreTerm=413007947&TextTerm=Funk"
+    },
+    {
+      "track": "I Want To Be Loved Epic",
+      "catalog": "X-Ray Dog",
+      "provider": "BMG Production Music",
+      "bpm": 140,
+      "observed": {
+        "genre_style": ["electronic", "sound design", "hybrid orchestral", "score", "pop"],
+        "mood": ["beautiful", "stark", "epic", "dramatic", "uplifting", "hopeful", "pensive", "inspirational", "empowering", "soaring", "triumphant", "powerful", "emotional", "determined", "spiritual", "soulful", "cinematic", "ethereal", "floating", "bold"],
+        "arrangement_energy": ["building", "climactic", "crescendo", "sparse", "minimal", "driving"],
+        "use_case": ["fantasy", "adventure", "sci-fi", "trailer", "noir", "romance", "video game", "promo", "imaging", "commercial"],
+        "instrument": ["strings", "percussion", "drones", "synthesizer", "piano"],
+        "vocals": ["female vocal"]
+      },
+      "source": "https://protunes.com/search/?Origin=homepage&SeedScoreTerm=505846519&TextTerm=Dramatic"
+    },
+    {
+      "track": "Taking Me Higher",
+      "catalog": "Vox Trax",
+      "provider": "BMG Production Music",
+      "bpm": 167,
+      "observed": {
+        "genre_style": ["Pop", "Hip Hop", "Synth Pop"],
+        "mood": ["euphoric", "big-energy", "direct", "exciting"],
+        "vocals": ["female vocal"],
+        "arrangement_energy": ["halftime", "big edit points"]
+      },
+      "source": "https://protunes.com/search/?FacetTerm=genre%40pop&Origin=homepage&SeedScoreTerm=762024146"
+    }
+  ],
+  "normalized_candidate_vocab": {
+    "genre_style": ["electro pop", "breakbeat", "funk", "synth pop", "electronic", "sound design", "hybrid orchestral", "hip hop"],
+    "mood": ["cool", "joyful", "optimistic", "enthusiastic", "energetic", "busy", "frantic", "playful", "whimsical", "fun", "upbeat", "motivational", "happy", "outgoing", "positive", "raucous", "groovy", "artsy", "quirky", "raw", "epic", "dramatic", "uplifting", "hopeful", "pensive", "inspirational", "empowering", "soaring", "triumphant", "powerful", "emotional", "determined", "cinematic", "ethereal", "bold", "euphoric", "exciting"],
+    "instrument": ["synthesizer", "synth drums", "keyboards", "brass", "horns", "saxophone", "wah guitar", "electric guitar", "bass guitar", "drums", "organ", "electric piano", "strings", "percussion", "drones", "piano"],
+    "vocals": ["instrumental", "female vocal"],
+    "arrangement_energy": ["bouncing", "rhythmic", "building", "climactic", "crescendo", "sparse", "minimal", "driving", "halftime", "big edit points"],
+    "use_case": ["fantasy", "adventure", "sci-fi", "trailer", "noir", "romance", "video game", "promo", "imaging", "commercial"]
+  },
+  "rule": "Use as external corroboration/candidate vocabulary only. Do not label any value as an official current BMG tag unless verified on a BMG-owned search/filter/metadata surface."
+}
