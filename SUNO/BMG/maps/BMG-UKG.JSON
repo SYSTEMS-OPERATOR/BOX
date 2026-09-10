@@ -1,1 +1,602 @@
-{"id":"BMG-UKG","version":"0.2.0","genre":{"canonical":"UK Garage","aliases":["UK garage","UKG","2-step","two-step garage","speed garage","garage"],"parent":"Electronic","adjacent":["Bassline","Speed Garage","Grime","Dubstep","House","Drum & Bass"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["UK Garage","2-Step","Speed Garage","Bassline"],"descriptors":["rhythmic","melodic","lush","atmospheric","repetitive","complex"]},"sysop":{"seed_terms":["two-step","grime","dubstep","minimal techno","sub-heavy","warehouse","bassline","speed-neuro bass","glitch hop"]}},"parameters":{"tempo_bpm":{"min":128,"max":140,"preferred":[130,132,133,135,138]},"meter":["4/4"],"rhythm":["swung two-step","skipping kick pattern","syncopated garage shuffle","off-grid percussion"],"drums":["tight clap/snare","shuffled hats","rim and percussion ticks","occasional breakbeat fills"],"bass":["rubbery sub-bass","reese/bassline movement","short call-response bass phrases"],"harmony":["minor seventh and suspended chord color","sparse organ/piano stabs optional"],"texture":["wet vocal fragments","dark club air","crisp shuffled percussion"],"arrangement":["DJ intro","verse pocket","bassline drop","breakdown with vocal or chord reset"],"mix":["tight mono sub","wide tops","short room/reverb tails","clear swing transients"],"vocals":["female or male chopped hooks optional","MC/grime delivery optional","instrumental valid"]},"prompt_map":{"positive":[{"term":"UK garage","weight":1.0,"source":"seed"},{"term":"swung two-step","weight":0.95,"source":"seed"},{"term":"rubbery bassline","weight":0.95,"source":"seed"},{"term":"grime","weight":0.75,"source":"sysop"},{"term":"rhythmic","weight":0.8,"source":"rym"},{"term":"lush","weight":0.6,"source":"rym"}],"negative":["rigid unswung quantization","washy sub-bass"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim.","SYSOP seed terms are normalized observations from BACKUP metadata search and are not BMG vocabulary."]}}
+{
+  "id": "BMG-UKG",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "UK Garage",
+    "aliases": [
+      "UK garage",
+      "UKG",
+      "2-step",
+      "two-step garage",
+      "speed garage",
+      "garage"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "Bassline",
+      "Speed Garage",
+      "Grime",
+      "Dubstep",
+      "House",
+      "Drum & Bass"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "partially_verified",
+      "genre_terms": [
+        "Dance",
+        "Edm",
+        "House",
+        "Rave",
+        "Uk Garage"
+      ],
+      "mood_terms": [
+        "Cool",
+        "Driving",
+        "Heavy",
+        "Positive",
+        "Powerful",
+        "Propulsive"
+      ],
+      "instrument_terms": [
+        "Bass",
+        "Drum Machine",
+        "Drums",
+        "Female Vocal",
+        "Instrumental",
+        "Piano",
+        "Sampled Vocals",
+        "Saxophone",
+        "Synth",
+        "Synth Bass",
+        "Vocal"
+      ],
+      "production_terms": [
+        "Slick",
+        "Sound Effects"
+      ],
+      "sync_usage_terms": [
+        "Beach",
+        "City",
+        "Corporate",
+        "Fashion",
+        "Lifestyle",
+        "Parties",
+        "Travel",
+        "Workout"
+      ],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [
+        "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+        "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage"
+      ],
+      "term_evidence": {
+        "Dance": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Edm": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "House": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Rave": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Uk Garage": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Cool": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Driving": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Heavy": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Positive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Powerful": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Propulsive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drum Machine": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Female Vocal": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Instrumental": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Piano": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Sampled Vocals": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Saxophone": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synth": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synth Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Vocal": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Slick": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sound Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Beach": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "City": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Corporate": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Fashion": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Lifestyle": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Parties": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Travel": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/street-ballad/7b3512f0064107d365fb00b5861d5cb9/a1caa85ea70f4c54?searchTerm=UK+Garage&typed=UK+Garage",
+            "page_type": "track",
+            "track_or_collection": "Street Ballad",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Workout": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/in-the-house/f3046424c146bbd2324c2597e5f427eb/afdccf6041507156?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "In The House",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ]
+      },
+      "scope_note": "Observed labels from selected family-associated tracks; map hierarchy and parameters remain analyst seed assumptions."
+    },
+    "rym": {
+      "genres": [
+        "UK Garage",
+        "2-Step",
+        "Speed Garage",
+        "Bassline"
+      ],
+      "descriptors": [
+        "rhythmic",
+        "melodic",
+        "lush",
+        "atmospheric",
+        "repetitive",
+        "complex"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "two-step",
+        "grime",
+        "dubstep",
+        "minimal techno",
+        "sub-heavy",
+        "warehouse",
+        "bassline",
+        "speed-neuro bass",
+        "glitch hop"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 128,
+      "max": 140,
+      "preferred": [
+        130,
+        132,
+        133,
+        135,
+        138
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "swung two-step",
+      "skipping kick pattern",
+      "syncopated garage shuffle",
+      "off-grid percussion"
+    ],
+    "drums": [
+      "tight clap/snare",
+      "shuffled hats",
+      "rim and percussion ticks",
+      "occasional breakbeat fills"
+    ],
+    "bass": [
+      "rubbery sub-bass",
+      "reese/bassline movement",
+      "short call-response bass phrases"
+    ],
+    "harmony": [
+      "minor seventh and suspended chord color",
+      "sparse organ/piano stabs optional"
+    ],
+    "texture": [
+      "wet vocal fragments",
+      "dark club air",
+      "crisp shuffled percussion"
+    ],
+    "arrangement": [
+      "DJ intro",
+      "verse pocket",
+      "bassline drop",
+      "breakdown with vocal or chord reset"
+    ],
+    "mix": [
+      "tight mono sub",
+      "wide tops",
+      "short room/reverb tails",
+      "clear swing transients"
+    ],
+    "vocals": [
+      "female or male chopped hooks optional",
+      "MC/grime delivery optional",
+      "instrumental valid"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "UK garage",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "swung two-step",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "rubbery bassline",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "grime",
+        "weight": 0.75,
+        "source": "sysop"
+      },
+      {
+        "term": "rhythmic",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "lush",
+        "weight": 0.6,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "rigid unswung quantization",
+      "washy sub-bass"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 19,
+      "unique_profiles": 19,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "partially_verified"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "Observed labels from selected family-associated tracks; map hierarchy and parameters remain analyst seed assumptions.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
+  }
+}

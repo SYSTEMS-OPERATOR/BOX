@@ -1,1 +1,980 @@
-{"id":"BMG-DUBSTEP","version":"0.2.0","genre":{"canonical":"Dubstep","aliases":["dubstep","UK dubstep","deep dubstep","neurostep"],"parent":"Electronic","adjacent":["UK Garage","Bassline","Grime","Drum & Bass","Riddim","Breaks"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["Dubstep","Brostep","Riddim","Deep Dubstep"],"descriptors":["heavy","rhythmic","dense","atmospheric","minimalistic","raw"]},"sysop":{"seed_terms":["breakbeat","UK garage","grime","bassline","speed neurobass","industrial","trap","neurofunk","minimalist electronic"]}},"parameters":{"tempo_bpm":{"min":135,"max":150,"preferred":[138,140,142,145]},"meter":["4/4"],"rhythm":["half-time bass pulse","syncopated kick placement","negative-space groove","occasional two-step carryover"],"drums":["hard snare anchor","sparse kick architecture","shuffled hats","impact fills"],"bass":["sub pressure","wobble/reese movement","FM growls optional","call-response bass design"],"harmony":["minor/modal darkness common","sparse chord stabs","dissonant tension optional"],"texture":["deep space","industrial grit optional","low-mid bass detail","sudden silence"],"arrangement":["intro tension","pre-drop vacuum","bass drop","mid-track reset","second-drop variation"],"mix":["mono sub foundation","controlled mid-bass width","snare forward","headroom for bass transients"],"vocals":["chopped hooks optional","grime/MC delivery optional","instrumental valid"]},"prompt_map":{"positive":[{"term":"dubstep","weight":1.0,"source":"seed"},{"term":"sub-bass pressure","weight":0.95,"source":"seed"},{"term":"half-time groove","weight":0.9,"source":"seed"},{"term":"grime","weight":0.75,"source":"sysop"},{"term":"heavy","weight":0.8,"source":"rym"},{"term":"atmospheric","weight":0.65,"source":"rym"}],"negative":["thin sub-bass","constant full-spectrum wall without groove"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim.","SYSOP seed terms are normalized observations from BACKUP metadata search and are not BMG vocabulary."]}}
+{
+  "id": "BMG-DUBSTEP",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "Dubstep",
+    "aliases": [
+      "dubstep",
+      "UK dubstep",
+      "deep dubstep",
+      "neurostep"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "UK Garage",
+      "Bassline",
+      "Grime",
+      "Drum & Bass",
+      "Riddim",
+      "Breaks"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "partially_verified",
+      "genre_terms": [
+        "Big Beat",
+        "Brostep",
+        "Dance",
+        "Dubstep",
+        "Edm",
+        "Garage",
+        "Rave",
+        "Robostep"
+      ],
+      "mood_terms": [
+        "Aggressive",
+        "Driving",
+        "Energetic",
+        "Heavy",
+        "Hectic",
+        "Intense",
+        "Propulsive",
+        "Restless"
+      ],
+      "instrument_terms": [
+        "Arpeggiators",
+        "Bass",
+        "Drum Machine",
+        "Drums",
+        "Dubstep Drums",
+        "Edm Synths",
+        "Electronic Beats",
+        "Instrumental",
+        "Mc",
+        "Pads",
+        "Sampled Vocals",
+        "Sub",
+        "Sub Bass",
+        "Synth",
+        "Synthesizers",
+        "Theremin",
+        "Wobble",
+        "Wobble Bass"
+      ],
+      "production_terms": [
+        "Dj Scratches",
+        "Drops",
+        "Glitch Effects",
+        "Mangled",
+        "Rises",
+        "Sound Effects"
+      ],
+      "sync_usage_terms": [
+        "Action",
+        "Advertising",
+        "City",
+        "Commercial",
+        "Extreme Sports",
+        "Fashion",
+        "Sports",
+        "Workout"
+      ],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [
+        "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+        "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic"
+      ],
+      "term_evidence": {
+        "Big Beat": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Brostep": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Dance": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Dubstep": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Edm": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Garage": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Rave": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Robostep": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Aggressive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Driving": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Energetic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Heavy": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Hectic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Intense": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Propulsive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Restless": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Arpeggiators": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drum Machine": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Dubstep Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Edm Synths": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Electronic Beats": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Instrumental": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Mc": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Pads": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sampled Vocals": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sub": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sub Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Synth": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synthesizers": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Theremin": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Wobble": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Wobble Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Dj Scratches": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Drops": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Glitch Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Mangled": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Rises": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sound Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Action": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Advertising": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "City": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Commercial": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Extreme Sports": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Fashion": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Sports": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/relentless/175dd378e173b87e/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Relentless",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Workout": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/never-give-up/83dfcb33f6ba5da5/002a3793350484b5?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Never Give Up",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ]
+      },
+      "scope_note": "Observed labels from selected family-associated tracks; map hierarchy and parameters remain analyst seed assumptions."
+    },
+    "rym": {
+      "genres": [
+        "Dubstep",
+        "Brostep",
+        "Riddim",
+        "Deep Dubstep"
+      ],
+      "descriptors": [
+        "heavy",
+        "rhythmic",
+        "dense",
+        "atmospheric",
+        "minimalistic",
+        "raw"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "breakbeat",
+        "UK garage",
+        "grime",
+        "bassline",
+        "speed neurobass",
+        "industrial",
+        "trap",
+        "neurofunk",
+        "minimalist electronic"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 135,
+      "max": 150,
+      "preferred": [
+        138,
+        140,
+        142,
+        145
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "half-time bass pulse",
+      "syncopated kick placement",
+      "negative-space groove",
+      "occasional two-step carryover"
+    ],
+    "drums": [
+      "hard snare anchor",
+      "sparse kick architecture",
+      "shuffled hats",
+      "impact fills"
+    ],
+    "bass": [
+      "sub pressure",
+      "wobble/reese movement",
+      "FM growls optional",
+      "call-response bass design"
+    ],
+    "harmony": [
+      "minor/modal darkness common",
+      "sparse chord stabs",
+      "dissonant tension optional"
+    ],
+    "texture": [
+      "deep space",
+      "industrial grit optional",
+      "low-mid bass detail",
+      "sudden silence"
+    ],
+    "arrangement": [
+      "intro tension",
+      "pre-drop vacuum",
+      "bass drop",
+      "mid-track reset",
+      "second-drop variation"
+    ],
+    "mix": [
+      "mono sub foundation",
+      "controlled mid-bass width",
+      "snare forward",
+      "headroom for bass transients"
+    ],
+    "vocals": [
+      "chopped hooks optional",
+      "grime/MC delivery optional",
+      "instrumental valid"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "dubstep",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "sub-bass pressure",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "half-time groove",
+        "weight": 0.9,
+        "source": "seed"
+      },
+      {
+        "term": "grime",
+        "weight": 0.75,
+        "source": "sysop"
+      },
+      {
+        "term": "heavy",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "atmospheric",
+        "weight": 0.65,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "thin sub-bass",
+      "constant full-spectrum wall without groove"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 29,
+      "unique_profiles": 29,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "partially_verified"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "Observed labels from selected family-associated tracks; map hierarchy and parameters remain analyst seed assumptions.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
+  }
+}

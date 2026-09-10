@@ -1,67 +1,472 @@
 {
   "id": "BMG-RAVE",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "genre": {
     "canonical": "Rave",
-    "aliases": ["rave", "future rave", "rave music", "rave techno", "rave house"],
+    "aliases": [
+      "rave",
+      "future rave",
+      "rave music",
+      "rave techno",
+      "rave house"
+    ],
     "parent": "Electronic",
-    "adjacent": ["Techno", "Trance", "House", "Breakbeat Hardcore", "Big Beat"]
+    "adjacent": [
+      "Techno",
+      "Trance",
+      "House",
+      "Breakbeat Hardcore",
+      "Big Beat"
+    ]
   },
   "taxonomy": {
     "bmg": {
-      "status": "pending_official_tag_verification",
-      "genre_terms": [],
-      "mood_terms": [],
-      "instrument_terms": [],
-      "production_terms": [],
-      "sync_usage_terms": []
+      "status": "partially_verified",
+      "genre_terms": [
+        "Rave",
+        "Tech House",
+        "Techno"
+      ],
+      "mood_terms": [
+        "Driving",
+        "Moody",
+        "Positive"
+      ],
+      "instrument_terms": [
+        "Bass",
+        "Beat",
+        "Drums",
+        "Instrumental",
+        "Synth",
+        "Synthesizer"
+      ],
+      "production_terms": [
+        "Repetitive",
+        "Sound Effects"
+      ],
+      "sync_usage_terms": [
+        "Corporate",
+        "Fashion",
+        "Fitness",
+        "Industry",
+        "Lifestyle",
+        "Sports",
+        "Technology",
+        "Workout"
+      ],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [
+        "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic"
+      ],
+      "term_evidence": {
+        "Rave": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Tech House": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Techno": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Driving": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Moody": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Positive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Beat": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Instrumental": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synth": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synthesizer": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Repetitive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sound Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Corporate": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Fashion": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Fitness": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Industry": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Lifestyle": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Sports": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Technology": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Workout": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/minimal-techno-rave/48695f432f5ee650/68df576246698469?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Minimal Techno Rave",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ]
+      },
+      "scope_note": "Observed labels from selected family-associated tracks; map hierarchy and parameters remain analyst seed assumptions."
     },
     "bmg_catalog_related": {
       "status": "release_title_evidence",
-      "terms": ["Future Rave", "Future Rave Attack", "Future Rave Festival", "Future Rave Fire", "Future Rave Hysteria", "Future Rave Punchy", "Future Rave Weapon"],
+      "terms": [
+        "Future Rave",
+        "Future Rave Attack",
+        "Future Rave Festival",
+        "Future Rave Fire",
+        "Future Rave Hysteria",
+        "Future Rave Punchy",
+        "Future Rave Weapon"
+      ],
       "evidence_ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json"
     },
     "rym": {
-      "genres": ["Rave", "Hardcore Breaks", "Techno", "Trance"],
-      "descriptors": ["energetic", "rhythmic", "repetitive", "anthemic", "dense", "euphoric"]
+      "genres": [
+        "Rave",
+        "Hardcore Breaks",
+        "Techno",
+        "Trance"
+      ],
+      "descriptors": [
+        "energetic",
+        "rhythmic",
+        "repetitive",
+        "anthemic",
+        "dense",
+        "euphoric"
+      ]
     },
     "sysop": {
-      "seed_terms": ["underground rave", "UK rave", "hoover stabs", "breakbeat hardcore", "acid", "hard minimal", "warehouse"]
+      "seed_terms": [
+        "underground rave",
+        "UK rave",
+        "hoover stabs",
+        "breakbeat hardcore",
+        "acid",
+        "hard minimal",
+        "warehouse"
+      ]
     }
   },
   "parameters": {
-    "tempo_bpm": {"min": 128, "max": 160, "preferred": [128, 135, 140, 145, 150]},
-    "meter": ["4/4"],
-    "rhythm": ["driving club pulse", "rave-break accents", "rolling percussion", "breakbeat or four-on-the-floor compatible"],
-    "drums": ["hard kick", "bright snare/clap", "rave fills", "rapid hat energy"],
-    "bass": ["driving sub", "rave bass stab", "acid or reese movement optional"],
-    "harmony": ["minor or modal rave hooks", "anthemic synth intervals", "trance-compatible lift optional"],
-    "texture": ["hoover stabs", "bright supersaws", "acid resonance", "warehouse air", "distorted rave FX"],
-    "arrangement": ["DJ intro", "tension build", "hard drop", "breakdown", "re-entry with larger hook"],
-    "mix": ["club-forward low end", "hard transient focus", "wide synth energy", "clear drop contrast"],
-    "vocals": ["MC shouts optional", "short vocal hooks", "instrumental valid"]
+    "tempo_bpm": {
+      "min": 128,
+      "max": 160,
+      "preferred": [
+        128,
+        135,
+        140,
+        145,
+        150
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "driving club pulse",
+      "rave-break accents",
+      "rolling percussion",
+      "breakbeat or four-on-the-floor compatible"
+    ],
+    "drums": [
+      "hard kick",
+      "bright snare/clap",
+      "rave fills",
+      "rapid hat energy"
+    ],
+    "bass": [
+      "driving sub",
+      "rave bass stab",
+      "acid or reese movement optional"
+    ],
+    "harmony": [
+      "minor or modal rave hooks",
+      "anthemic synth intervals",
+      "trance-compatible lift optional"
+    ],
+    "texture": [
+      "hoover stabs",
+      "bright supersaws",
+      "acid resonance",
+      "warehouse air",
+      "distorted rave FX"
+    ],
+    "arrangement": [
+      "DJ intro",
+      "tension build",
+      "hard drop",
+      "breakdown",
+      "re-entry with larger hook"
+    ],
+    "mix": [
+      "club-forward low end",
+      "hard transient focus",
+      "wide synth energy",
+      "clear drop contrast"
+    ],
+    "vocals": [
+      "MC shouts optional",
+      "short vocal hooks",
+      "instrumental valid"
+    ]
   },
   "prompt_map": {
     "positive": [
-      {"term": "rave", "weight": 1.0, "source": "seed"},
-      {"term": "future rave", "weight": 0.85, "source": "seed"},
-      {"term": "warehouse", "weight": 0.8, "source": "sysop"},
-      {"term": "hoover stabs", "weight": 0.8, "source": "sysop"},
-      {"term": "energetic", "weight": 0.75, "source": "rym"},
-      {"term": "anthemic", "weight": 0.7, "source": "rym"}
+      {
+        "term": "rave",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "future rave",
+        "weight": 0.85,
+        "source": "seed"
+      },
+      {
+        "term": "warehouse",
+        "weight": 0.8,
+        "source": "sysop"
+      },
+      {
+        "term": "hoover stabs",
+        "weight": 0.8,
+        "source": "sysop"
+      },
+      {
+        "term": "energetic",
+        "weight": 0.75,
+        "source": "rym"
+      },
+      {
+        "term": "anthemic",
+        "weight": 0.7,
+        "source": "rym"
+      }
     ],
-    "negative": ["soft background wash", "low-energy lounge groove"],
-    "compile_order": ["genre", "tempo", "rhythm", "drums", "bass", "harmony", "texture", "arrangement", "mix", "vocals", "negative"]
+    "negative": [
+      "soft background wash",
+      "low-energy lounge groove"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
   },
   "cross_reference": {
-    "backup": {"status": "pending_empirical_scan", "matched_tracks": 0, "top_terms": [], "rym_terms": [], "rym_descriptor_hits": [], "negative_terms": []}
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 9,
+      "unique_profiles": 9,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
   },
   "provenance": {
     "sources": [
-      {"kind": "bmg_catalog_related", "ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json", "status": "BMG Production Music-distributed release/track-title evidence; not official taxonomy"},
-      {"kind": "rym", "ref": "BOX/RYM/styles.json"},
-      {"kind": "sysop", "ref": "SYSTEMS-OPERATOR/BACKUP", "status": "seed vocabulary pending fingerprint scan"}
+      {
+        "kind": "bmg_catalog_related",
+        "ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json",
+        "status": "BMG Production Music-distributed release/track-title evidence; not official taxonomy"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "partially_verified"
+      }
     ],
-    "notes": ["Candidate family created from BMG-distributed Future Rave catalog language. Formal BMG tag status remains unverified."]
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "Observed labels from selected family-associated tracks; map hierarchy and parameters remain analyst seed assumptions.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
   }
 }

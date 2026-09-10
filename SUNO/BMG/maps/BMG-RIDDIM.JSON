@@ -1,1 +1,212 @@
-{"id":"BMG-RIDDIM","version":"0.2.0","genre":{"canonical":"Riddim Dubstep","aliases":["riddim dubstep","dark riddim","minimal riddim","sensual riddim"],"parent":"Electronic","adjacent":["Dubstep","Deathstep","Neurofunk","Grime","Bassline"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["Riddim Dubstep","Dubstep"],"descriptors":["repetitive","minimalistic","heavy","rhythmic","raw","dense"]},"sysop":{"seed_terms":["dark riddim","riddim rap","neurobass","deathstep","minimal electronic","sensual/psychological bass","sensual riddim","hard neurobass"]}},"parameters":{"tempo_bpm":{"min":138,"max":150,"preferred":[140,145,150]},"meter":["4/4"],"rhythm":["half-time grid","repetitive syncopated bass cells","negative-space groove","triplet or swung variations optional"],"drums":["hard snare anchor","sparse kick placement","tight hats","impact fills"],"bass":["square/reese bass stabs","sub pulse","call-response growls","minimal repeated bass motif"],"harmony":["minimal harmonic movement","minor/atonal tension","bass rhythm dominates"],"texture":["dry","mechanical","dark","controlled distortion"],"arrangement":["pre-drop vacuum","repeating bass motif","micro-variation cycles","second-drop mutation"],"mix":["mono sub","dry snare","clear bass gaps","limited low-mid smear"],"vocals":["rap/MC fragments optional","chopped command phrases optional","instrumental valid"]},"prompt_map":{"positive":[{"term":"riddim dubstep","weight":1.0,"source":"seed"},{"term":"minimal repeated bass motif","weight":0.95,"source":"seed"},{"term":"dark riddim","weight":0.85,"source":"sysop"},{"term":"neurobass","weight":0.8,"source":"sysop"},{"term":"repetitive","weight":0.8,"source":"rym"},{"term":"minimalistic","weight":0.75,"source":"rym"}],"negative":["lush chord-heavy arrangement","continuous bass with no negative space"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["Target map; official BMG child taxonomy remains pending verification.","Alias deliberately avoids bare 'riddim' to reduce false matches with dancehall riddim usage."]}}
+{
+  "id": "BMG-RIDDIM",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "Riddim Dubstep",
+    "aliases": [
+      "riddim dubstep",
+      "dark riddim",
+      "minimal riddim",
+      "sensual riddim"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "Dubstep",
+      "Deathstep",
+      "Neurofunk",
+      "Grime",
+      "Bassline"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "not_observed_in_sample",
+      "genre_terms": [],
+      "mood_terms": [],
+      "instrument_terms": [],
+      "production_terms": [],
+      "sync_usage_terms": [],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [],
+      "term_evidence": {},
+      "scope_note": "No detailed track selected for this family in the bounded harvest. Empty arrays are explicit evidence gaps, not placeholders or catalog-absence claims."
+    },
+    "rym": {
+      "genres": [
+        "Riddim Dubstep",
+        "Dubstep"
+      ],
+      "descriptors": [
+        "repetitive",
+        "minimalistic",
+        "heavy",
+        "rhythmic",
+        "raw",
+        "dense"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "dark riddim",
+        "riddim rap",
+        "neurobass",
+        "deathstep",
+        "minimal electronic",
+        "sensual/psychological bass",
+        "sensual riddim",
+        "hard neurobass"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 138,
+      "max": 150,
+      "preferred": [
+        140,
+        145,
+        150
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "half-time grid",
+      "repetitive syncopated bass cells",
+      "negative-space groove",
+      "triplet or swung variations optional"
+    ],
+    "drums": [
+      "hard snare anchor",
+      "sparse kick placement",
+      "tight hats",
+      "impact fills"
+    ],
+    "bass": [
+      "square/reese bass stabs",
+      "sub pulse",
+      "call-response growls",
+      "minimal repeated bass motif"
+    ],
+    "harmony": [
+      "minimal harmonic movement",
+      "minor/atonal tension",
+      "bass rhythm dominates"
+    ],
+    "texture": [
+      "dry",
+      "mechanical",
+      "dark",
+      "controlled distortion"
+    ],
+    "arrangement": [
+      "pre-drop vacuum",
+      "repeating bass motif",
+      "micro-variation cycles",
+      "second-drop mutation"
+    ],
+    "mix": [
+      "mono sub",
+      "dry snare",
+      "clear bass gaps",
+      "limited low-mid smear"
+    ],
+    "vocals": [
+      "rap/MC fragments optional",
+      "chopped command phrases optional",
+      "instrumental valid"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "riddim dubstep",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "minimal repeated bass motif",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "dark riddim",
+        "weight": 0.85,
+        "source": "sysop"
+      },
+      {
+        "term": "neurobass",
+        "weight": 0.8,
+        "source": "sysop"
+      },
+      {
+        "term": "repetitive",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "minimalistic",
+        "weight": 0.75,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "lush chord-heavy arrangement",
+      "continuous bass with no negative space"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 5,
+      "unique_profiles": 4,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "not_observed_in_sample"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "No detailed track selected for this family in the bounded harvest. Empty arrays are explicit evidence gaps, not placeholders or catalog-absence claims.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
+  }
+}

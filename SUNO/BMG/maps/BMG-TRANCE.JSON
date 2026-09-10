@@ -1,1 +1,216 @@
-{"id":"BMG-TRANCE","version":"0.2.0","genre":{"canonical":"Trance","aliases":["trance","hard trance","tech trance","psytrance","progressive trance"],"parent":"Electronic","adjacent":["Techno","Hardcore","House","Psytrance","EDM"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["Trance","Hard Trance","Tech Trance","Progressive Trance"],"descriptors":["melodic","repetitive","anthemic","lush","atmospheric","progressive"]},"sysop":{"seed_terms":["UK hard minimal","speed-neuro trance","rave-pop","UK hardcore","tech trance","hard trance","psy-core","aggressive bass"]}},"parameters":{"tempo_bpm":{"min":128,"max":145,"preferred":[132,136,138,140]},"meter":["4/4"],"rhythm":["driving four-on-the-floor","rolling offbeat bass","repeating arpeggio pulse","long tension ramps"],"drums":["firm kick","bright hats","snare rolls/builds","riser percussion"],"bass":["offbeat bass pulse","sub support","acid line optional"],"harmony":["minor/major euphoric progressions","arpeggiated synth harmony","suspended tension"],"texture":["wide supersaw/pad field","bright arpeggios","air and reverb","psychedelic FX optional"],"arrangement":["long intro","progressive build","breakdown","large re-entry/drop","extended outro"],"mix":["clean kick/sub","wide melodic field","controlled bright highs","automation-led dynamics"],"vocals":["breathy/euphoric topline optional","spoken phrase optional","instrumental valid"]},"prompt_map":{"positive":[{"term":"trance","weight":1.0,"source":"seed"},{"term":"driving four-on-the-floor","weight":0.9,"source":"seed"},{"term":"arpeggiated synths","weight":0.9,"source":"seed"},{"term":"hard trance","weight":0.75,"source":"sysop"},{"term":"melodic","weight":0.8,"source":"rym"},{"term":"anthemic","weight":0.7,"source":"rym"}],"negative":["breakbeat-dominant rhythm","dry narrow melodic field"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim.","SYSOP seed terms are normalized observations from BACKUP metadata search and are not BMG vocabulary."]}}
+{
+  "id": "BMG-TRANCE",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "Trance",
+    "aliases": [
+      "trance",
+      "hard trance",
+      "tech trance",
+      "psytrance",
+      "progressive trance"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "Techno",
+      "Hardcore",
+      "House",
+      "Psytrance",
+      "EDM"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "not_observed_in_sample",
+      "genre_terms": [],
+      "mood_terms": [],
+      "instrument_terms": [],
+      "production_terms": [],
+      "sync_usage_terms": [],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [],
+      "term_evidence": {},
+      "scope_note": "No detailed track selected for this family in the bounded harvest. Empty arrays are explicit evidence gaps, not placeholders or catalog-absence claims."
+    },
+    "rym": {
+      "genres": [
+        "Trance",
+        "Hard Trance",
+        "Tech Trance",
+        "Progressive Trance"
+      ],
+      "descriptors": [
+        "melodic",
+        "repetitive",
+        "anthemic",
+        "lush",
+        "atmospheric",
+        "progressive"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "UK hard minimal",
+        "speed-neuro trance",
+        "rave-pop",
+        "UK hardcore",
+        "tech trance",
+        "hard trance",
+        "psy-core",
+        "aggressive bass"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 128,
+      "max": 145,
+      "preferred": [
+        132,
+        136,
+        138,
+        140
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "driving four-on-the-floor",
+      "rolling offbeat bass",
+      "repeating arpeggio pulse",
+      "long tension ramps"
+    ],
+    "drums": [
+      "firm kick",
+      "bright hats",
+      "snare rolls/builds",
+      "riser percussion"
+    ],
+    "bass": [
+      "offbeat bass pulse",
+      "sub support",
+      "acid line optional"
+    ],
+    "harmony": [
+      "minor/major euphoric progressions",
+      "arpeggiated synth harmony",
+      "suspended tension"
+    ],
+    "texture": [
+      "wide supersaw/pad field",
+      "bright arpeggios",
+      "air and reverb",
+      "psychedelic FX optional"
+    ],
+    "arrangement": [
+      "long intro",
+      "progressive build",
+      "breakdown",
+      "large re-entry/drop",
+      "extended outro"
+    ],
+    "mix": [
+      "clean kick/sub",
+      "wide melodic field",
+      "controlled bright highs",
+      "automation-led dynamics"
+    ],
+    "vocals": [
+      "breathy/euphoric topline optional",
+      "spoken phrase optional",
+      "instrumental valid"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "trance",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "driving four-on-the-floor",
+        "weight": 0.9,
+        "source": "seed"
+      },
+      {
+        "term": "arpeggiated synths",
+        "weight": 0.9,
+        "source": "seed"
+      },
+      {
+        "term": "hard trance",
+        "weight": 0.75,
+        "source": "sysop"
+      },
+      {
+        "term": "melodic",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "anthemic",
+        "weight": 0.7,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "breakbeat-dominant rhythm",
+      "dry narrow melodic field"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 18,
+      "unique_profiles": 9,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "not_observed_in_sample"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "No detailed track selected for this family in the bounded harvest. Empty arrays are explicit evidence gaps, not placeholders or catalog-absence claims.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
+  }
+}

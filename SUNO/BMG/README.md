@@ -15,13 +15,24 @@ Never flatten these sources together:
 - **SYSOP_EMPIRICAL** — corpus-derived fingerprints measuring what actually recurs in BACKUP.
 - **SUNO** — compiled prompt output.
 
-## Current BMG search model
+## Direct public-UI harvest — 10 September 2026
+
+- [Analysis-ready taxonomy](bmg_sync_electronic_taxonomy.json): 1,329 exact displayed strings, 17 detailed tracks, source fields, counts, relationships and untested Suno candidates.
+- [Research summary](bmg_sync_electronic_taxonomy_summary.md): findings, uncertainties and controlled experiments.
+- [Compact UI evidence](evidence/public-ui-harvest-2026-09-10.json): public navigation and metadata observations; no media or catalog prose.
+- [Validation report](validation_report.md): existing-file audit, repairs, test results and scope limits.
+
+The current harvest is from BMG Production Music. Sync+ required login with no existing authenticated catalog access. Track panels expose Genre, Keywords, Instrumentation, optional Key, BPM and optional Tempo. Analytical mood/production/use-case buckets do not imply separate source fields.
+
+Fourteen maps have bounded track evidence, two have suggestion-only evidence and six are explicitly unsampled. `active` is a project registry designation, not BMG verification. Existing map `genre` relationships, aliases, parameter ranges and prompt weights remain seed assumptions; only `taxonomy.bmg` carries the new direct evidence. Every populated BMG term links to its original source field and URL. Nulls and empty arrays with documented evidence gaps are intentional.
+
+## Advertised BMG search model
 
 The current public BMG MusicSpace surface explicitly advertises automatic keyword suggestions and A.I.-enhanced track tagging across five search axes:
 
 `genre | mood | instrument | key | tempo`
 
-It also exposes similarity search. `evidence/official-tag-axes.json` records those verified axes. The public crawl does **not** currently expose a complete enumerable value list, so individual tag values are promoted to `bmg` only after direct BMG confirmation.
+It also exposes similarity search. `evidence/official-tag-axes.json` records those verified axes. The direct UI harvest now supplies observed values, including 852 distinct nonempty suggestions for a UK Garage result set. This is not a complete enumerable vocabulary or proof that every suggestion is a controlled tag. Source fields remain distinct from advertised search axes.
 
 ## Catalog-related vocabulary
 
@@ -36,7 +47,7 @@ It also exposes similarity search. `evidence/official-tag-axes.json` records tho
 - Acid: `pressure`, `groove`, `trax`, `test`
 - Drone: `dark`, `tension`, `investigation`
 
-Two repeated catalog families now have candidate maps while remaining explicitly unverified as official BMG genre tags:
+Two catalog families retain candidate-map placement. The direct harvest now observes `Glitch` and `Rave` in Genre fields; the longer release-title phrases below remain catalog-related evidence:
 
 `BMG-GLITCH.JSON` — Glitched Electronica / Hyper Glitch / Glitch Hop / Lofi Glitch Hop
 
@@ -114,7 +125,10 @@ python SUNO/BMG/tools/blend_maps.py \
 ## Validate
 
 ```bash
+python -m pip install -r SUNO/BMG/tools/requirements.txt
 python SUNO/BMG/tools/validate_maps.py
+python -m unittest discover -s SUNO/BMG/tools -p 'test_*.py'
 ```
 
-Validation catches malformed JSON, duplicate IDs, filename/ID mismatches, missing parameter groups, BPM-range errors, and invalid prompt-source labels.
+Validation enforces Draft 2020-12 map schemas, JSON duplicate-key checks, registry integrity, local evidence references, per-term provenance, track/count consistency, relationship endpoints, candidate ranking rules and explicit dummy values. Missing dependencies fail closed. Historical external evidence receives structural checks; its source contents were not all re-fetched during this harvest.
+

@@ -1,6 +1,9 @@
 {
-  "version": "0.9.0",
-  "verified_parent": {"source": "BMG Production Music", "genre": "Electronic"},
+  "version": "0.10.0",
+  "verified_parent": {
+    "source": "BMG Production Music",
+    "genre": "Electronic"
+  },
   "official_tag_axes": "SUNO/BMG/evidence/official-tag-axes.json",
   "catalog_evidence": "SUNO/BMG/evidence/catalog-genre-terms.json",
   "related_catalog_vocabulary": "SUNO/BMG/evidence/related-catalog-vocabulary.json",
@@ -13,21 +16,129 @@
     "naming": "SYSOP_<MAP_ID>_CORE.JSON",
     "status": "generated_in_private_BACKUP",
     "latest_scan_evidence": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
-    "latest_scan": {"tracks": 441, "unique_style_profiles": 325, "maps_scanned": 22, "builder_version": "0.2.0", "source_repo": "SYSTEMS-OPERATOR/BACKUP", "generated_output_commit": "3ffbafd9e677cf10666eceb0547530bbdc6f3f90"}
+    "latest_scan": {
+      "tracks": 441,
+      "unique_style_profiles": 325,
+      "maps_scanned": 22,
+      "builder_version": "0.2.0",
+      "source_repo": "SYSTEMS-OPERATOR/BACKUP",
+      "generated_output_commit": "3ffbafd9e677cf10666eceb0547530bbdc6f3f90"
+    }
   },
-  "active": ["BMG-BREAKCORE", "BMG-DNB", "BMG-BREAKS", "BMG-JUNGLE", "BMG-UKG", "BMG-SPEED-GARAGE", "BMG-BASSLINE", "BMG-DUBSTEP", "BMG-NEUROFUNK", "BMG-RIDDIM", "BMG-GRIME", "BMG-TECHNO", "BMG-HOUSE", "BMG-ACID", "BMG-BIG-BEAT", "BMG-EBM", "BMG-TRANCE", "BMG-INDUSTRIAL", "BMG-EXPERIMENTAL", "BMG-DRONE"],
+  "active": [
+    "BMG-BREAKCORE",
+    "BMG-DNB",
+    "BMG-BREAKS",
+    "BMG-JUNGLE",
+    "BMG-UKG",
+    "BMG-SPEED-GARAGE",
+    "BMG-BASSLINE",
+    "BMG-DUBSTEP",
+    "BMG-NEUROFUNK",
+    "BMG-RIDDIM",
+    "BMG-GRIME",
+    "BMG-TECHNO",
+    "BMG-HOUSE",
+    "BMG-ACID",
+    "BMG-BIG-BEAT",
+    "BMG-EBM",
+    "BMG-TRANCE",
+    "BMG-INDUSTRIAL",
+    "BMG-EXPERIMENTAL",
+    "BMG-DRONE"
+  ],
   "candidate_families": {
-    "BMG-GLITCH": {"status": "map_created_empirically_supported_pending_official_tag_verification", "map": "maps/BMG-GLITCH.JSON", "empirical_profiles": 18, "empirical_confidence": "moderate", "evidence": ["Glitched Electronica", "Hyper Glitch", "Glitch Hop", "Lofi Glitch Hop"]},
-    "BMG-RAVE": {"status": "map_created_empirically_supported_pending_official_tag_verification", "map": "maps/BMG-RAVE.JSON", "empirical_profiles": 9, "empirical_confidence": "moderate", "evidence": ["Future Rave"]}
+    "BMG-GLITCH": {
+      "status": "direct_genre_label_observed_in_bounded_sample",
+      "map": "maps/BMG-GLITCH.JSON",
+      "empirical_profiles": 18,
+      "empirical_confidence": "moderate",
+      "evidence": [
+        "Glitched Electronica",
+        "Hyper Glitch",
+        "Glitch Hop",
+        "Lofi Glitch Hop"
+      ],
+      "direct_evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json"
+    },
+    "BMG-RAVE": {
+      "status": "direct_genre_label_observed_in_bounded_sample",
+      "map": "maps/BMG-RAVE.JSON",
+      "empirical_profiles": 9,
+      "empirical_confidence": "moderate",
+      "evidence": [
+        "Future Rave"
+      ],
+      "direct_evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json"
+    }
   },
   "families": {
-    "breaks": ["BMG-BREAKS", "BMG-BIG-BEAT", "BMG-BREAKCORE", "BMG-JUNGLE", "BMG-DNB", "BMG-ACID", "BMG-GLITCH"],
-    "uk_bass": ["BMG-UKG", "BMG-SPEED-GARAGE", "BMG-BASSLINE", "BMG-GRIME", "BMG-DUBSTEP", "BMG-RIDDIM", "BMG-DNB", "BMG-NEUROFUNK"],
-    "club_4x4": ["BMG-HOUSE", "BMG-TECHNO", "BMG-ACID", "BMG-TRANCE", "BMG-EBM", "BMG-RAVE"],
-    "industrial_experimental": ["BMG-INDUSTRIAL", "BMG-EBM", "BMG-EXPERIMENTAL", "BMG-DRONE", "BMG-BREAKCORE", "BMG-NEUROFUNK", "BMG-GLITCH"]
+    "breaks": [
+      "BMG-BREAKS",
+      "BMG-BIG-BEAT",
+      "BMG-BREAKCORE",
+      "BMG-JUNGLE",
+      "BMG-DNB",
+      "BMG-ACID",
+      "BMG-GLITCH"
+    ],
+    "uk_bass": [
+      "BMG-UKG",
+      "BMG-SPEED-GARAGE",
+      "BMG-BASSLINE",
+      "BMG-GRIME",
+      "BMG-DUBSTEP",
+      "BMG-RIDDIM",
+      "BMG-DNB",
+      "BMG-NEUROFUNK"
+    ],
+    "club_4x4": [
+      "BMG-HOUSE",
+      "BMG-TECHNO",
+      "BMG-ACID",
+      "BMG-TRANCE",
+      "BMG-EBM",
+      "BMG-RAVE"
+    ],
+    "industrial_experimental": [
+      "BMG-INDUSTRIAL",
+      "BMG-EBM",
+      "BMG-EXPERIMENTAL",
+      "BMG-DRONE",
+      "BMG-BREAKCORE",
+      "BMG-NEUROFUNK",
+      "BMG-GLITCH"
+    ]
   },
-  "verification_queue": ["enumerate live BMG genre tag values", "enumerate live BMG mood tag values", "enumerate live BMG instrument tag values", "confirm key and tempo filter semantics", "promote catalog-related candidates only when official BMG metadata/filter evidence exists"],
-  "tooling": ["tools/build_rym_crossref.py", "tools/build_empirical_fingerprints.py", "tools/compare_fingerprints.py", "tools/score_related_catalog_overlap.py", "tools/compile_genre_map.py", "tools/blend_maps.py", "tools/validate_maps.py"],
-  "namespaces": ["bmg", "bmg_catalog_related", "bmg_editorial", "bmg_distributor_external", "rym", "sysop", "sysop_empirical", "suno"],
-  "rule": "Do not flatten provenance; current BMG search axes are official, empirical SYSOP fingerprints are corpus observations, BMG-distributed release/track vocabulary is catalog evidence rather than official taxonomy, and tag values require direct BMG confirmation before promotion."
+  "verification_queue": [
+    "Obtain legitimately available Sync+ catalog access to compare taxonomies.",
+    "Target currently unsampled families; distinguish suggestion, album-title, keyword and Genre evidence.",
+    "Determine whether key/tempo filter values are normalized separately from displayed track fields.",
+    "Test candidate terminology in controlled Suno experiments; no efficacy has yet been established."
+  ],
+  "tooling": [
+    "tools/build_rym_crossref.py",
+    "tools/build_empirical_fingerprints.py",
+    "tools/compare_fingerprints.py",
+    "tools/score_related_catalog_overlap.py",
+    "tools/compile_genre_map.py",
+    "tools/blend_maps.py",
+    "tools/validate_maps.py"
+  ],
+  "namespaces": [
+    "bmg",
+    "bmg_catalog_related",
+    "bmg_editorial",
+    "bmg_distributor_external",
+    "rym",
+    "sysop",
+    "sysop_empirical",
+    "suno"
+  ],
+  "rule": "Do not flatten provenance; current BMG search axes are official, empirical SYSOP fingerprints are corpus observations, BMG-distributed release/track vocabulary is catalog evidence rather than official taxonomy, and tag values require direct BMG confirmation before promotion.",
+  "public_ui_harvest": "SUNO/BMG/evidence/public-ui-harvest-2026-09-10.json",
+  "electronic_taxonomy": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+  "research_summary": "SUNO/BMG/bmg_sync_electronic_taxonomy_summary.md",
+  "validation_report": "SUNO/BMG/validation_report.md",
+  "family_assignment_status": "derived analyst grouping; active does not mean BMG-verified"
 }

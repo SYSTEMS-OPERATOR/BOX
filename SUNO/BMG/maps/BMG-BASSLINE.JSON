@@ -1,1 +1,472 @@
-{"id":"BMG-BASSLINE","version":"0.2.0","genre":{"canonical":"Bassline","aliases":["bassline","UK bassline","bassline house","4x4 bassline"],"parent":"Electronic","adjacent":["UK Garage","Speed Garage","House","Grime","Dubstep"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["Bassline","Bassline House"],"descriptors":["rhythmic","repetitive","heavy","minimalistic","raw","melodic"]},"sysop":{"seed_terms":["UK garage","grime","speed-neuro bass","dubstep","two-step","hard UK bass","warehouse","slap house"]}},"parameters":{"tempo_bpm":{"min":130,"max":142,"preferred":[133,135,138,140]},"meter":["4/4"],"rhythm":["bouncy 4x4 or swung garage grid","syncopated bass-call rhythm","short tension gaps"],"drums":["hard kick","clap/snare anchor","shuffled hats","garage percussion"],"bass":["rubbery bassline","reese bass","FM bass stabs","call-response sub/low-mid"],"harmony":["minimal minor-key stabs","organ/piano accents optional"],"texture":["dark funky club texture","tight bass modulation","dry percussion"],"arrangement":["quick intro","bassline reveal","drop-hook cycle","breakdown and return"],"mix":["mono sub","wide bass harmonics","sharp kick separation","compact club master"],"vocals":["chopped hooks or grime vocal optional","instrumental valid"]},"prompt_map":{"positive":[{"term":"bassline","weight":1.0,"source":"seed"},{"term":"rubbery bassline","weight":0.95,"source":"seed"},{"term":"swung garage rhythm","weight":0.85,"source":"seed"},{"term":"grime","weight":0.75,"source":"sysop"},{"term":"rhythmic","weight":0.8,"source":"rym"}],"negative":["subless mid-bass only","soft diffuse kick"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim.","SYSOP seed terms are normalized observations from BACKUP metadata search and are not BMG vocabulary."]}}
+{
+  "id": "BMG-BASSLINE",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "Bassline",
+    "aliases": [
+      "bassline",
+      "UK bassline",
+      "bassline house",
+      "4x4 bassline"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "UK Garage",
+      "Speed Garage",
+      "House",
+      "Grime",
+      "Dubstep"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "partially_verified",
+      "genre_terms": [
+        "Edm",
+        "Hardcore"
+      ],
+      "mood_terms": [
+        "Aggressive",
+        "Agressive",
+        "Driving",
+        "Energetic",
+        "Hectic",
+        "Propulsive",
+        "Restless"
+      ],
+      "instrument_terms": [
+        "Bass",
+        "Bassline",
+        "Drum Machine",
+        "Drums",
+        "Electronic Beat",
+        "Instrumental",
+        "Synth",
+        "Synthetizer",
+        "Vocal Sample"
+      ],
+      "production_terms": [
+        "Harsh",
+        "Sound Effects"
+      ],
+      "sync_usage_terms": [
+        "Corporate",
+        "Extreme Sports",
+        "Industry",
+        "Nightlife",
+        "Sports",
+        "Technology"
+      ],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [
+        "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic"
+      ],
+      "term_evidence": {
+        "Edm": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Hardcore": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Aggressive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Agressive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Driving": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Energetic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Hectic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Propulsive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Restless": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Bassline": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drum Machine": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Electronic Beat": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Instrumental": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synth": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synthetizer": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Vocal Sample": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Harsh": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sound Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Corporate": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Extreme Sports": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Industry": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Nightlife": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Sports": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Technology": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/peyotl/7214943912844d2a/77878cc12b8da128?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Peyotl",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ]
+      },
+      "scope_note": "Bassline appears in Instrumentation on Peyotl, not as a UK Garage / Bassline genre label."
+    },
+    "rym": {
+      "genres": [
+        "Bassline",
+        "Bassline House"
+      ],
+      "descriptors": [
+        "rhythmic",
+        "repetitive",
+        "heavy",
+        "minimalistic",
+        "raw",
+        "melodic"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "UK garage",
+        "grime",
+        "speed-neuro bass",
+        "dubstep",
+        "two-step",
+        "hard UK bass",
+        "warehouse",
+        "slap house"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 130,
+      "max": 142,
+      "preferred": [
+        133,
+        135,
+        138,
+        140
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "bouncy 4x4 or swung garage grid",
+      "syncopated bass-call rhythm",
+      "short tension gaps"
+    ],
+    "drums": [
+      "hard kick",
+      "clap/snare anchor",
+      "shuffled hats",
+      "garage percussion"
+    ],
+    "bass": [
+      "rubbery bassline",
+      "reese bass",
+      "FM bass stabs",
+      "call-response sub/low-mid"
+    ],
+    "harmony": [
+      "minimal minor-key stabs",
+      "organ/piano accents optional"
+    ],
+    "texture": [
+      "dark funky club texture",
+      "tight bass modulation",
+      "dry percussion"
+    ],
+    "arrangement": [
+      "quick intro",
+      "bassline reveal",
+      "drop-hook cycle",
+      "breakdown and return"
+    ],
+    "mix": [
+      "mono sub",
+      "wide bass harmonics",
+      "sharp kick separation",
+      "compact club master"
+    ],
+    "vocals": [
+      "chopped hooks or grime vocal optional",
+      "instrumental valid"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "bassline",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "rubbery bassline",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "swung garage rhythm",
+        "weight": 0.85,
+        "source": "seed"
+      },
+      {
+        "term": "grime",
+        "weight": 0.75,
+        "source": "sysop"
+      },
+      {
+        "term": "rhythmic",
+        "weight": 0.8,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "subless mid-bass only",
+      "soft diffuse kick"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 9,
+      "unique_profiles": 8,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "partially_verified"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "Bassline appears in Instrumentation on Peyotl, not as a UK Garage / Bassline genre label.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
+  }
+}

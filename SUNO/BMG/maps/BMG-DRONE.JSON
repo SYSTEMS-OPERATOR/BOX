@@ -1,1 +1,634 @@
-{"id":"BMG-DRONE","version":"0.2.0","genre":{"canonical":"Drone Electronic","aliases":["drone electronic","industrial drone","drone music","dark drone"],"parent":"Electronic","adjacent":["Ambient","Industrial","Experimental","Noise","Dark Ambient"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["Drone","Dark Ambient","Industrial"],"descriptors":["atmospheric","repetitive","minimalistic","dense","sparse","noisy"]},"sysop":{"seed_terms":["industrial drone","ritual ambient","deep bass music","neurostep","pure sine drone","cinematic flatline","sub drone","warehouse pressure"]}},"parameters":{"tempo_bpm":{"min":0,"max":120,"preferred":[]},"meter":["free time","4/4 optional"],"rhythm":["sustained pulse optional","near-static duration","slow modulation","rhythm may be absent"],"drums":["none by default","isolated impacts optional","subtle mechanical ticks optional"],"bass":["continuous sub drone","pure sine fundamental optional","slow beating partials","low-frequency pressure"],"harmony":["single tonal center or spectral cluster","microtonal beating optional","very slow harmonic drift"],"texture":["long sustained layers","industrial resonance","noise floor","spectral motion","ritual ambience"],"arrangement":["slow accretion","long plateaus","subtractive voids","single-event transitions"],"mix":["stable low-frequency headroom","controlled resonance","wide upper atmospherics","minimal transient density"],"vocals":["none by default","breath/phoneme textures optional","spoken fragments optional"]},"prompt_map":{"positive":[{"term":"drone electronic","weight":1.0,"source":"seed"},{"term":"continuous sub drone","weight":0.95,"source":"seed"},{"term":"industrial drone","weight":0.85,"source":"sysop"},{"term":"ritual ambient","weight":0.8,"source":"sysop"},{"term":"atmospheric","weight":0.8,"source":"rym"},{"term":"repetitive","weight":0.7,"source":"rym"}],"negative":["busy melodic lead","frequent drum fills","rapid chord changes"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["Target map; official BMG child taxonomy remains pending verification."]}}
+{
+  "id": "BMG-DRONE",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "Drone Electronic",
+    "aliases": [
+      "drone electronic",
+      "industrial drone",
+      "drone music",
+      "dark drone"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "Ambient",
+      "Industrial",
+      "Experimental",
+      "Noise",
+      "Dark Ambient"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "partially_verified",
+      "genre_terms": [
+        "Electronic"
+      ],
+      "mood_terms": [
+        "Dramatic",
+        "Eerie",
+        "Ominous",
+        "Suspense",
+        "Tension"
+      ],
+      "instrument_terms": [
+        "Bass",
+        "Beat",
+        "Drums",
+        "Instrumental",
+        "Pads",
+        "Percussion",
+        "Synth",
+        "Synthesizer",
+        "Synths"
+      ],
+      "production_terms": [
+        "Drama Fx",
+        "Drone",
+        "Drones",
+        "Evolving",
+        "Growing",
+        "Sfx",
+        "Sound Design",
+        "Sound Effects"
+      ],
+      "sync_usage_terms": [
+        "Crime",
+        "Documentary",
+        "Drama",
+        "Film Score",
+        "Halloween",
+        "Horror",
+        "Investigation",
+        "Mystery",
+        "Score",
+        "Technology",
+        "Thriller",
+        "Underscore"
+      ],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [
+        "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+        "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74"
+      ],
+      "term_evidence": {
+        "Electronic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Dramatic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Eerie": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Ominous": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Suspense": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Tension": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Beat": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Instrumental": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Pads": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Percussion": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synth": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Synthesizer": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synths": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drama Fx": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drone": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Drones": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Evolving": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Growing": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sfx": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Sound Design": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sound Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Crime": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Documentary": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Drama": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Film Score": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Halloween": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Horror": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Investigation": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Mystery": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Score": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Technology": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Thriller": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/obscura/a8e3185bdc5842b3bd15726fe4458165/1c3892867033be73",
+            "page_type": "track",
+            "track_or_collection": "Obscura",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Underscore": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ]
+      },
+      "scope_note": "Drone/Drones are keywords/instrumentation and a version label, not a confirmed genre in this sample."
+    },
+    "rym": {
+      "genres": [
+        "Drone",
+        "Dark Ambient",
+        "Industrial"
+      ],
+      "descriptors": [
+        "atmospheric",
+        "repetitive",
+        "minimalistic",
+        "dense",
+        "sparse",
+        "noisy"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "industrial drone",
+        "ritual ambient",
+        "deep bass music",
+        "neurostep",
+        "pure sine drone",
+        "cinematic flatline",
+        "sub drone",
+        "warehouse pressure"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 0,
+      "max": 120,
+      "preferred": []
+    },
+    "meter": [
+      "free time",
+      "4/4 optional"
+    ],
+    "rhythm": [
+      "sustained pulse optional",
+      "near-static duration",
+      "slow modulation",
+      "rhythm may be absent"
+    ],
+    "drums": [
+      "none by default",
+      "isolated impacts optional",
+      "subtle mechanical ticks optional"
+    ],
+    "bass": [
+      "continuous sub drone",
+      "pure sine fundamental optional",
+      "slow beating partials",
+      "low-frequency pressure"
+    ],
+    "harmony": [
+      "single tonal center or spectral cluster",
+      "microtonal beating optional",
+      "very slow harmonic drift"
+    ],
+    "texture": [
+      "long sustained layers",
+      "industrial resonance",
+      "noise floor",
+      "spectral motion",
+      "ritual ambience"
+    ],
+    "arrangement": [
+      "slow accretion",
+      "long plateaus",
+      "subtractive voids",
+      "single-event transitions"
+    ],
+    "mix": [
+      "stable low-frequency headroom",
+      "controlled resonance",
+      "wide upper atmospherics",
+      "minimal transient density"
+    ],
+    "vocals": [
+      "none by default",
+      "breath/phoneme textures optional",
+      "spoken fragments optional"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "drone electronic",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "continuous sub drone",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "industrial drone",
+        "weight": 0.85,
+        "source": "sysop"
+      },
+      {
+        "term": "ritual ambient",
+        "weight": 0.8,
+        "source": "sysop"
+      },
+      {
+        "term": "atmospheric",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "repetitive",
+        "weight": 0.7,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "busy melodic lead",
+      "frequent drum fills",
+      "rapid chord changes"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 1,
+      "unique_profiles": 1,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "partially_verified"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "Drone/Drones are keywords/instrumentation and a version label, not a confirmed genre in this sample.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM.",
+      "The existing seed tempo lower bound 0 denotes optional absence of pulse, not a measured 0 BPM track; preferred BPM is intentionally empty."
+    ]
+  }
+}

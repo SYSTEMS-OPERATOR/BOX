@@ -1,6 +1,6 @@
 {
   "id": "BMG-BREAKCORE",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "genre": {
     "canonical": "Breakcore",
     "aliases": [
@@ -19,10 +19,215 @@
   },
   "taxonomy": {
     "bmg": {
-      "status": "pending_verification",
-      "genre_terms": [],
-      "mood_terms": [],
-      "production_terms": []
+      "status": "partially_verified",
+      "genre_terms": [
+        "Electronica",
+        "Glitch"
+      ],
+      "mood_terms": [
+        "Intense",
+        "Pulsing",
+        "Tension"
+      ],
+      "instrument_terms": [
+        "808s",
+        "Bass",
+        "Drum Machine",
+        "Drums",
+        "Instrumental",
+        "Rhythmic",
+        "Shout",
+        "Space Tones",
+        "Synth",
+        "Vocals",
+        "Walking"
+      ],
+      "production_terms": [
+        "Pulsing",
+        "Sound Effects"
+      ],
+      "sync_usage_terms": [
+        "Industry",
+        "Technology"
+      ],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [
+        "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep"
+      ],
+      "term_evidence": {
+        "Electronica": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Glitch": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Intense": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Pulsing": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Tension": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "808s": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drum Machine": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Instrumental": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Rhythmic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Shout": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Space Tones": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synth": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Vocals": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Walking": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Sound Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Industry": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Technology": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ]
+      },
+      "scope_note": "Breakcore is observed under Instrumentation, not Genre; family assignment is derived."
     },
     "rym": {
       "genres": [
@@ -169,33 +374,42 @@
   },
   "cross_reference": {
     "backup": {
-      "status": "seed_only",
-      "matched_tracks": 0,
-      "top_terms": [],
-      "rym_terms": [],
-      "rym_descriptor_hits": [],
-      "negative_terms": []
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 42,
+      "unique_profiles": 35,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
     }
   },
   "provenance": {
     "sources": [
       {
         "kind": "bmg_public",
-        "ref": "BMG Production Music / Electronic",
-        "status": "parent_verified"
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
       },
       {
         "kind": "rym",
-        "ref": "BOX/RYM/styles.json"
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
       },
       {
         "kind": "sysop",
         "ref": "SYSTEMS-OPERATOR/BACKUP",
-        "status": "seed_examples_and_pending_scan"
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "partially_verified"
       }
     ],
     "notes": [
-      "BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim."
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "Breakcore is observed under Instrumentation, not Genre; family assignment is derived.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
     ]
   }
 }
