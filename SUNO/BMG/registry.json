@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "verified_parent": {
     "source": "BMG Production Music",
     "genre": "Electronic"
@@ -7,9 +7,7 @@
   "active": [
     "BMG-BREAKCORE",
     "BMG-DNB",
-    "BMG-BREAKS"
-  ],
-  "next": [
+    "BMG-BREAKS",
     "BMG-JUNGLE",
     "BMG-UKG",
     "BMG-DUBSTEP",
@@ -18,7 +16,42 @@
     "BMG-EBM",
     "BMG-TRANCE",
     "BMG-INDUSTRIAL",
-    "BMG-EXPERIMENTAL"
+    "BMG-EXPERIMENTAL",
+    "BMG-BASSLINE",
+    "BMG-SPEED-GARAGE"
+  ],
+  "families": {
+    "breaks": [
+      "BMG-BREAKS",
+      "BMG-BREAKCORE",
+      "BMG-JUNGLE",
+      "BMG-DNB"
+    ],
+    "uk_bass": [
+      "BMG-UKG",
+      "BMG-SPEED-GARAGE",
+      "BMG-BASSLINE",
+      "BMG-DUBSTEP",
+      "BMG-DNB"
+    ],
+    "club_4x4": [
+      "BMG-HOUSE",
+      "BMG-TECHNO",
+      "BMG-TRANCE",
+      "BMG-EBM"
+    ],
+    "industrial_experimental": [
+      "BMG-INDUSTRIAL",
+      "BMG-EBM",
+      "BMG-EXPERIMENTAL",
+      "BMG-BREAKCORE"
+    ]
+  },
+  "verification_queue": [
+    "live BMG Electronic child-filter vocabulary",
+    "BMG mood/filter vocabulary",
+    "BMG instrumentation/filter vocabulary",
+    "BMG production/sync-use vocabulary"
   ],
   "namespaces": [
     "bmg",
