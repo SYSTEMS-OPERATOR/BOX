@@ -1,0 +1,30 @@
+{
+  "version": "0.1.0",
+  "verified_parent": {
+    "source": "BMG Production Music",
+    "genre": "Electronic"
+  },
+  "active": [
+    "BMG-BREAKCORE",
+    "BMG-DNB",
+    "BMG-BREAKS"
+  ],
+  "next": [
+    "BMG-JUNGLE",
+    "BMG-UKG",
+    "BMG-DUBSTEP",
+    "BMG-TECHNO",
+    "BMG-HOUSE",
+    "BMG-EBM",
+    "BMG-TRANCE",
+    "BMG-INDUSTRIAL",
+    "BMG-EXPERIMENTAL"
+  ],
+  "namespaces": [
+    "bmg",
+    "rym",
+    "sysop",
+    "suno"
+  ],
+  "rule": "Do not flatten provenance; verify live BMG child terms before marking them verified."
+}

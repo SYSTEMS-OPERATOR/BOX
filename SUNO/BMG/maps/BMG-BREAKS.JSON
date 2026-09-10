@@ -1,0 +1,199 @@
+{
+  "id": "BMG-BREAKS",
+  "version": "0.1.0",
+  "genre": {
+    "canonical": "Breaks",
+    "aliases": [
+      "breaks",
+      "breakbeat",
+      "classic breakbeat",
+      "nu skool breaks",
+      "big beat",
+      "breakbeat hardcore"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "Drum & Bass",
+      "Jungle",
+      "UK Garage",
+      "Electro",
+      "Big Beat"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "pending_verification",
+      "genre_terms": [],
+      "mood_terms": [],
+      "production_terms": []
+    },
+    "rym": {
+      "genres": [
+        "Breakbeat",
+        "Big Beat",
+        "Breakbeat Hardcore"
+      ],
+      "descriptors": [
+        "rhythmic",
+        "raw",
+        "complex",
+        "repetitive",
+        "minimalistic"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "funky",
+        "minimal",
+        "ragga-grime",
+        "jungle",
+        "techno",
+        "house",
+        "dubstep",
+        "breakbeat hardcore",
+        "rave",
+        "electro",
+        "big beat"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 110,
+      "max": 150,
+      "preferred": [
+        128,
+        133,
+        140
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "syncopated broken beat",
+      "funk-derived breaks",
+      "off-grid-feel percussion",
+      "swing optional"
+    ],
+    "drums": [
+      "punchy sampled breaks",
+      "snare-led backbeat",
+      "chopped kick patterns",
+      "percussion fills"
+    ],
+    "bass": [
+      "funk bassline",
+      "sub-bass pulse",
+      "acid or electro bass optional"
+    ],
+    "harmony": [
+      "riff-driven",
+      "modal or minor-key optional",
+      "sparse harmony compatible"
+    ],
+    "texture": [
+      "dry punch",
+      "sample grit",
+      "rave stabs optional",
+      "metallic percussion optional"
+    ],
+    "arrangement": [
+      "groove-first sections",
+      "break isolations",
+      "drop by subtraction",
+      "call-and-response"
+    ],
+    "mix": [
+      "tight dry transients",
+      "clear bass/drum separation",
+      "club-forward low end"
+    ],
+    "vocals": [
+      "instrumental friendly",
+      "MC or chopped hook optional"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "breakbeat",
+        "weight": 1,
+        "source": "seed"
+      },
+      {
+        "term": "syncopated broken beat",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "funky",
+        "weight": 0.8,
+        "source": "sysop"
+      },
+      {
+        "term": "minimal",
+        "weight": 0.7,
+        "source": "sysop"
+      },
+      {
+        "term": "rhythmic",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "big beat",
+        "weight": 0.65,
+        "source": "sysop"
+      }
+    ],
+    "negative": [
+      "continuous straight four-on-the-floor",
+      "overwashed reverb"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "seed_only",
+      "matched_tracks": 0,
+      "top_terms": [],
+      "rym_terms": [],
+      "rym_descriptor_hits": [],
+      "negative_terms": []
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "BMG Production Music / Electronic",
+        "status": "parent_verified"
+      },
+      {
+        "kind": "rym",
+        "ref": "BOX/RYM/styles.json"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed_examples_and_pending_scan"
+      }
+    ],
+    "notes": [
+      "BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim."
+    ]
+  }
+}

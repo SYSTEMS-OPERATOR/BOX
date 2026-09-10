@@ -1,0 +1,201 @@
+{
+  "id": "BMG-BREAKCORE",
+  "version": "0.1.0",
+  "genre": {
+    "canonical": "Breakcore",
+    "aliases": [
+      "breakcore",
+      "glitchcore",
+      "mashcore"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "Jungle",
+      "Drum & Bass",
+      "Breakbeat Hardcore",
+      "Gabber",
+      "Glitch"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "pending_verification",
+      "genre_terms": [],
+      "mood_terms": [],
+      "production_terms": []
+    },
+    "rym": {
+      "genres": [
+        "Breakcore",
+        "Glitchcore",
+        "Breakbeat Hardcore"
+      ],
+      "descriptors": [
+        "chaotic",
+        "complex",
+        "dense",
+        "noisy",
+        "technical",
+        "rhythmic",
+        "raw"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "glitch",
+        "glitchcore",
+        "happy hardcore",
+        "hard acid breakcore",
+        "bubblegum deathstep",
+        "kawaii noir",
+        "cinematic cyberwar",
+        "hyperactive"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 160,
+      "max": 220,
+      "preferred": [
+        180,
+        196,
+        205
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "hyper-edited breakbeats",
+      "chopped Amen breaks",
+      "micro-cuts",
+      "abrupt stop-start edits"
+    ],
+    "drums": [
+      "shredded break edits",
+      "hard kick transients",
+      "razor snare attacks",
+      "rapid fill mutation"
+    ],
+    "bass": [
+      "distorted sub-bass",
+      "reese bass",
+      "hard low-mid bass impacts"
+    ],
+    "harmony": [
+      "minor-key or atonal-compatible",
+      "melody optional; rhythm can dominate"
+    ],
+    "texture": [
+      "glitch",
+      "granular edits",
+      "digital skipping",
+      "controlled distortion"
+    ],
+    "arrangement": [
+      "violent contrast",
+      "micro-silence",
+      "rapid section mutation",
+      "false drops"
+    ],
+    "mix": [
+      "hard transient focus",
+      "dense but separated low end",
+      "intentional clipping only when requested"
+    ],
+    "vocals": [
+      "optional chopped vocal fragments",
+      "stutter edits",
+      "spoken or sung lead optional"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "breakcore",
+        "weight": 1,
+        "source": "seed"
+      },
+      {
+        "term": "chopped Amen breaks",
+        "weight": 1,
+        "source": "seed"
+      },
+      {
+        "term": "micro-cut drum edits",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "glitchcore",
+        "weight": 0.8,
+        "source": "seed"
+      },
+      {
+        "term": "chaotic",
+        "weight": 0.75,
+        "source": "rym"
+      },
+      {
+        "term": "technical",
+        "weight": 0.7,
+        "source": "rym"
+      },
+      {
+        "term": "200 Hz snare focus",
+        "weight": 0.65,
+        "source": "sysop",
+        "note": "Observed SYSTEMS-OPERATOR preference; not a genre requirement."
+      }
+    ],
+    "negative": [
+      "straight four-on-the-floor dominance",
+      "soft-focus ambient wash"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "seed_only",
+      "matched_tracks": 0,
+      "top_terms": [],
+      "rym_terms": [],
+      "rym_descriptor_hits": [],
+      "negative_terms": []
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "BMG Production Music / Electronic",
+        "status": "parent_verified"
+      },
+      {
+        "kind": "rym",
+        "ref": "BOX/RYM/styles.json"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed_examples_and_pending_scan"
+      }
+    ],
+    "notes": [
+      "BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim."
+    ]
+  }
+}

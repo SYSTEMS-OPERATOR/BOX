@@ -1,0 +1,77 @@
+{
+  "id": "BMG-GENRE",
+  "version": "0.1.0",
+  "genre": {
+    "canonical": "GENRE",
+    "aliases": [],
+    "parent": "Electronic",
+    "adjacent": []
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "pending_verification",
+      "genre_terms": [],
+      "mood_terms": [],
+      "instrument_terms": [],
+      "production_terms": [],
+      "sync_usage_terms": []
+    },
+    "rym": {
+      "genres": [],
+      "descriptors": []
+    },
+    "sysop": {
+      "seed_terms": []
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 0,
+      "max": 0,
+      "preferred": []
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [],
+    "drums": [],
+    "bass": [],
+    "harmony": [],
+    "texture": [],
+    "arrangement": [],
+    "mix": [],
+    "vocals": []
+  },
+  "prompt_map": {
+    "positive": [],
+    "negative": [],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "unscanned",
+      "matched_tracks": 0,
+      "top_terms": [],
+      "rym_terms": [],
+      "rym_descriptor_hits": [],
+      "negative_terms": []
+    }
+  },
+  "provenance": {
+    "generated_at": "2026-09-10T02:30:00Z",
+    "sources": [],
+    "notes": []
+  }
+}

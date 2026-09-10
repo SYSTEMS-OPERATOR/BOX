@@ -1,0 +1,200 @@
+{
+  "id": "BMG-DNB",
+  "version": "0.1.0",
+  "genre": {
+    "canonical": "Drum & Bass",
+    "aliases": [
+      "drum and bass",
+      "drum & bass",
+      "dnb",
+      "neurofunk",
+      "liquid dnb",
+      "techstep"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "Jungle",
+      "Breakcore",
+      "UK Garage",
+      "Dubstep",
+      "Breaks"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "pending_verification",
+      "genre_terms": [],
+      "mood_terms": [],
+      "production_terms": []
+    },
+    "rym": {
+      "genres": [
+        "Drum & Bass",
+        "Neurofunk",
+        "Techstep",
+        "Liquid Drum & Bass"
+      ],
+      "descriptors": [
+        "rhythmic",
+        "complex",
+        "dense",
+        "atmospheric",
+        "technical",
+        "melodic"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "neurofunk",
+        "ragga jungle",
+        "neurobass",
+        "riddim",
+        "bass music",
+        "dark cinematic electronic",
+        "UK rave",
+        "classic breakbeat",
+        "industrial techno",
+        "gabber"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 160,
+      "max": 180,
+      "preferred": [
+        170,
+        172,
+        174
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "fast broken-beat drive",
+      "two-step DnB pulse",
+      "syncopated break edits",
+      "rolling ghost notes"
+    ],
+    "drums": [
+      "tight kick/snare anchor",
+      "Amen/Think break vocabulary",
+      "rapid hats",
+      "ghosted percussion"
+    ],
+    "bass": [
+      "sub-bass foundation",
+      "reese bass",
+      "neurobass movement",
+      "call-and-response low mids"
+    ],
+    "harmony": [
+      "minor and modal centers common",
+      "pads or stabs optional"
+    ],
+    "texture": [
+      "clean-to-aggressive spectrum",
+      "atmospheric layers optional",
+      "resampled bass detail"
+    ],
+    "arrangement": [
+      "intro-build-drop architecture",
+      "breakdown and second-drop variation",
+      "DJ-friendly energy blocks"
+    ],
+    "mix": [
+      "mono-compatible sub",
+      "wide upper bass",
+      "sharp transient separation",
+      "headroom around kick/snare"
+    ],
+    "vocals": [
+      "instrumental or vocal-led",
+      "ragga chops optional",
+      "breathy topline optional"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "drum and bass",
+        "weight": 1,
+        "source": "seed"
+      },
+      {
+        "term": "rolling breakbeats",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "sub-bass foundation",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "neurofunk",
+        "weight": 0.8,
+        "source": "sysop"
+      },
+      {
+        "term": "rhythmic",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "complex",
+        "weight": 0.7,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "sluggish halftime-only groove",
+      "muddy mono low-mid wall"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "seed_only",
+      "matched_tracks": 0,
+      "top_terms": [],
+      "rym_terms": [],
+      "rym_descriptor_hits": [],
+      "negative_terms": []
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "BMG Production Music / Electronic",
+        "status": "parent_verified"
+      },
+      {
+        "kind": "rym",
+        "ref": "BOX/RYM/styles.json"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed_examples_and_pending_scan"
+      }
+    ],
+    "notes": [
+      "BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim."
+    ]
+  }
+}

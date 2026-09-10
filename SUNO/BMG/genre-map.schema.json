@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Suno BMG Genre Parameter Map",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "genre",
+    "taxonomy",
+    "parameters",
+    "prompt_map",
+    "cross_reference",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^BMG-[A-Z0-9-]+$"
+    },
+    "version": {
+      "type": "string"
+    },
+    "genre": {
+      "type": "object",
+      "required": [
+        "canonical",
+        "aliases",
+        "parent"
+      ]
+    },
+    "taxonomy": {
+      "type": "object",
+      "required": [
+        "bmg",
+        "rym",
+        "sysop"
+      ]
+    },
+    "parameters": {
+      "type": "object"
+    },
+    "prompt_map": {
+      "type": "object",
+      "required": [
+        "positive",
+        "negative",
+        "compile_order"
+      ]
+    },
+    "cross_reference": {
+      "type": "object"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "sources"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
