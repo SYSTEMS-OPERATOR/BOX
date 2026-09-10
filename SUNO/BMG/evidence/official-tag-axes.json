@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "source": "https://bmgmusicspace.com/",
+  "status": "verified_current_public_bmg_surface",
+  "observed_features": {
+    "automatic_keyword_suggestions": true,
+    "ai_enhanced_track_tagging": true,
+    "similarity_search": true
+  },
+  "official_search_axes": [
+    "genre",
+    "mood",
+    "instrument",
+    "key",
+    "tempo"
+  ],
+  "notes": [
+    "The current public BMG Production Music surface explicitly says AI-enhanced track tagging is used across genre, mood, instrument, key, and tempo.",
+    "The crawl exposes the tag dimensions but not a complete enumerable list of values for each dimension.",
+    "Candidate values gathered from BMG-distributed release and track titles remain catalog evidence until an official BMG metadata/filter surface confirms them."
+  ]
+}
