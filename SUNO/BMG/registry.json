@@ -1,5 +1,5 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "verified_parent": {
     "source": "BMG Production Music",
     "genre": "Electronic"
@@ -10,7 +10,15 @@
     "schema": "SUNO/BMG/fingerprints/fingerprint.schema.json",
     "builder": "SUNO/BMG/tools/build_empirical_fingerprints.py",
     "naming": "SYSOP_<MAP_ID>_CORE.JSON",
-    "status": "generator_ready_pending_local_BACKUP_scan"
+    "status": "generated_in_private_BACKUP",
+    "latest_scan_evidence": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+    "latest_scan": {
+      "tracks": 441,
+      "unique_style_profiles": 325,
+      "builder_version": "0.2.0",
+      "source_repo": "SYSTEMS-OPERATOR/BACKUP",
+      "generated_output_commit": "f23a6461b7df0badc96e02de50c1597a95a47f36"
+    }
   },
   "active": [
     "BMG-BREAKCORE",
