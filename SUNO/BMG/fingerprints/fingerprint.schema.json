@@ -14,7 +14,7 @@
     "musical_anchors",
     "rym",
     "negative_terms",
-    "model_distribution",
+    "model_distribution_tracks",
     "thresholds",
     "provenance"
   ],
@@ -23,19 +23,26 @@
       "type": "string",
       "pattern": "^SYSOP_[A-Z0-9_]+_CORE$"
     },
-    "version": {
-      "type": "string"
-    },
+    "version": {"type": "string"},
     "map_id": {
       "type": "string",
       "pattern": "^BMG-[A-Z0-9-]+$"
     },
-    "genre": {
-      "type": ["string", "null"]
-    },
+    "genre": {"type": ["string", "null"]},
     "sample": {
       "type": "object",
-      "required": ["matched_tracks", "total_tracks", "match_rate", "match_aliases"]
+      "required": [
+        "matched_tracks",
+        "unique_style_profiles",
+        "duplicate_style_tracks",
+        "total_tracks",
+        "total_unique_style_profiles",
+        "track_match_rate",
+        "profile_match_rate",
+        "confidence",
+        "match_aliases",
+        "membership_source"
+      ]
     },
     "core_terms": {
       "type": "array",
@@ -49,7 +56,7 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["terms", "tracks", "support"]
+        "required": ["terms", "profiles", "support"]
       }
     },
     "musical_anchors": {
@@ -58,24 +65,37 @@
     },
     "rym": {"type": "array"},
     "negative_terms": {"type": "array"},
-    "model_distribution": {"type": "array"},
+    "model_distribution_tracks": {"type": "array"},
     "thresholds": {"type": "object"},
     "provenance": {
       "type": "object",
-      "required": ["generated_at", "builder", "source_repo", "source_path", "map_source", "policy"]
+      "required": ["generated_at", "builder", "builder_version", "source_repo", "source_path", "map_source", "policy"]
     }
   },
   "$defs": {
     "termStat": {
       "type": "object",
-      "required": ["term", "tracks", "support", "global_support", "lift", "score"],
+      "required": [
+        "term",
+        "profiles",
+        "support",
+        "global_support",
+        "lift",
+        "score",
+        "tracks",
+        "track_support",
+        "global_track_support"
+      ],
       "properties": {
         "term": {"type": "string"},
-        "tracks": {"type": "integer", "minimum": 1},
+        "profiles": {"type": "integer", "minimum": 1},
         "support": {"type": "number", "minimum": 0, "maximum": 1},
         "global_support": {"type": "number", "minimum": 0, "maximum": 1},
         "lift": {"type": "number", "minimum": 0},
-        "score": {"type": "number", "minimum": 0}
+        "score": {"type": "number", "minimum": 0},
+        "tracks": {"type": "integer", "minimum": 1},
+        "track_support": {"type": "number", "minimum": 0, "maximum": 1},
+        "global_track_support": {"type": "number", "minimum": 0, "maximum": 1}
       },
       "additionalProperties": false
     }
