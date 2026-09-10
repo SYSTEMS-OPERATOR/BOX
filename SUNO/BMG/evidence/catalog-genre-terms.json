@@ -1,0 +1,69 @@
+{
+  "version": "0.1.0",
+  "purpose": "Evidence that genre language occurs in BMG Production Music-distributed catalog releases. This is not a claim about BMG's official website filter hierarchy.",
+  "official_taxonomy": false,
+  "official_parent": {
+    "term": "Electronic",
+    "source": "https://bmgproductionmusic.com/en-us/home/genre/electronic/f1cd685e278574e2",
+    "status": "verified_on_bmg_site"
+  },
+  "observed_catalog_terms": [
+    {
+      "term": "Drum & Bass",
+      "evidence": "Fresh Drum & Bass Cuts",
+      "label": "Clear Wave Music / BMG Production Music",
+      "year": 2026,
+      "source": "https://music.apple.com/us/album/fresh-drum-bass-cuts/1868553279"
+    },
+    {
+      "term": "UK Garage",
+      "evidence": "2-Step Revival – UK Garage",
+      "label": "So Effective / BMG Production Music",
+      "year": 2026,
+      "source": "https://music.amazon.co.uk/albums/B0GYQMC9HG"
+    },
+    {
+      "term": "Dubstep",
+      "evidence": "Dubstep Essentials",
+      "label": "Altitude Music / BMG Production Music",
+      "year": 2023,
+      "source": "https://open.spotify.com/track/3HqvwPh6lKH9WUUfLq7UJL"
+    },
+    {
+      "term": "House",
+      "evidence": "Melodic House",
+      "label": "AXS Music / BMG Production Music",
+      "year": 2024,
+      "source": "https://music.apple.com/us/album/melodic-house/1707726506"
+    },
+    {
+      "term": "Techno",
+      "evidence": "ABSTRACT TECHNO",
+      "label": "Apache Music / BMG Production Music",
+      "year": 2025,
+      "source": "https://music.apple.com/us/album/abstract-techno/1809467533"
+    },
+    {
+      "term": "Jungle",
+      "evidence": "Jungle & X-Grooves",
+      "label": "AXS Music / BMG Production Music",
+      "year": 2016,
+      "source": "https://music.apple.com/us/album/jungle-x-grooves/1558154289"
+    },
+    {
+      "term": "Tech House",
+      "evidence": "Happy Tech House on Happy House Music",
+      "label": "The Home Of Happy / BMG Production Music",
+      "year": 2022,
+      "source": "https://open.spotify.com/track/6itW9cpinvwXguHkVDiuzJ"
+    },
+    {
+      "term": "Industrial",
+      "evidence": "Industrial Activity, Vol. 1",
+      "label": "Parry Music Library / BMG Production Music",
+      "year": 2019,
+      "source": "https://music.apple.com/us/album/industrial-activity-vol-1/1451690145"
+    }
+  ],
+  "rule": "Catalog-release evidence may promote a term to observed vocabulary, but only a live BMG filter/catalog interface pass can promote it to official taxonomy."
+}
