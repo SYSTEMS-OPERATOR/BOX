@@ -1,0 +1,94 @@
+{
+  "version": "0.2.0",
+  "generated_at": "2026-09-10T05:48:57.936057+00:00",
+  "source": {
+    "repository": "SYSTEMS-OPERATOR/BACKUP",
+    "source_commit": "64122993bf579197a3863d25c564008dd56cfcb8",
+    "generated_output_commit": "f23a6461b7df0badc96e02de50c1597a95a47f36",
+    "map_repository": "SYSTEMS-OPERATOR/BOX",
+    "map_commit": "b5ce9ea17beb2a4eaebe231439a2e98a9316e448"
+  },
+  "sample": {
+    "tracks_scanned": 441,
+    "unique_style_profiles": 325,
+    "method": "genre membership from compact display_tags with metadata.tags fallback; identical/reordered style profiles deduplicated for primary support/lift statistics"
+  },
+  "confidence_groups": {
+    "high": [
+      {"map_id": "BMG-BREAKCORE", "tracks": 42, "profiles": 35},
+      {"map_id": "BMG-BREAKS", "tracks": 28, "profiles": 27},
+      {"map_id": "BMG-DNB", "tracks": 83, "profiles": 71},
+      {"map_id": "BMG-DUBSTEP", "tracks": 29, "profiles": 29},
+      {"map_id": "BMG-EXPERIMENTAL", "tracks": 29, "profiles": 29},
+      {"map_id": "BMG-GRIME", "tracks": 28, "profiles": 28},
+      {"map_id": "BMG-HOUSE", "tracks": 30, "profiles": 24},
+      {"map_id": "BMG-NEUROFUNK", "tracks": 26, "profiles": 26},
+      {"map_id": "BMG-TECHNO", "tracks": 20, "profiles": 20}
+    ],
+    "moderate": [
+      {"map_id": "BMG-ACID", "tracks": 20, "profiles": 19},
+      {"map_id": "BMG-BASSLINE", "tracks": 9, "profiles": 8},
+      {"map_id": "BMG-INDUSTRIAL", "tracks": 15, "profiles": 15},
+      {"map_id": "BMG-JUNGLE", "tracks": 10, "profiles": 9},
+      {"map_id": "BMG-TRANCE", "tracks": 18, "profiles": 9},
+      {"map_id": "BMG-UKG", "tracks": 19, "profiles": 19}
+    ],
+    "low": [
+      {"map_id": "BMG-EBM", "tracks": 4, "profiles": 4},
+      {"map_id": "BMG-RIDDIM", "tracks": 5, "profiles": 4},
+      {"map_id": "BMG-SPEED-GARAGE", "tracks": 6, "profiles": 6}
+    ],
+    "insufficient": [
+      {"map_id": "BMG-BIG-BEAT", "tracks": 1, "profiles": 1},
+      {"map_id": "BMG-DRONE", "tracks": 1, "profiles": 1}
+    ]
+  },
+  "selected_observations": {
+    "BMG-NEUROFUNK": {
+      "profiles": 26,
+      "core": [
+        {"term": "neurofunk", "profiles": 26, "support": 1.0},
+        {"term": "minimal", "profiles": 15, "support": 0.5769},
+        {"term": "minimalistic", "profiles": 14, "support": 0.5385},
+        {"term": "172 bpm", "profiles": 12, "support": 0.4615},
+        {"term": "heavy", "profiles": 11, "support": 0.4231},
+        {"term": "tight transients", "profiles": 8, "support": 0.3077},
+        {"term": "200hz snare", "profiles": 8, "support": 0.3077}
+      ],
+      "frequency_anchor": {"hz": 200, "profiles": 13, "support": 0.5}
+    },
+    "BMG-DNB": {
+      "profiles": 71,
+      "core": [
+        {"term": "dnb", "profiles": 40, "support": 0.5634},
+        {"term": "dark dnb", "profiles": 35, "support": 0.493},
+        {"term": "neurofunk", "profiles": 27, "support": 0.3803},
+        {"term": "172 bpm", "profiles": 21, "support": 0.2958}
+      ]
+    },
+    "BMG-BREAKCORE": {
+      "profiles": 35,
+      "core": [
+        {"term": "breakcore", "profiles": 32, "support": 0.9143},
+        {"term": "glitch", "profiles": 20, "support": 0.5714},
+        {"term": "hardcore", "profiles": 12, "support": 0.3429},
+        {"term": "deathstep", "profiles": 8, "support": 0.2286},
+        {"term": "acid breakcore", "profiles": 7, "support": 0.2},
+        {"term": "glitchcore", "profiles": 7, "support": 0.2}
+      ]
+    },
+    "BMG-SPEED-GARAGE": {
+      "profiles": 6,
+      "confidence": "low",
+      "candidate_core": [
+        {"term": "speed garage", "profiles": 6, "support": 1.0},
+        {"term": "hard minimal", "profiles": 4, "support": 0.6667},
+        {"term": "200hz snare", "profiles": 4, "support": 0.6667},
+        {"term": "172 bpm", "profiles": 4, "support": 0.6667},
+        {"term": "minimal", "profiles": 5, "support": 0.8333}
+      ],
+      "note": "Treat as provisional until the sample grows; do not promote low-sample correlations to genre requirements."
+    }
+  },
+  "privacy": "This public evidence file contains aggregate counts only. Full generated SYSOP_*_CORE.JSON fingerprints remain in the private BACKUP repository unless deliberately exported."
+}
