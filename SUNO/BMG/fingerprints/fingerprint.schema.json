@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SYSOP Empirical Genre Fingerprint",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "map_id",
+    "genre",
+    "sample",
+    "core_terms",
+    "signature_terms",
+    "cooccurrence",
+    "musical_anchors",
+    "rym",
+    "negative_terms",
+    "model_distribution",
+    "thresholds",
+    "provenance"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^SYSOP_[A-Z0-9_]+_CORE$"
+    },
+    "version": {
+      "type": "string"
+    },
+    "map_id": {
+      "type": "string",
+      "pattern": "^BMG-[A-Z0-9-]+$"
+    },
+    "genre": {
+      "type": ["string", "null"]
+    },
+    "sample": {
+      "type": "object",
+      "required": ["matched_tracks", "total_tracks", "match_rate", "match_aliases"]
+    },
+    "core_terms": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/termStat"}
+    },
+    "signature_terms": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/termStat"}
+    },
+    "cooccurrence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["terms", "tracks", "support"]
+      }
+    },
+    "musical_anchors": {
+      "type": "object",
+      "required": ["bpm", "frequency_hz", "keys", "camelot"]
+    },
+    "rym": {"type": "array"},
+    "negative_terms": {"type": "array"},
+    "model_distribution": {"type": "array"},
+    "thresholds": {"type": "object"},
+    "provenance": {
+      "type": "object",
+      "required": ["generated_at", "builder", "source_repo", "source_path", "map_source", "policy"]
+    }
+  },
+  "$defs": {
+    "termStat": {
+      "type": "object",
+      "required": ["term", "tracks", "support", "global_support", "lift", "score"],
+      "properties": {
+        "term": {"type": "string"},
+        "tracks": {"type": "integer", "minimum": 1},
+        "support": {"type": "number", "minimum": 0, "maximum": 1},
+        "global_support": {"type": "number", "minimum": 0, "maximum": 1},
+        "lift": {"type": "number", "minimum": 0},
+        "score": {"type": "number", "minimum": 0}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
