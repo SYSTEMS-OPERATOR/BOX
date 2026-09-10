@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "purpose": "Confirmed BMG-owned editorial/search landing facets adjacent to the core genre/mood/instrument/key/tempo tag axes. This is a partial observed set, not a complete enumeration.",
+  "status": "partial_official_bmg_surface",
+  "facets": {
+    "music_for": [
+      {"term": "Drama", "slug": "drama", "source": "https://bmgproductionmusic.com/fr-fr/home/music-for/drama/eb4aafb45cd8a2f8", "related_language": ["intense", "emotional", "tension", "suspense", "dark"]},
+      {"term": "Documentary & History", "slug": "documentary-history", "source": "https://bmgproductionmusic.com/en-gb/home/music-for/documentary-history/7840eed321ef5dff", "related_language": ["history", "nature", "technology", "politics", "emotion"]},
+      {"term": "News & Journalism", "slug": "news-journalism", "source": "https://bmgproductionmusic.com/en-gb/home/music-for/news-journalism/fd69b1e4fb9dc2b2", "related_language": ["politics", "business", "sport", "local stories", "jingles", "atmospheric"]},
+      {"term": "Nature & Landscapes", "slug": "nature-landscapes", "source": "https://bmgproductionmusic.com/de-de/home/music-for/nature-landscapes/97033edd60d82922", "related_language": ["serene", "calm", "awe", "fear", "excitement"]},
+      {"term": "Inspired By", "slug": "inspired-by", "source": "https://bmgproductionmusic.com/en-us/home/music-for/inspired-by/0041c8d8c213aa4d", "related_language": ["cinematic", "film", "trailers", "television"]}
+    ],
+    "era_examples": [
+      {"term": "1950s", "slug": "era-1950s", "source": "https://bmgproductionmusic.com/en-gb/home/music-for/era-1950s/df0187342aa7b56c"}
+    ]
+  },
+  "note": "These editorial facets can be useful as a separate BGM/use-case prompt layer, but should not be mixed into genre taxonomy or treated as track-level AI tags without direct metadata evidence."
+}
