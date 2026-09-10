@@ -1,10 +1,17 @@
 {
-  "version": "0.3.0",
+  "version": "0.4.0",
   "verified_parent": {
     "source": "BMG Production Music",
     "genre": "Electronic"
   },
   "catalog_evidence": "SUNO/BMG/evidence/catalog-genre-terms.json",
+  "fingerprints": {
+    "directory": "SUNO/BMG/fingerprints",
+    "schema": "SUNO/BMG/fingerprints/fingerprint.schema.json",
+    "builder": "SUNO/BMG/tools/build_empirical_fingerprints.py",
+    "naming": "SYSOP_<MAP_ID>_CORE.JSON",
+    "status": "generator_ready_pending_local_BACKUP_scan"
+  },
   "active": [
     "BMG-BREAKCORE",
     "BMG-DNB",
@@ -41,10 +48,12 @@
   ],
   "tooling": [
     "tools/build_rym_crossref.py",
+    "tools/build_empirical_fingerprints.py",
+    "tools/compare_fingerprints.py",
     "tools/compile_genre_map.py",
     "tools/blend_maps.py",
     "tools/validate_maps.py"
   ],
-  "namespaces": ["bmg", "rym", "sysop", "suno"],
-  "rule": "Do not flatten provenance; catalog evidence is not official taxonomy; verify live BMG child terms before marking them verified."
+  "namespaces": ["bmg", "rym", "sysop", "sysop_empirical", "suno"],
+  "rule": "Do not flatten provenance; empirical SYSOP fingerprints are corpus observations, catalog evidence is not official taxonomy, and live BMG child terms must be verified before marking them verified."
 }
