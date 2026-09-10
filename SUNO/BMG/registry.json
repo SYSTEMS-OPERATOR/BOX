@@ -1,9 +1,10 @@
 {
-  "version": "0.6.0",
+  "version": "0.7.0",
   "verified_parent": {
     "source": "BMG Production Music",
     "genre": "Electronic"
   },
+  "official_tag_axes": "SUNO/BMG/evidence/official-tag-axes.json",
   "catalog_evidence": "SUNO/BMG/evidence/catalog-genre-terms.json",
   "related_catalog_vocabulary": "SUNO/BMG/evidence/related-catalog-vocabulary.json",
   "fingerprints": {
@@ -43,6 +44,16 @@
     "BMG-EXPERIMENTAL",
     "BMG-DRONE"
   ],
+  "candidate_families": {
+    "BMG-GLITCH": {
+      "status": "catalog_evidence_ready",
+      "evidence": ["Glitched Electronica", "Hyper Glitch", "Glitch Hop", "Lofi Glitch Hop"]
+    },
+    "BMG-RAVE": {
+      "status": "catalog_evidence_ready",
+      "evidence": ["Future Rave"]
+    }
+  },
   "families": {
     "breaks": ["BMG-BREAKS", "BMG-BIG-BEAT", "BMG-BREAKCORE", "BMG-JUNGLE", "BMG-DNB", "BMG-ACID"],
     "uk_bass": ["BMG-UKG", "BMG-SPEED-GARAGE", "BMG-BASSLINE", "BMG-GRIME", "BMG-DUBSTEP", "BMG-RIDDIM", "BMG-DNB", "BMG-NEUROFUNK"],
@@ -50,10 +61,10 @@
     "industrial_experimental": ["BMG-INDUSTRIAL", "BMG-EBM", "BMG-EXPERIMENTAL", "BMG-DRONE", "BMG-BREAKCORE", "BMG-NEUROFUNK"]
   },
   "verification_queue": [
-    "live BMG Electronic child-filter vocabulary",
-    "BMG mood/filter vocabulary",
-    "BMG instrumentation/filter vocabulary",
-    "BMG production/sync-use vocabulary",
+    "enumerate live BMG genre tag values",
+    "enumerate live BMG mood tag values",
+    "enumerate live BMG instrument tag values",
+    "confirm key and tempo filter semantics",
     "promote catalog-related candidates only when official BMG metadata/filter evidence exists"
   ],
   "tooling": [
@@ -65,5 +76,5 @@
     "tools/validate_maps.py"
   ],
   "namespaces": ["bmg", "bmg_catalog_related", "rym", "sysop", "sysop_empirical", "suno"],
-  "rule": "Do not flatten provenance; empirical SYSOP fingerprints are corpus observations, BMG-distributed release/track vocabulary is catalog evidence rather than official taxonomy, and live BMG child terms must be verified before marking them verified."
+  "rule": "Do not flatten provenance; current BMG search axes are official, empirical SYSOP fingerprints are corpus observations, BMG-distributed release/track vocabulary is catalog evidence rather than official taxonomy, and tag values require direct BMG confirmation before promotion."
 }
