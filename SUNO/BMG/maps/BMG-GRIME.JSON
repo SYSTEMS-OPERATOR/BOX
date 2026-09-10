@@ -1,1 +1,220 @@
-{"id":"BMG-GRIME","version":"0.2.0","genre":{"canonical":"Grime","aliases":["grime","UK grime","ragga-grime","neurogrime","grimecore"],"parent":"Electronic","adjacent":["UK Garage","Bassline","Dubstep","Breakbeat Hardcore","UK Drill"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["Grime","UK Garage"],"descriptors":["rhythmic","raw","minimalistic","heavy","repetitive","sparse"]},"sysop":{"seed_terms":["ragga-grime","deep house","hyperpop","digital hardcore","neurofunk","booty house","neurobass","electroclash","UK trip-hop","breakbeat hardcore","rave","bassline","dubstep","neurogrime","UK drill"]}},"parameters":{"tempo_bpm":{"min":132,"max":145,"preferred":[138,140]},"meter":["4/4"],"rhythm":["140-ish syncopated grid","half-time MC pocket","skipping garage ancestry","sparse percussion gaps"],"drums":["hard clap/snare","short kick cells","rim/click percussion","occasional chopped breaks"],"bass":["square-wave sub","warped bassline","dark reese accents","short bass replies"],"harmony":["cold sparse synth motifs","minor/modal tension","limited chord motion"],"texture":["gritty","minimal","warehouse","icy synth stabs"],"arrangement":["MC-first verse pocket","instrumental response bars","bass-led hook","drop by subtraction"],"mix":["dry close vocal space","centered sub","sharp percussion","room left for bars"],"vocals":["rapid MC delivery","short hooks","call-response ad-libs","instrumental valid"]},"prompt_map":{"positive":[{"term":"UK grime","weight":1.0,"source":"seed"},{"term":"140 BPM","weight":0.95,"source":"seed"},{"term":"sparse square-wave bass","weight":0.9,"source":"seed"},{"term":"ragga-grime","weight":0.8,"source":"sysop"},{"term":"raw","weight":0.8,"source":"rym"},{"term":"rhythmic","weight":0.75,"source":"rym"}],"negative":["dense chord pads covering the vocal pocket","soft rounded percussion"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["Target map; official BMG child taxonomy remains pending verification."]}}
+{
+  "id": "BMG-GRIME",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "Grime",
+    "aliases": [
+      "grime",
+      "UK grime",
+      "ragga-grime",
+      "neurogrime",
+      "grimecore"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "UK Garage",
+      "Bassline",
+      "Dubstep",
+      "Breakbeat Hardcore",
+      "UK Drill"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "not_observed_in_sample",
+      "genre_terms": [],
+      "mood_terms": [],
+      "instrument_terms": [],
+      "production_terms": [],
+      "sync_usage_terms": [],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [],
+      "term_evidence": {},
+      "scope_note": "No detailed track selected for this family in the bounded harvest. Empty arrays are explicit evidence gaps, not placeholders or catalog-absence claims."
+    },
+    "rym": {
+      "genres": [
+        "Grime",
+        "UK Garage"
+      ],
+      "descriptors": [
+        "rhythmic",
+        "raw",
+        "minimalistic",
+        "heavy",
+        "repetitive",
+        "sparse"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "ragga-grime",
+        "deep house",
+        "hyperpop",
+        "digital hardcore",
+        "neurofunk",
+        "booty house",
+        "neurobass",
+        "electroclash",
+        "UK trip-hop",
+        "breakbeat hardcore",
+        "rave",
+        "bassline",
+        "dubstep",
+        "neurogrime",
+        "UK drill"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 132,
+      "max": 145,
+      "preferred": [
+        138,
+        140
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "140-ish syncopated grid",
+      "half-time MC pocket",
+      "skipping garage ancestry",
+      "sparse percussion gaps"
+    ],
+    "drums": [
+      "hard clap/snare",
+      "short kick cells",
+      "rim/click percussion",
+      "occasional chopped breaks"
+    ],
+    "bass": [
+      "square-wave sub",
+      "warped bassline",
+      "dark reese accents",
+      "short bass replies"
+    ],
+    "harmony": [
+      "cold sparse synth motifs",
+      "minor/modal tension",
+      "limited chord motion"
+    ],
+    "texture": [
+      "gritty",
+      "minimal",
+      "warehouse",
+      "icy synth stabs"
+    ],
+    "arrangement": [
+      "MC-first verse pocket",
+      "instrumental response bars",
+      "bass-led hook",
+      "drop by subtraction"
+    ],
+    "mix": [
+      "dry close vocal space",
+      "centered sub",
+      "sharp percussion",
+      "room left for bars"
+    ],
+    "vocals": [
+      "rapid MC delivery",
+      "short hooks",
+      "call-response ad-libs",
+      "instrumental valid"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "UK grime",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "140 BPM",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "sparse square-wave bass",
+        "weight": 0.9,
+        "source": "seed"
+      },
+      {
+        "term": "ragga-grime",
+        "weight": 0.8,
+        "source": "sysop"
+      },
+      {
+        "term": "raw",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "rhythmic",
+        "weight": 0.75,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "dense chord pads covering the vocal pocket",
+      "soft rounded percussion"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 28,
+      "unique_profiles": 28,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "not_observed_in_sample"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "No detailed track selected for this family in the bounded harvest. Empty arrays are explicit evidence gaps, not placeholders or catalog-absence claims.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
+  }
+}

@@ -1,1 +1,645 @@
-{"id":"BMG-EXPERIMENTAL","version":"0.2.0","genre":{"canonical":"Experimental Electronic","aliases":["experimental electronic","experimental","IDM","glitch","drill and bass"],"parent":"Electronic","adjacent":["Industrial","IDM","Breakcore","Ambient","Glitch"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["Experimental","IDM","Glitch","Drill and Bass"],"descriptors":["avant-garde","complex","eclectic","atonal","microtonal","noisy","technical"]},"sysop":{"seed_terms":["deep bass music","ritual ambient","neurostep","industrial drone","dark techno","electroclash","glitch hop","breakcore","glitchcore","IDM","drill-and-bass","acid techno"]}},"parameters":{"tempo_bpm":{"min":40,"max":220,"preferred":[]},"meter":["4/4"],"rhythm":["free or polymetric rhythm","micro-edited percussion","broken-grid sequencing","tempo mutation optional"],"drums":["synthetic or found percussion","micro-cuts","granular transients","nonstandard drum design"],"bass":["sub drones","FM bass","resampled bass artifacts","nonlinear bass gestures"],"harmony":["atonal/modal/microtonal options","unresolved harmony","algorithmic or generative movement"],"texture":["granular","bitcrushed","spectral","field-recorded","glitch-heavy","sparse-to-dense extremes"],"arrangement":["nonlinear form","abrupt section mutation","process-based evolution","silence as structure"],"mix":["intentional contrast","extreme stereo/spectral design allowed","low-end discipline retained"],"vocals":["spoken word optional","phoneme fragments","synthetic voice optional","instrumental valid"]},"prompt_map":{"positive":[{"term":"experimental electronic","weight":1.0,"source":"seed"},{"term":"micro-edited percussion","weight":0.9,"source":"seed"},{"term":"glitch","weight":0.85,"source":"sysop"},{"term":"avant-garde","weight":0.8,"source":"rym"},{"term":"complex","weight":0.8,"source":"rym"},{"term":"eclectic","weight":0.7,"source":"rym"}],"negative":["generic stock EDM structure unless intentionally contrasted","uncontrolled sub-bass masking"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim.","SYSOP seed terms are normalized observations from BACKUP metadata search and are not BMG vocabulary."]}}
+{
+  "id": "BMG-EXPERIMENTAL",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "Experimental Electronic",
+    "aliases": [
+      "experimental electronic",
+      "experimental",
+      "IDM",
+      "glitch",
+      "drill and bass"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "Industrial",
+      "IDM",
+      "Breakcore",
+      "Ambient",
+      "Glitch"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "partially_verified",
+      "genre_terms": [
+        "Dnb",
+        "Drum And Bass",
+        "Electronic"
+      ],
+      "mood_terms": [
+        "Dramatic",
+        "Driving",
+        "Hectic",
+        "Lively",
+        "Propulsive",
+        "Pulsing",
+        "Restless"
+      ],
+      "instrument_terms": [
+        "Bass",
+        "Beat",
+        "Drums",
+        "Electronics",
+        "Instrumental",
+        "Pads",
+        "Sampled Vocals",
+        "Synth",
+        "Synth Drums",
+        "Synthesizer"
+      ],
+      "production_terms": [
+        "Drama Fx",
+        "Drone",
+        "Evolving",
+        "Growing",
+        "Pulsing",
+        "Sfx",
+        "Sound Design",
+        "Sound Effects"
+      ],
+      "sync_usage_terms": [
+        "Corporate",
+        "Documentary",
+        "Drama",
+        "Investigation",
+        "Sports",
+        "Technology",
+        "Underscore"
+      ],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [
+        "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+        "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74"
+      ],
+      "term_evidence": {
+        "Dnb": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Drum And Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Electronic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Dramatic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Driving": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Hectic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Lively": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Propulsive": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Pulsing": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Restless": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Beat": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Electronics": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Instrumental": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Pads": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Sampled Vocals": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synth": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Synth Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synthesizer": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drama Fx": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drone": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Evolving": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Growing": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sfx": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Sound Design": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sound Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Corporate": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Documentary": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Drama": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Investigation": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Sports": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Technology": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/murmur/c7752d1a95b482d3c5905ec6a8c3feef/5a718c62bce68272?genre=f1cd685e278574e2&backName=Electronic",
+            "page_type": "track",
+            "track_or_collection": "Murmur",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          },
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Underscore": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/andromeda/75c159a8fb1ec2ad205d96d90d7611cd/9c82de9784cfeb74",
+            "page_type": "track",
+            "track_or_collection": "Andromeda",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ]
+      },
+      "scope_note": "Experimental occurs in Keywords on Murmur; Andromeda contributes electronic underscore descriptors. Family assignment is derived."
+    },
+    "rym": {
+      "genres": [
+        "Experimental",
+        "IDM",
+        "Glitch",
+        "Drill and Bass"
+      ],
+      "descriptors": [
+        "avant-garde",
+        "complex",
+        "eclectic",
+        "atonal",
+        "microtonal",
+        "noisy",
+        "technical"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "deep bass music",
+        "ritual ambient",
+        "neurostep",
+        "industrial drone",
+        "dark techno",
+        "electroclash",
+        "glitch hop",
+        "breakcore",
+        "glitchcore",
+        "IDM",
+        "drill-and-bass",
+        "acid techno"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 40,
+      "max": 220,
+      "preferred": []
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "free or polymetric rhythm",
+      "micro-edited percussion",
+      "broken-grid sequencing",
+      "tempo mutation optional"
+    ],
+    "drums": [
+      "synthetic or found percussion",
+      "micro-cuts",
+      "granular transients",
+      "nonstandard drum design"
+    ],
+    "bass": [
+      "sub drones",
+      "FM bass",
+      "resampled bass artifacts",
+      "nonlinear bass gestures"
+    ],
+    "harmony": [
+      "atonal/modal/microtonal options",
+      "unresolved harmony",
+      "algorithmic or generative movement"
+    ],
+    "texture": [
+      "granular",
+      "bitcrushed",
+      "spectral",
+      "field-recorded",
+      "glitch-heavy",
+      "sparse-to-dense extremes"
+    ],
+    "arrangement": [
+      "nonlinear form",
+      "abrupt section mutation",
+      "process-based evolution",
+      "silence as structure"
+    ],
+    "mix": [
+      "intentional contrast",
+      "extreme stereo/spectral design allowed",
+      "low-end discipline retained"
+    ],
+    "vocals": [
+      "spoken word optional",
+      "phoneme fragments",
+      "synthetic voice optional",
+      "instrumental valid"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "experimental electronic",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "micro-edited percussion",
+        "weight": 0.9,
+        "source": "seed"
+      },
+      {
+        "term": "glitch",
+        "weight": 0.85,
+        "source": "sysop"
+      },
+      {
+        "term": "avant-garde",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "complex",
+        "weight": 0.8,
+        "source": "rym"
+      },
+      {
+        "term": "eclectic",
+        "weight": 0.7,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "generic stock EDM structure unless intentionally contrasted",
+      "uncontrolled sub-bass masking"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 29,
+      "unique_profiles": 29,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "partially_verified"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "Experimental occurs in Keywords on Murmur; Andromeda contributes electronic underscore descriptors. Family assignment is derived.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
+  }
+}

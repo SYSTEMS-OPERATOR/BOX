@@ -1,67 +1,423 @@
 {
   "id": "BMG-GLITCH",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "genre": {
     "canonical": "Glitch Electronic",
-    "aliases": ["glitch", "glitched electronica", "hyper glitch", "glitch hop", "lofi glitch hop"],
+    "aliases": [
+      "glitch",
+      "glitched electronica",
+      "hyper glitch",
+      "glitch hop",
+      "lofi glitch hop"
+    ],
     "parent": "Electronic",
-    "adjacent": ["Breakcore", "IDM", "Experimental Electronic", "Dubstep", "Electro"]
+    "adjacent": [
+      "Breakcore",
+      "IDM",
+      "Experimental Electronic",
+      "Dubstep",
+      "Electro"
+    ]
   },
   "taxonomy": {
     "bmg": {
-      "status": "pending_official_tag_verification",
-      "genre_terms": [],
-      "mood_terms": [],
-      "instrument_terms": [],
-      "production_terms": [],
-      "sync_usage_terms": []
+      "status": "partially_verified",
+      "genre_terms": [
+        "Electronica",
+        "Glitch"
+      ],
+      "mood_terms": [
+        "Intense",
+        "Pulsing",
+        "Tension"
+      ],
+      "instrument_terms": [
+        "808s",
+        "Bass",
+        "Drum Machine",
+        "Drums",
+        "Instrumental",
+        "Rhythmic",
+        "Shout",
+        "Space Tones",
+        "Synth",
+        "Vocals",
+        "Walking"
+      ],
+      "production_terms": [
+        "Pulsing",
+        "Sound Effects"
+      ],
+      "sync_usage_terms": [
+        "Industry",
+        "Technology"
+      ],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [
+        "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep"
+      ],
+      "term_evidence": {
+        "Electronica": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Glitch": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Intense": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Pulsing": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Tension": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "808s": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Bass": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drum Machine": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Drums": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Instrumental": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Rhythmic": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "KEYWORDS",
+            "context": "Exact displayed label in KEYWORDS."
+          }
+        ],
+        "Shout": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Space Tones": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Synth": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Vocals": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Walking": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Sound Effects": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "INSTRUMENTATION",
+            "context": "Exact displayed label in INSTRUMENTATION."
+          }
+        ],
+        "Industry": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ],
+        "Technology": [
+          {
+            "url": "https://bmgproductionmusic.com/en-us/track/get-the-eff-outta-here/cbee04b30c626006c627468843365b34/9aa66961bbfd63f9?searchTerm=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep&typed=Neurofunk+OR+Breakcore+OR+Darkstep+OR+Hardstep",
+            "page_type": "track",
+            "track_or_collection": "Get The Eff Outta Here",
+            "source_field": "GENRE",
+            "context": "Exact displayed label in GENRE."
+          }
+        ]
+      },
+      "scope_note": "Observed labels from selected family-associated tracks; map hierarchy and parameters remain analyst seed assumptions."
     },
     "bmg_catalog_related": {
       "status": "release_title_evidence",
-      "terms": ["Glitched Electronica", "Hyper Glitch", "Glitch Hop", "Lofi Glitch Hop"],
+      "terms": [
+        "Glitched Electronica",
+        "Hyper Glitch",
+        "Glitch Hop",
+        "Lofi Glitch Hop"
+      ],
       "evidence_ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json"
     },
     "rym": {
-      "genres": ["Glitch", "Glitch Hop", "IDM"],
-      "descriptors": ["complex", "rhythmic", "technical", "chaotic", "noisy", "atmospheric"]
+      "genres": [
+        "Glitch",
+        "Glitch Hop",
+        "IDM"
+      ],
+      "descriptors": [
+        "complex",
+        "rhythmic",
+        "technical",
+        "chaotic",
+        "noisy",
+        "atmospheric"
+      ]
     },
     "sysop": {
-      "seed_terms": ["glitchcore", "micro-edits", "bitcrushed", "broken arcade", "granular", "neurobass", "breakcore"]
+      "seed_terms": [
+        "glitchcore",
+        "micro-edits",
+        "bitcrushed",
+        "broken arcade",
+        "granular",
+        "neurobass",
+        "breakcore"
+      ]
     }
   },
   "parameters": {
-    "tempo_bpm": {"min": 90, "max": 180, "preferred": [100, 110, 128, 140, 160]},
-    "meter": ["4/4"],
-    "rhythm": ["micro-edited broken beat", "syncopated glitch-hop pocket", "stutter cuts", "abrupt micro-silence"],
-    "drums": ["chopped break fragments", "digital transient edits", "skipping percussion", "crushed kick-snare accents"],
-    "bass": ["elastic sub-bass", "glitch bass", "neurobass-compatible low-mid movement"],
-    "harmony": ["sparse synthetic motifs", "minor or modal harmony", "atonal fragments optional"],
-    "texture": ["granular edits", "bitcrush", "digital skipping", "buffer-stutter", "broken-machine artifacts"],
-    "arrangement": ["rapid mutation", "micro-breaks", "false resets", "contrast between clean pocket and corruption"],
-    "mix": ["tight transient separation", "controlled digital distortion", "clear sub under dense upper edits"],
-    "vocals": ["optional chopped phrases", "vocal microsamples", "instrumental valid"]
+    "tempo_bpm": {
+      "min": 90,
+      "max": 180,
+      "preferred": [
+        100,
+        110,
+        128,
+        140,
+        160
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "micro-edited broken beat",
+      "syncopated glitch-hop pocket",
+      "stutter cuts",
+      "abrupt micro-silence"
+    ],
+    "drums": [
+      "chopped break fragments",
+      "digital transient edits",
+      "skipping percussion",
+      "crushed kick-snare accents"
+    ],
+    "bass": [
+      "elastic sub-bass",
+      "glitch bass",
+      "neurobass-compatible low-mid movement"
+    ],
+    "harmony": [
+      "sparse synthetic motifs",
+      "minor or modal harmony",
+      "atonal fragments optional"
+    ],
+    "texture": [
+      "granular edits",
+      "bitcrush",
+      "digital skipping",
+      "buffer-stutter",
+      "broken-machine artifacts"
+    ],
+    "arrangement": [
+      "rapid mutation",
+      "micro-breaks",
+      "false resets",
+      "contrast between clean pocket and corruption"
+    ],
+    "mix": [
+      "tight transient separation",
+      "controlled digital distortion",
+      "clear sub under dense upper edits"
+    ],
+    "vocals": [
+      "optional chopped phrases",
+      "vocal microsamples",
+      "instrumental valid"
+    ]
   },
   "prompt_map": {
     "positive": [
-      {"term": "glitch", "weight": 1.0, "source": "seed"},
-      {"term": "glitch hop", "weight": 0.9, "source": "seed"},
-      {"term": "micro-edited", "weight": 0.9, "source": "sysop"},
-      {"term": "granular", "weight": 0.8, "source": "sysop"},
-      {"term": "technical", "weight": 0.7, "source": "rym"},
-      {"term": "complex", "weight": 0.7, "source": "rym"}
+      {
+        "term": "glitch",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "glitch hop",
+        "weight": 0.9,
+        "source": "seed"
+      },
+      {
+        "term": "micro-edited",
+        "weight": 0.9,
+        "source": "sysop"
+      },
+      {
+        "term": "granular",
+        "weight": 0.8,
+        "source": "sysop"
+      },
+      {
+        "term": "technical",
+        "weight": 0.7,
+        "source": "rym"
+      },
+      {
+        "term": "complex",
+        "weight": 0.7,
+        "source": "rym"
+      }
     ],
-    "negative": ["smooth unbroken quantization", "featureless ambient wash"],
-    "compile_order": ["genre", "tempo", "rhythm", "drums", "bass", "harmony", "texture", "arrangement", "mix", "vocals", "negative"]
+    "negative": [
+      "smooth unbroken quantization",
+      "featureless ambient wash"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
   },
   "cross_reference": {
-    "backup": {"status": "pending_empirical_scan", "matched_tracks": 0, "top_terms": [], "rym_terms": [], "rym_descriptor_hits": [], "negative_terms": []}
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 18,
+      "unique_profiles": 18,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
   },
   "provenance": {
     "sources": [
-      {"kind": "bmg_catalog_related", "ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json", "status": "BMG Production Music-distributed release-title evidence; not official taxonomy"},
-      {"kind": "rym", "ref": "BOX/RYM/styles.json"},
-      {"kind": "sysop", "ref": "SYSTEMS-OPERATOR/BACKUP", "status": "seed vocabulary pending fingerprint scan"}
+      {
+        "kind": "bmg_catalog_related",
+        "ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json",
+        "status": "BMG Production Music-distributed release-title evidence; not official taxonomy"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "partially_verified"
+      }
     ],
-    "notes": ["Candidate family created from repeated BMG-distributed Glitch/Glitch Hop release language. Formal BMG tag status remains unverified."]
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "Observed labels from selected family-associated tracks; map hierarchy and parameters remain analyst seed assumptions.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
   }
 }

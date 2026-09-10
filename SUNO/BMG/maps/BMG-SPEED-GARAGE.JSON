@@ -1,1 +1,206 @@
-{"id":"BMG-SPEED-GARAGE","version":"0.2.0","genre":{"canonical":"Speed Garage","aliases":["speed garage","UK speed garage","speedgarage"],"parent":"Electronic","adjacent":["UK Garage","Bassline","House","Breaks","Grime"]},"taxonomy":{"bmg":{"status":"pending_verification","genre_terms":[],"mood_terms":[],"instrument_terms":[],"production_terms":[],"sync_usage_terms":[]},"rym":{"genres":["Speed Garage","UK Garage"],"descriptors":["rhythmic","repetitive","raw","heavy","melodic","atmospheric"]},"sysop":{"seed_terms":["UK garage","two-step","grime","bassline","dubstep","warehouse","hard UK bass","speed-neuro bass"]}},"parameters":{"tempo_bpm":{"min":130,"max":140,"preferred":[133,135,138]},"meter":["4/4"],"rhythm":["swung 4x4 garage drive","skipping syncopation","occasional two-step break","funky bass-led pocket"],"drums":["punchy kick","snappy clap/snare","shuffled hats","tight break fills"],"bass":["hoover/reese bassline","rubbery sub","warped bass stabs","funky call-response movement"],"harmony":["minor garage chords","short organ/piano stabs","minimal harmonic loop"],"texture":["dark warehouse air","haunting but funky bass tone","short vocal echoes"],"arrangement":["DJ intro","groove lock","bassline drop","brief break","strong second drop"],"mix":["centered sub","wide reese harmonics","dry punchy drums","short ambience tails"],"vocals":["pitched/chopped garage vocal optional","MC fragments optional","instrumental valid"]},"prompt_map":{"positive":[{"term":"speed garage","weight":1.0,"source":"seed"},{"term":"swung 4x4 garage","weight":0.95,"source":"seed"},{"term":"haunting funky bassline","weight":0.95,"source":"sysop"},{"term":"133 BPM","weight":0.9,"source":"sysop"},{"term":"rhythmic","weight":0.8,"source":"rym"}],"negative":["sterile straight-grid house feel","weak bassline presence"],"compile_order":["genre","tempo","rhythm","drums","bass","harmony","texture","arrangement","mix","vocals","negative"]},"cross_reference":{"backup":{"status":"sampled_connector_search","matched_tracks":null,"top_terms":[],"rym_terms":[],"rym_descriptor_hits":[],"negative_terms":[]}},"provenance":{"sources":[{"kind":"bmg_public","ref":"BMG Production Music / Electronic","status":"parent_verified"},{"kind":"rym","ref":"BOX/RYM/styles.json"},{"kind":"sysop","ref":"SYSTEMS-OPERATOR/BACKUP","status":"connector_sample_and_pending_full_scan"}],"notes":["BMG child taxonomy pending live verification; map name is a target namespace, not an official hierarchy claim.","SYSOP seed terms are normalized observations from BACKUP metadata search and are not BMG vocabulary."]}}
+{
+  "id": "BMG-SPEED-GARAGE",
+  "version": "0.2.0",
+  "genre": {
+    "canonical": "Speed Garage",
+    "aliases": [
+      "speed garage",
+      "UK speed garage",
+      "speedgarage"
+    ],
+    "parent": "Electronic",
+    "adjacent": [
+      "UK Garage",
+      "Bassline",
+      "House",
+      "Breaks",
+      "Grime"
+    ]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "not_observed_in_sample",
+      "genre_terms": [],
+      "mood_terms": [],
+      "instrument_terms": [],
+      "production_terms": [],
+      "sync_usage_terms": [],
+      "evidence_ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+      "track_urls": [],
+      "term_evidence": {},
+      "scope_note": "No detailed track selected for this family in the bounded harvest. Empty arrays are explicit evidence gaps, not placeholders or catalog-absence claims."
+    },
+    "rym": {
+      "genres": [
+        "Speed Garage",
+        "UK Garage"
+      ],
+      "descriptors": [
+        "rhythmic",
+        "repetitive",
+        "raw",
+        "heavy",
+        "melodic",
+        "atmospheric"
+      ]
+    },
+    "sysop": {
+      "seed_terms": [
+        "UK garage",
+        "two-step",
+        "grime",
+        "bassline",
+        "dubstep",
+        "warehouse",
+        "hard UK bass",
+        "speed-neuro bass"
+      ]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {
+      "min": 130,
+      "max": 140,
+      "preferred": [
+        133,
+        135,
+        138
+      ]
+    },
+    "meter": [
+      "4/4"
+    ],
+    "rhythm": [
+      "swung 4x4 garage drive",
+      "skipping syncopation",
+      "occasional two-step break",
+      "funky bass-led pocket"
+    ],
+    "drums": [
+      "punchy kick",
+      "snappy clap/snare",
+      "shuffled hats",
+      "tight break fills"
+    ],
+    "bass": [
+      "hoover/reese bassline",
+      "rubbery sub",
+      "warped bass stabs",
+      "funky call-response movement"
+    ],
+    "harmony": [
+      "minor garage chords",
+      "short organ/piano stabs",
+      "minimal harmonic loop"
+    ],
+    "texture": [
+      "dark warehouse air",
+      "haunting but funky bass tone",
+      "short vocal echoes"
+    ],
+    "arrangement": [
+      "DJ intro",
+      "groove lock",
+      "bassline drop",
+      "brief break",
+      "strong second drop"
+    ],
+    "mix": [
+      "centered sub",
+      "wide reese harmonics",
+      "dry punchy drums",
+      "short ambience tails"
+    ],
+    "vocals": [
+      "pitched/chopped garage vocal optional",
+      "MC fragments optional",
+      "instrumental valid"
+    ]
+  },
+  "prompt_map": {
+    "positive": [
+      {
+        "term": "speed garage",
+        "weight": 1.0,
+        "source": "seed"
+      },
+      {
+        "term": "swung 4x4 garage",
+        "weight": 0.95,
+        "source": "seed"
+      },
+      {
+        "term": "haunting funky bassline",
+        "weight": 0.95,
+        "source": "sysop"
+      },
+      {
+        "term": "133 BPM",
+        "weight": 0.9,
+        "source": "sysop"
+      },
+      {
+        "term": "rhythmic",
+        "weight": 0.8,
+        "source": "rym"
+      }
+    ],
+    "negative": [
+      "sterile straight-grid house feel",
+      "weak bassline presence"
+    ],
+    "compile_order": [
+      "genre",
+      "tempo",
+      "rhythm",
+      "drums",
+      "bass",
+      "harmony",
+      "texture",
+      "arrangement",
+      "mix",
+      "vocals",
+      "negative"
+    ]
+  },
+  "cross_reference": {
+    "backup": {
+      "status": "prior_empirical_scan_summary",
+      "generated_at": "2026-09-10T06:10:21.517646+00:00",
+      "matched_tracks": 6,
+      "unique_profiles": 6,
+      "evidence_ref": "SUNO/BMG/evidence/sysop-empirical-scan-2026-09-10.json",
+      "note": "Counts copied from existing public aggregate evidence; no new private BACKUP scan or export performed."
+    }
+  },
+  "provenance": {
+    "sources": [
+      {
+        "kind": "bmg_public",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "bounded public UI harvest; see taxonomy.bmg evidence and limitations"
+      },
+      {
+        "kind": "rym",
+        "ref": "RYM/styles.json",
+        "status": "existing independent seed lineage; not reverified against RYM"
+      },
+      {
+        "kind": "sysop",
+        "ref": "SYSTEMS-OPERATOR/BACKUP",
+        "status": "seed lineage; prior aggregate scan linked under cross_reference.backup"
+      },
+      {
+        "kind": "bmg_public_ui",
+        "ref": "SUNO/BMG/bmg_sync_electronic_taxonomy.json",
+        "status": "not_observed_in_sample"
+      }
+    ],
+    "notes": [
+      "genre canonical/aliases/parent/adjacent and parameters are existing analyst seed material, not measured BMG taxonomy or validated Suno controls.",
+      "taxonomy.bmg bucket assignment is analytical; original source_field and URL are preserved per term. partially_verified means bounded evidence, not complete family verification.",
+      "No detailed track selected for this family in the bounded harvest. Empty arrays are explicit evidence gaps, not placeholders or catalog-absence claims.",
+      "The BMG DnB sample includes literal BPM 85 and 88; existing prompt tempo ranges are independent seed preferences and are not substituted for catalog BPM."
+    ]
+  }
+}
