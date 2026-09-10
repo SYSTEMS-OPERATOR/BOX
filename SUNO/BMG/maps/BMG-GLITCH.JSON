@@ -1,0 +1,67 @@
+{
+  "id": "BMG-GLITCH",
+  "version": "0.1.0",
+  "genre": {
+    "canonical": "Glitch Electronic",
+    "aliases": ["glitch", "glitched electronica", "hyper glitch", "glitch hop", "lofi glitch hop"],
+    "parent": "Electronic",
+    "adjacent": ["Breakcore", "IDM", "Experimental Electronic", "Dubstep", "Electro"]
+  },
+  "taxonomy": {
+    "bmg": {
+      "status": "pending_official_tag_verification",
+      "genre_terms": [],
+      "mood_terms": [],
+      "instrument_terms": [],
+      "production_terms": [],
+      "sync_usage_terms": []
+    },
+    "bmg_catalog_related": {
+      "status": "release_title_evidence",
+      "terms": ["Glitched Electronica", "Hyper Glitch", "Glitch Hop", "Lofi Glitch Hop"],
+      "evidence_ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json"
+    },
+    "rym": {
+      "genres": ["Glitch", "Glitch Hop", "IDM"],
+      "descriptors": ["complex", "rhythmic", "technical", "chaotic", "noisy", "atmospheric"]
+    },
+    "sysop": {
+      "seed_terms": ["glitchcore", "micro-edits", "bitcrushed", "broken arcade", "granular", "neurobass", "breakcore"]
+    }
+  },
+  "parameters": {
+    "tempo_bpm": {"min": 90, "max": 180, "preferred": [100, 110, 128, 140, 160]},
+    "meter": ["4/4"],
+    "rhythm": ["micro-edited broken beat", "syncopated glitch-hop pocket", "stutter cuts", "abrupt micro-silence"],
+    "drums": ["chopped break fragments", "digital transient edits", "skipping percussion", "crushed kick-snare accents"],
+    "bass": ["elastic sub-bass", "glitch bass", "neurobass-compatible low-mid movement"],
+    "harmony": ["sparse synthetic motifs", "minor or modal harmony", "atonal fragments optional"],
+    "texture": ["granular edits", "bitcrush", "digital skipping", "buffer-stutter", "broken-machine artifacts"],
+    "arrangement": ["rapid mutation", "micro-breaks", "false resets", "contrast between clean pocket and corruption"],
+    "mix": ["tight transient separation", "controlled digital distortion", "clear sub under dense upper edits"],
+    "vocals": ["optional chopped phrases", "vocal microsamples", "instrumental valid"]
+  },
+  "prompt_map": {
+    "positive": [
+      {"term": "glitch", "weight": 1.0, "source": "seed"},
+      {"term": "glitch hop", "weight": 0.9, "source": "seed"},
+      {"term": "micro-edited", "weight": 0.9, "source": "sysop"},
+      {"term": "granular", "weight": 0.8, "source": "sysop"},
+      {"term": "technical", "weight": 0.7, "source": "rym"},
+      {"term": "complex", "weight": 0.7, "source": "rym"}
+    ],
+    "negative": ["smooth unbroken quantization", "featureless ambient wash"],
+    "compile_order": ["genre", "tempo", "rhythm", "drums", "bass", "harmony", "texture", "arrangement", "mix", "vocals", "negative"]
+  },
+  "cross_reference": {
+    "backup": {"status": "pending_empirical_scan", "matched_tracks": 0, "top_terms": [], "rym_terms": [], "rym_descriptor_hits": [], "negative_terms": []}
+  },
+  "provenance": {
+    "sources": [
+      {"kind": "bmg_catalog_related", "ref": "SUNO/BMG/evidence/related-catalog-vocabulary.json", "status": "BMG Production Music-distributed release-title evidence; not official taxonomy"},
+      {"kind": "rym", "ref": "BOX/RYM/styles.json"},
+      {"kind": "sysop", "ref": "SYSTEMS-OPERATOR/BACKUP", "status": "seed vocabulary pending fingerprint scan"}
+    ],
+    "notes": ["Candidate family created from repeated BMG-distributed Glitch/Glitch Hop release language. Formal BMG tag status remains unverified."]
+  }
+}
