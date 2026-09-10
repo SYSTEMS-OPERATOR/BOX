@@ -1,6 +1,6 @@
 {
   "id": "BMG-GENRE",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "genre": {
     "canonical": "GENRE",
     "aliases": [],
@@ -30,9 +30,7 @@
       "max": 0,
       "preferred": []
     },
-    "meter": [
-      "4/4"
-    ],
+    "meter": ["4/4"],
     "rhythm": [],
     "drums": [],
     "bass": [],
@@ -62,7 +60,7 @@
   "cross_reference": {
     "backup": {
       "status": "unscanned",
-      "matched_tracks": 0,
+      "matched_tracks": null,
       "top_terms": [],
       "rym_terms": [],
       "rym_descriptor_hits": [],
@@ -70,7 +68,6 @@
     }
   },
   "provenance": {
-    "generated_at": "2026-09-10T02:30:00Z",
     "sources": [],
     "notes": []
   }
