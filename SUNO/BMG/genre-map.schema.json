@@ -1,60 +1,135 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/SYSTEMS-OPERATOR/BOX/SUNO/BMG/genre-map.schema.json",
   "title": "Suno BMG Genre Parameter Map",
   "type": "object",
-  "required": [
-    "id",
-    "version",
-    "genre",
-    "taxonomy",
-    "parameters",
-    "prompt_map",
-    "cross_reference",
-    "provenance"
-  ],
+  "required": ["id", "version", "genre", "taxonomy", "parameters", "prompt_map", "cross_reference", "provenance"],
   "properties": {
-    "id": {
-      "type": "string",
-      "pattern": "^BMG-[A-Z0-9-]+$"
-    },
-    "version": {
-      "type": "string"
-    },
+    "id": {"type": "string", "pattern": "^BMG-[A-Z0-9-]+$"},
+    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"},
     "genre": {
       "type": "object",
-      "required": [
-        "canonical",
-        "aliases",
-        "parent"
-      ]
+      "required": ["canonical", "aliases", "parent"],
+      "properties": {
+        "canonical": {"type": "string", "minLength": 1},
+        "aliases": {"type": "array", "items": {"type": "string"}},
+        "parent": {"type": "string", "minLength": 1},
+        "adjacent": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
     },
     "taxonomy": {
       "type": "object",
-      "required": [
-        "bmg",
-        "rym",
-        "sysop"
-      ]
+      "required": ["bmg", "rym", "sysop"],
+      "properties": {
+        "bmg": {
+          "type": "object",
+          "required": ["status", "genre_terms", "mood_terms"],
+          "properties": {
+            "status": {"enum": ["pending_verification", "partially_verified", "verified"]},
+            "genre_terms": {"type": "array", "items": {"type": "string"}},
+            "mood_terms": {"type": "array", "items": {"type": "string"}},
+            "instrument_terms": {"type": "array", "items": {"type": "string"}},
+            "production_terms": {"type": "array", "items": {"type": "string"}},
+            "sync_usage_terms": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        },
+        "rym": {
+          "type": "object",
+          "required": ["genres", "descriptors"],
+          "properties": {
+            "genres": {"type": "array", "items": {"type": "string"}},
+            "descriptors": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        },
+        "sysop": {
+          "type": "object",
+          "required": ["seed_terms"],
+          "properties": {"seed_terms": {"type": "array", "items": {"type": "string"}}},
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     },
     "parameters": {
-      "type": "object"
+      "type": "object",
+      "required": ["tempo_bpm", "meter", "rhythm", "drums", "bass", "harmony", "texture", "arrangement", "mix", "vocals"],
+      "properties": {
+        "tempo_bpm": {
+          "type": "object",
+          "required": ["min", "max", "preferred"],
+          "properties": {
+            "min": {"type": "number", "minimum": 0},
+            "max": {"type": "number", "minimum": 0},
+            "preferred": {"type": "array", "items": {"type": "number", "minimum": 0}}
+          },
+          "additionalProperties": false
+        },
+        "meter": {"type": "array", "items": {"type": "string"}},
+        "rhythm": {"type": "array", "items": {"type": "string"}},
+        "drums": {"type": "array", "items": {"type": "string"}},
+        "bass": {"type": "array", "items": {"type": "string"}},
+        "harmony": {"type": "array", "items": {"type": "string"}},
+        "texture": {"type": "array", "items": {"type": "string"}},
+        "arrangement": {"type": "array", "items": {"type": "string"}},
+        "mix": {"type": "array", "items": {"type": "string"}},
+        "vocals": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
     },
     "prompt_map": {
       "type": "object",
-      "required": [
-        "positive",
-        "negative",
-        "compile_order"
-      ]
+      "required": ["positive", "negative", "compile_order"],
+      "properties": {
+        "positive": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["term", "weight", "source"],
+            "properties": {
+              "term": {"type": "string"},
+              "weight": {"type": "number", "minimum": 0},
+              "source": {"enum": ["seed", "bmg", "rym", "sysop", "derived"]},
+              "note": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "negative": {"type": "array", "items": {"type": "string"}},
+        "compile_order": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
     },
     "cross_reference": {
-      "type": "object"
+      "type": "object",
+      "properties": {
+        "backup": {
+          "type": "object",
+          "properties": {
+            "status": {"type": "string"},
+            "generated_at": {"type": "string"},
+            "matched_tracks": {"type": ["integer", "null"], "minimum": 0},
+            "top_terms": {"type": "array"},
+            "rym_terms": {"type": "array"},
+            "rym_descriptor_hits": {"type": "array"},
+            "negative_terms": {"type": "array"}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     },
     "provenance": {
       "type": "object",
-      "required": [
-        "sources"
-      ]
+      "required": ["sources"],
+      "properties": {
+        "generated_at": {"type": "string"},
+        "sources": {"type": "array", "items": {"type": "object"}},
+        "notes": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false
