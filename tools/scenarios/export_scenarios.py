@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 import shutil
 from pathlib import Path
 from typing import Any
@@ -59,6 +60,15 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def validate_inputs(values: dict, variables: dict, path: Path) -> None:
+    if not isinstance(values, dict):
+        raise ValueError(f"{path}: inputs must be a mapping")
+    for key, value in values.items():
+        choices = variables.get(key, [])
+        if not any(type(value) is type(choice) and value == choice for choice in choices):
+            raise ValueError(f"{path}: invalid input {key!r}: {value!r}")
+
+
 def validate_scenario(data: dict[str, Any], path: Path) -> None:
     missing = REQUIRED_KEYS - set(data)
     if missing:
@@ -78,6 +88,35 @@ def validate_scenario(data: dict[str, Any], path: Path) -> None:
         value = data[key]
         if not isinstance(value, list) or not all(isinstance(item, str) for item in value):
             raise ValueError(f"{path}: {key!r} must be a list of strings")
+
+    for name, rule in data.get("measurements", {}).items():
+        if isinstance(rule, dict) and ("min" in rule or "max" in rule):
+            bounds = (rule.get("min"), rule.get("max"))
+            if (any(type(v) not in (int, float) or not math.isfinite(v) for v in bounds)
+                    or bounds[0] > bounds[1]):
+                raise ValueError(f"{path}: invalid measurement range for {name!r}")
+
+    cases = data.get("test_cases", [])
+    if not isinstance(cases, list):
+        raise ValueError(f"{path}: 'test_cases' must be a list")
+    labels = {label for key in ("end_state_labels", "failure_modes", "success_conditions")
+              for label in data.get(key, []) if isinstance(label, str)}
+    seen = set()
+    for case in cases:
+        if not isinstance(case, dict) or not isinstance(case.get("id"), str) or not case["id"].strip():
+            raise ValueError(f"{path}: each test case needs a non-empty string id")
+        if case["id"] in seen:
+            raise ValueError(f"{path}: duplicate case id {case['id']!r}")
+        seen.add(case["id"])
+        if not (case.get("expect") or case.get("expect_measure")):
+            raise ValueError(f"{path}: case {case['id']!r} needs an expectation")
+        validate_inputs(case.get("given", {}), data.get("independent_variables", {}), path)
+        for key, allowed in (("expect", labels), ("expect_measure", data.get("measurements", {})),
+                             ("active_stops", data.get("stop_conditions", []))):
+            values = case.get(key, [])
+            if (not isinstance(values, list)
+                    or any(not isinstance(v, str) or v not in allowed for v in values)):
+                raise ValueError(f"{path}: invalid {key!r} in case {case['id']!r}")
 
 
 def load_yaml(path: Path) -> dict[str, Any]:

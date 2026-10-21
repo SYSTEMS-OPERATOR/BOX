@@ -9,16 +9,20 @@ on:
       - '.sophy/scenarios/**'
       - 'tools/scenarios/export_scenarios.py'
       - 'tools/scenarios/solve_three_body.py'
+      - 'tools/scenarios/simulate_souperposition.py'
       - 'tests/test_scenario_exporter.py'
       - 'tests/test_three_body_solution.py'
+      - 'tests/test_souperposition.py'
       - '.github/workflows/scenario-export-backup.yml'
   pull_request:
     paths:
       - '.sophy/scenarios/**'
       - 'tools/scenarios/export_scenarios.py'
       - 'tools/scenarios/solve_three_body.py'
+      - 'tools/scenarios/simulate_souperposition.py'
       - 'tests/test_scenario_exporter.py'
       - 'tests/test_three_body_solution.py'
+      - 'tests/test_souperposition.py'
       - '.github/workflows/scenario-export-backup.yml'
 
 permissions:
@@ -44,10 +48,13 @@ jobs:
           PyYAML==6.0.2 pytest==8.3.5
 
       - name: Run scenario regression tests
-        run: python -m pytest -q tests/test_scenario_exporter.py tests/test_three_body_solution.py
+        run: python -m pytest -q tests/test_scenario_exporter.py tests/test_three_body_solution.py tests/test_souperposition.py
 
       - name: Verify three-body constructive proof
         run: python tools/scenarios/solve_three_body.py --output build/three-body-proof
+
+      - name: Run Souperposition sensitivity cases
+        run: python -m tools.scenarios.simulate_souperposition --output build/souperposition
 
       - name: Validate and export scenarios
         run: |
@@ -62,6 +69,7 @@ jobs:
           path: |
             build/scenario-export/
             build/three-body-proof/
+            build/souperposition/
           if-no-files-found: error
           retention-days: 90
 

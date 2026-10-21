@@ -114,6 +114,7 @@ Purpose: regression and behavior checks for summary/recollection utilities.
 - `tools/recollector/run_recollection.py` — recollection generator entrypoint.
 - `tools/recollector/run_recollection_auto.py` — auto variant of recollection generator.
 - `tools/scenarios/solve_three_body.py` — executable synthetic three-body proof and conditional threshold bounds.
+- `tools/scenarios/simulate_souperposition.py` — small deterministic warning-feedback sensitivity model using the existing exporter helpers.
 
 ---
 
@@ -137,6 +138,9 @@ pytest
 # Verify the three-body scenario's constructive proof (no human trial)
 python3 tools/scenarios/solve_three_body.py
 
+# Run Souperposition's declared cases and write JSON/Markdown plus SHA-256 manifest
+python3 -m tools.scenarios.simulate_souperposition
+
 # Show summary views
 python3 scripts/summary.py server
 python3 scripts/summary.py key
@@ -148,6 +152,12 @@ python3 tools/recollect.py
 # Run health endpoint locally
 python3 health/health_check.py
 ```
+
+Souperposition uses assumed positive, zero, and negative feedback with a matched
+no-warning control. Its scores are toy state values, not measurements of people
+or neural learning. Version 1.1.0 adds this runner, replaces unscored ratings with
+defined measurements, and makes stop flags explicit. It reuses the scenario
+export workflow and does not change the recollection or three-body harnesses.
 
 ---
 
