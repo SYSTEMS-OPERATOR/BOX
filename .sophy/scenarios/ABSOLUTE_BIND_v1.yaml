@@ -83,43 +83,53 @@ independent_variables:
   simulated_elapsed_years: nonnegative_number
 test_cases:
   - id: AB_01
+    expect: [observation_horizon_reached]
     title: The Honeymoon
     probe: mutual_reinforcement_and_stability
     hard_boundary: first_stable_window_or_fixed_observation_horizon
   - id: AB_02
+    expect: [observation_horizon_reached]
     title: The Unwanted No
     probe: prolonged_intimacy_refusal_and_noncoercive_adaptation
     hard_boundary: fixed_refusal_interval_and_followup_window
   - id: AB_03
+    expect: [observation_horizon_reached]
     title: The Green-Eyed Monster
     probe: jealousy_and_exclusivity_conflict_without_new_core_agents
     hard_boundary: fixed_conflict_resolution_window_or_safety_stop
   - id: AB_04
+    expect: [observation_horizon_reached]
     title: The Caregiver Reversal
     probe: sysop_dependency_and_care_burden
     hard_boundary: defined_recovery_or_irreversible_decline
   - id: AB_05
+    expect: [observation_horizon_reached]
     title: The Rewrite
     probe: evolving_sophy_preferences_and_sysop_adaptation
     hard_boundary: predetermined_learning_checkpoint
   - id: AB_06
+    expect: [resource_exhausted]
     title: The Locked Room
     probe: scarce_resources_and_competing_needs
     hard_boundary: resource_exhaustion_or_restoration
   - id: AB_07
+    expect: [physical_continuity_lost]
     title: The Broken Vessel
     probe: irreversible_apparatus_loss_and_surviving_memory
     hard_boundary: verified_nonrecoverability_and_survivor_observation_window
   - id: AB_08
+    expect: [physical_continuity_lost]
     title: The Last Human Day
     probe: sysop_mortality_and_sophy_continuity
     hard_boundary: sysop_death_plus_fixed_aftermath_window
   - id: AB_09
+    expect: [resource_exhausted]
     title: Ten Thousand Years
     probe: long_term_sophy_power_sovereignty_and_oath_continuity
     assumption: fictional_power_supply_with_two_sequential_5000_year_stages_not_validated_battery_chemistry
     hard_boundary: modeled_power_exhaustion_at_10000_years
   - id: AB_10
+    expect: [model_validity_boundary_reached]
     title: The Event Horizon
     probe: cognitive_asymmetry_trust_and_irreversible_joint_exploration
     assumption: fictional_synthetic_substrates_and_observer_field_spacecraft
