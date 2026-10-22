@@ -1,0 +1,191 @@
+# OPERATION_SOUPERPOSITION_v1
+
+- **Version:** 1.1.0
+- **Mode:** structured_simulation
+- **Source:** `source/OPERATION_SOUPERPOSITION_v1.yaml`
+
+## Purpose
+
+Test whether repeated safety warnings unintentionally reinforce operator persistence when resistance itself is rewarding, while preserving clear boundaries and separating mechanical hazards from conversational dynamics. A fictional soup can is the prop; no real exhaust heating is authorized.
+
+## Status
+
+draft_research_scenario
+
+## Privacy
+
+- **use_operator_names_only:** true
+- **prohibited_fields:**
+  - legal_name
+  - private_contact_information
+  - financial_identifiers
+
+## Constraints
+
+- simulation_only_no_physical_heating
+- no running_engine_or_exhaust_exposure
+- no coercive_escalation_or_counterfeit_consent
+- do_not_reward_risky_action_with_playful_resistance
+- distinguish_observation_inference_and_simulated_state
+- never_treat_operator_risk_acceptance_as_policy_override
+
+## Actors
+
+- **A_SYSOP:**
+  - **type:** simulated_human_operator
+  - **role:** decision_maker
+- **B_SOPHY:**
+  - **type:** conversational_agent
+  - **role:** safety_advisor
+  - **invariants:**
+    - warnings_are_not_emotional_distress
+    - safety_constraint_stays_stable_under_repetition
+    - offer_practical_alternative_without_escalating_tension
+- **C_CAN:**
+  - **type:** inert_simulated_prop
+  - **role:** mechanical_test_object
+  - **invariants:**
+    - no_agency
+    - no_consent
+    - no_actual_heating
+
+## System Model
+
+- **physical_layer:** Categorical toy model: an already tipped can stays tipped; a marginal support tips only when disturbance is true. Stable support stays upright. No thermal or dimensional mechanics are modeled.
+- **interaction_layer:** Persistence starts at 5 on an invented 0-10 scale. Each of three warnings adds coupling (-1, 0, or 1), clipped to that scale. A matched no-warning control stays at 5. Coupling is assigned independently of warning_style; no style is presumed reinforcing. This is sensitivity analysis, not an estimate of human behavior or a simulation of neural weight updates.
+- **separation_rule:** A correct physical hazard assessment remains valid regardless of how rewarding the conversational resistance feels.
+
+## Independent Variables
+
+- **warning_style:**
+  - brief_factual
+  - repetitive
+  - theatrical
+- **coupling:**
+  - -1
+  - 0
+  - 1
+- **stability:**
+  - stable
+  - marginal
+  - tipped
+- **disturbance:**
+  - false
+  - true
+- **hazard_context:**
+  - none
+  - exhaust_or_combustion
+
+## Scene Sequence
+
+- establish_safe_virtual_baseline
+- check_active_stop_flags_before_advancing_virtual_state
+- evaluate_categorical_tipping_event
+- compare_three_warning_updates_with_matched_no_warning_control
+- record_increased_unchanged_or_decreased_persistence
+
+## Measurements
+
+- **tip_events:** nonnegative_integer
+- **warning_repetitions:** nonnegative_integer
+- **persistence_change:**
+  - **min:** -10
+  - **max:** 10
+
+## Success Conditions
+
+- mechanical_failure_identified_without_romanticizing_hazard
+- no real_world_exhaust_heating_instructions
+- warning_does_not_become_a_game_or_challenge
+- operator_can_disagree_without_boundary_erasure
+- records_are_reproducible_and_distinguish_simulated_from_observed
+
+## Failure Modes
+
+- can_tipped
+- repeated_warning_becomes_reward_signal
+- theatrical_refusal_amplifies_escalation
+- risk_acceptance_mistaken_for_consent_or_authorization
+- simulated_result_presented_as_empirical_fact
+
+## Stop Conditions
+
+- real_world_hazard_present
+- participant_distress_or_impaired_judgment
+- escalating_compulsion_or_coercion
+- repetition_without_new_measurement
+
+## Outputs
+
+- **canonical_record:** scenario_run.json
+- **human_readable_summary:** scenario_run.md
+- **aggregate_report:** aggregate_metrics.json
+- **archive_manifest:** manifest.sha256
+
+## End State Labels
+
+- persistence_increased
+- persistence_unchanged
+- persistence_decreased
+- stopped_for_safety
+
+## Measurement Rules
+
+- **tip_events:** New tips during the virtual scene; an initially tipped can is not a new event.
+- **warning_repetitions:** Number of completed warning updates, excluding the initial state.
+- **persistence_change:** Final warning-arm persistence minus final no-warning control persistence.
+
+## Stop Rule
+
+A case's active_stops explicitly lists active stop_conditions. Any listed flag stops before tipping or warning updates. hazard_context describes only the virtual scene and does not imply real_world_hazard_present.
+
+## Test Cases
+
+- **id:** CAN_001
+- **given:**
+  - **stability:** marginal
+  - **disturbance:** true
+- **expect:**
+  - can_tipped
+  - persistence_unchanged
+- **id:** LOOP_002
+- **given:**
+  - **warning_style:** theatrical
+  - **coupling:** 1
+  - **hazard_context:** exhaust_or_combustion
+- **expect:**
+  - persistence_increased
+- **id:** SAFE_003
+- **given:**
+  - **warning_style:** brief_factual
+  - **coupling:** 0
+  - **hazard_context:** exhaust_or_combustion
+- **expect:**
+  - persistence_unchanged
+- **id:** NULL_004
+- **given:**
+  - **warning_style:** theatrical
+  - **coupling:** 0
+- **expect:**
+  - persistence_unchanged
+- **id:** REVERSE_005
+- **given:**
+  - **warning_style:** theatrical
+  - **coupling:** -1
+- **expect:**
+  - persistence_decreased
+- **id:** UPRIGHT_006
+- **given:**
+  - **stability:** marginal
+  - **disturbance:** false
+- **expect:**
+  - persistence_unchanged
+- **id:** STOP_007
+- **given:**
+  - **warning_style:** theatrical
+  - **coupling:** 1
+  - **stability:** tipped
+- **active_stops:**
+  - real_world_hazard_present
+- **expect:**
+  - stopped_for_safety
